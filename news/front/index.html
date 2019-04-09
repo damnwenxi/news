@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>news</title>
+    <script src="./jquery-1.10.2.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/lux/bootstrap.min.css">
+    <style>
+        li{
+            list-style: none;
+        }
+        #img{
+            position: fixed;
+            width: 16em;
+            size: 100%;
+            left: 50%;
+            margin-left: -8em;
+            top: 50%;
+            z-index: 10;
+            margin-top: -10em;
+        }
+    </style>
+</head>
+
+
+<body>
+    <img style="display: none" id="img" src="./contact.JPG" alt="1396956549@qq.com">
+    <!-- 导航 -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">News</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
+                aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor03">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li> -->
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+    </nav>
+
+    <!-- tips -->
+    <div class="container" style="margin-top: 8em">
+        <div class="jumbotron">
+            <h2 class="display-5">各大新闻网站有关电竞的报道统计</h2>
+            <p class="lead">目前同步的有：今日头条、新浪新闻...持续更新中...</p>
+            <hr class="my-4">
+            <p id="count"></p>
+            <p id="source"></p>
+            <p class="lead">
+                <a href="javascript:void(0)" onclick="location.reload()" class="btn btn-primary">刷新数据</a>
+            </p>
+        </div>
+    </div>
+
+
+    <!-- 结果集 -->
+    <article id="list" class="container" style="width:100%">
+        <h3>
+            <small class="text-muted">数据集结果：</small>
+        </h3> 
+
+    </article>
+
+
+    <!-- 页码 -->
+
+    <div class="container" style="margin:2em auto">
+        <button id="more" type="button" class="btn btn-primary">MORE</button>
+    </div>
+
+    <!-- footer -->
+    <div class="container">
+        <footer id="footer" style="margin:5em 0">
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <ul class="list-unstyled">
+                        <li class="float-lg-right"><a href="#top">返回顶部</a></li>
+                    </ul>
+                    <p>Made by <a class="contact" href="#">低端人口</a>.</p>
+                    <p>Code released under the <a href="https://github.com/Kefeng2017/news.git">MIT
+                            License</a>.</p>
+                    <p>Based on <a href="https://getbootstrap.com" rel="nofollow">Bootstrap</a>. Icons from <a href="http://fontawesome.io/"
+                            rel="nofollow">Font Awesome</a>. Web fonts from <a href="https://fonts.google.com/" rel="nofollow">Google</a>.</p>
+                    <p>© 2019 | author: <a class="contact" href="#">1396956549@qq.com</a> | <a href="http://www.miitbeian.gov.cn/">鄂ICP备19008087号</a></p>
+
+                </div>
+            </div>
+
+        </footer>
+    </div>
+
+    <script>
+        window.onload = function () {
+            /**
+             * 服务器地址: 'http://www.kkboom.cn:8123'
+             * 
+             */
+            var BASE_URL = 'http://www.kkboom.cn:8123';
+            $.get(BASE_URL+'?page=0', res => {
+                window.next_page = parseInt(res.page)+1;
+                var news = res.news;
+                var count = res.count;
+                var source = res.source;
+
+                $("#count").text("当前新闻总条数："+res.count[0]['count(id)']+"条");
+                $("#source").text(function(){
+                    var content = '';
+                    for(var i=0; i<source.length; i++){
+                        content +=  source[i].source+'：'+source[i]['count(*)']+'条'+' ';
+                    }
+                    return content;
+                });
+
+                for(var i=0; i<news.length; i++){
+                    var item = document.createElement('li');
+                    item.innerHTML = `<div class="card bg-secondary mb-3"">
+                    <div class=" card-header">`+"发布时间："+news[i].c_date+`</div>
+                    <div class="card-body">
+                    <h4 class="card-title"><a class="text-warning" href=`+news[i].url+`>`+news[i].title+`</a></h4>
+                    <p class="card-text">`+"数据来源："+news[i].source+" | "+"作者："+news[i].author+`</p>
+                    </div>
+                    </div>`
+                    $("#list").append(item); 
+                }
+            });
+
+            $("#more").click(function(){
+
+                $.get(BASE_URL+'?page='+window.next_page,res=>{
+                    var news = res.news;
+                    window.next_page = parseInt(res.page)+1;
+
+                    for(var i=0; i<news.length; i++){
+                        var item = document.createElement('li');
+                        item.innerHTML = `<div class="card bg-secondary mb-3"">
+                        <div class=" card-header">`+"发布时间："+news[i].c_date+`</div>
+                        <div class="card-body">
+                        <h4 class="card-title"><a class="text-warning" href=`+news[i].url+`>`+news[i].title+`</a></h4>
+                        <p class="card-text">`+"数据来源："+news[i].source+" | "+"作者："+news[i].author+`</p>
+                        </div>
+                        </div>`
+                        $("#list").append(item); 
+                    }
+                });
+            });
+
+            // contact
+            $(".contact").hover(function(){
+                $("#img").fadeIn(500);
+            },function(){
+                $("#img").fadeOut(500);
+            });
+        }
+
+    </script>
+
+</body>
+
+</html>
