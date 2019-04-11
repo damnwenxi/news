@@ -6,10 +6,9 @@ const Koa = require('koa');
 const Router = require('koa-router');
 const db = require('./db');
 const schedule = require('node-schedule');
-const req = require('request');
-
 const app = new Koa();
 const router = new Router();
+const req = require('request');
 
 app.context.db = db;
 
@@ -55,11 +54,10 @@ app.listen(8123, () => {
 });
 
 
-// SINAGLOBAL=10.79.229.20_1547986098.650327; SCF=Ar8sNV30PJ7UmgWFsKphEij9JwPbrrSMCMaDAjRhXihsKSuRf_Y8ydcQs9C6haeH4qGI978s6dvD0m-nSEKTmSM.; sso_info=v02m6alo5qztKWRk6SljoOIpZCjgKWRk6SljpOkpY6DmKWRk5iljpOYpY6TnKadlqWkj5OYuI6DgLiNk4S1jpOYwA==; U_TRS1=00000024.387c4b08.5ca5c514.9a6fbb1c; U_TRS2=00000024.38884b08.5ca5c514.0463fc01; UOR=www.google.com,blog.sina.com.cn,; Apache=119.103.220.193_1554367767.983038; ULV=1554738567146:2:2:1:119.103.220.193_1554367767.983038:1554367732964; lxlrttp=1554343419; rotatecount=2
-// https://search.sina.com.cn/?q=%B5%E7%BE%BA&range=title&c=news&sort=time&col=&source=&from=&country=&size=&time=&a=&page=2&pf=0&ps=0&dpc=1
 //新浪新闻 每分钟刷新一次
 const xinlang = function scheduleCronstyle() {
     schedule.scheduleJob('20 * * * * *', function () {
+
         try {
             const url1 = 'https://search.sina.com.cn/?q=%B5%E7%BE%BA&range=title&c=news&sort=time&col=&source=&from=&country=&size=&time=&a=&page=%d&pf=0&ps=0&dpc=1'
             for (var i = 2; i < 11; i++) {
@@ -69,22 +67,19 @@ const xinlang = function scheduleCronstyle() {
                         'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36',
                         'referer': util.format(url1, i - 1),
                         'cookie': 'SINAGLOBAL=10.79.229.20_1547986098.650327; SCF=Ar8sNV30PJ7UmgWFsKphEij9JwPbrrSMCMaDAjRhXihsKSuRf_Y8ydcQs9C6haeH4qGI978s6dvD0m-nSEKTmSM.; sso_info=v02m6alo5qztKWRk6SljoOIpZCjgKWRk6SljpOkpY6DmKWRk5iljpOYpY6TnKadlqWkj5OYuI6DgLiNk4S1jpOYwA==; U_TRS1=00000024.387c4b08.5ca5c514.9a6fbb1c; U_TRS2=00000024.38884b08.5ca5c514.0463fc01; UOR=www.google.com,blog.sina.com.cn,; Apache=119.103.220.193_1554367767.983038; ULV=1554738567146:2:2:1:119.103.220.193_1554367767.983038:1554367732964; lxlrttp=1554343419'
-                                // SINAGLOBAL=10.79.229.20_1547986098.650327; SCF=Ar8sNV30PJ7UmgWFsKphEij9JwPbrrSMCMaDAjRhXihsKSuRf_Y8ydcQs9C6haeH4qGI978s6dvD0m-nSEKTmSM.; sso_info=v02m6alo5qztKWRk6SljoOIpZCjgKWRk6SljpOkpY6DmKWRk5iljpOYpY6TnKadlqWkj5OYuI6DgLiNk4S1jpOYwA==; U_TRS1=00000024.387c4b08.5ca5c514.9a6fbb1c; U_TRS2=00000024.38884b08.5ca5c514.0463fc01; UOR=www.google.com,blog.sina.com.cn,; Apache=119.103.220.193_1554367767.983038; ULV=1554738567146:2:2:1:119.103.220.193_1554367767.983038:1554367732964; lxlrttp=1554343419'
-                                // SINAGLOBAL=10.79.229.20_1547986098.650327; SCF=Ar8sNV30PJ7UmgWFsKphEij9JwPbrrSMCMaDAjRhXihsKSuRf_Y8ydcQs9C6haeH4qGI978s6dvD0m-nSEKTmSM.; sso_info=v02m6alo5qztKWRk6SljoOIpZCjgKWRk6SljpOkpY6DmKWRk5iljpOYpY6TnKadlqWkj5OYuI6DgLiNk4S1jpOYwA==; U_TRS1=00000024.387c4b08.5ca5c514.9a6fbb1c; U_TRS2=00000024.38884b08.5ca5c514.0463fc01; UOR=www.google.com,blog.sina.com.cn,; Apache=119.103.220.193_1554367767.983038; ULV=1554738567146:2:2:1:119.103.220.193_1554367767.983038:1554367732964; lxlrttp=1554343419; rotatecount=2
-                            }).binary(true)
+                    })
                     .charset('gb2312').end((err, res) => {
                         if (err) {
                             console.log(err);
                             return;
                         }
                         let $ = cheerio.load(res.text);
-                        console.log($);
-
                         $("#result>.box-result").each(async (i, elem) => {
-                            var url = $(elem).find('h2').find('a').attr('href');
-                            var t_title = $(elem).find('h2').find('a').text();
-                            var title = t_title.replace(/\n/g, '').replace(/\s/g, '');
-                            var other = $(elem).find('h2').find('span').text().split(' ');
+
+                            var url = await $(elem).find('h2').find('a').attr('href');
+                            var t_title = await $(elem).find('h2').find('a').text();
+                            var title = await t_title.replace(/\n/g, '').replace(/\s/g, '');
+                            var other = await $(elem).find('h2').find('span').text().split(' ');
                             var author = other[0];
                             var date = other[1] + ' ' + other[2]
 
@@ -96,7 +91,9 @@ const xinlang = function scheduleCronstyle() {
                                 if (a.length > 0) return true;
                                 else {
                                     var item = [url, title, author, date, '新浪新闻', url];
-                                    db.query(
+                                    console.log(item);
+
+                                    const b = await db.query(
                                         "insert into news (id,title,author,c_date,source,url) values(?,?,?,?,?,?) ",
                                         item,
                                         function (err, data) {
@@ -106,6 +103,7 @@ const xinlang = function scheduleCronstyle() {
                                             }
                                         }
                                     );
+
                                 }
                             }
                         });
@@ -171,6 +169,7 @@ const toutiao = function scheduleCronstyle() {
 // 腾讯新闻 每分钟刷新
 const tengxun = function scheduleCronstyle() {
     schedule.scheduleJob('10 * * * * *', function () {
+
         try {
             //分析：腾讯新闻获取数据每三条一次请求，下一次请求需要expids参数，即上一次请求获取的三条数据的id
             //先发送第一次请求，不需要expids参数
@@ -250,9 +249,6 @@ const tengxun = function scheduleCronstyle() {
                                     "select * from news where id =? or title=?",
                                     [items2[i].id, items2[i].title]
                                 );
-
-                                console.log(a);
-
                                 if (a.length > 0) continue;
                                 else {
                                     const item2 = [
@@ -264,7 +260,6 @@ const tengxun = function scheduleCronstyle() {
                                         items2[i].url
                                     ];
 
-                                    console.log(item2);
 
                                     const save = await db.query(
                                         "insert into news (id,title,author,c_date,source,url) values(?,?,?,?,?,?) ",
@@ -276,7 +271,6 @@ const tengxun = function scheduleCronstyle() {
                                             }
                                         }
                                     );
-                                    console.log(save);
                                 }
                             }
                         });
@@ -291,66 +285,89 @@ const tengxun = function scheduleCronstyle() {
 // 搜狐新闻 每分钟刷新
 const souhu = function scheduleCronstyle() {
     schedule.scheduleJob('40 * * * * *', function () {
-        
-try {
-    //搜狐新闻
-    const url5 = 'http://v2.sohu.com/integration-api/mix/region/4360?adapter=pc&page=%d&pvId=1554953785501v72uys5&requestId=190203100555HCGA_%d&callback=jQuery1124038860833709688225_%d&_=%d';
-    for (var i = 1; i < 11; i++) {
-        var time = new Date().getTime();
-        var url = util.format(url5,i,time,time,time);
-        req(url, { json: true }, async (err, res, body) => {
-            if (err) {
-                console.log(err);
-                return;
-            }
-            var temp = res.body;
-            var str = temp.replace(/\/\*\*\/jQuery\w*\(/g,'').slice(0,-2);
-            var data_json = JSON.parse(str);
-            var result = data_json.data;
+        try {
+            //搜狐新闻
+            const url5 = 'http://v2.sohu.com/integration-api/mix/region/4360?adapter=pc&page=%d&pvId=1554953785501v72uys5&requestId=190203100555HCGA_%d&callback=jQuery1124038860833709688225_%d&_=%d';
+            for (var i = 1; i < 11; i++) {
+                var time = new Date().getTime();
+                var url = util.format(url5, i, time, time, time);
+                req(url, { json: true }, async (err, res, body) => {
+                    if (err) {
+                        console.log(err);
+                        return;
+                    }
+                    var temp = res.body;
+                    var str = temp.replace(/\/\*\*\/jQuery\w*\(/g, '').slice(0, -2);
+                    var data_json = JSON.parse(str);
+                    var result = data_json.data;
 
-            for(var j=0; j<result.length; j++){
-              //去除非新闻内容
-              if (result[j].title && result[j].id) {
-                const a = await db.query(
-                    "select * from news where id =? or title=?",
-                    [result[j].id, result[j].title]
-                );
-                if (a.length > 0) continue;
-                else {
-                    var item = [
-                        result[j].id,
-                        result[j].title,
-                        result[j].authorName,
-                        result[j].publicTime,
-                        "搜狐新闻",
-                        result[j].url
-                    ];
-                    db.query(
-                        "insert into news (id,title,author,c_date,source,url) values(?,?,?,?,?,?) ",
-                        item,
-                        function (err, data) {
-                            if (err) {
-                                console.log(err);
-                                console.log("数据库错误");
+                    for (var j = 0; j < result.length; j++) {
+                        //去除非新闻内容
+                        if (result[j].title && result[j].id) {
+                            const a = await db.query(
+                                "select * from news where id =? or title=?",
+                                [result[j].id, result[j].title]
+                            );
+                            if (a.length > 0) continue;
+                            else {
+                                var item = [
+                                    result[j].id,
+                                    result[j].title,
+                                    result[j].authorName,
+                                    format(result[j].publicTime),
+                                    "搜狐新闻",
+                                    result[j].url
+                                ];
+                                db.query(
+                                    "insert into news (id,title,author,c_date,source,url) values(?,?,?,?,?,?) ",
+                                    item,
+                                    function (err, data) {
+                                        if (err) {
+                                            console.log(err);
+                                            console.log("数据库错误");
+                                        }
+                                    }
+                                );
                             }
                         }
-                    );
-                }
-            }  
-            }
-            
-        });
-    }
+                    }
 
-} catch (e) {
-    // console.log(e);
-}
+                });
+            }
+
+        } catch (e) {
+            // console.log(e);
+        }
 
     });
 }
+
+
 
 souhu();
 toutiao();
 xinlang();
 tengxun();
 
+
+
+
+function format(timestamp) {
+
+            var  date = new Date(timestamp);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
+    
+            var Y = date.getFullYear() + '-';
+    
+            var M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
+    
+            var D = date.getDate() + ' ';
+    
+            var h = date.getHours() + ':';
+    
+            var m = date.getMinutes() + ':';
+    
+            var s = date.getSeconds();
+    
+            return Y+M+D+h+m+s;
+    
+    }
