@@ -283,62 +283,66 @@ const tengxun = function scheduleCronstyle() {
 // 搜狐新闻 每分钟刷新
 const souhu = function scheduleCronstyle() {
     schedule.scheduleJob('40 * * * * *', function () {
-        try {
-            //搜狐新闻
-            const url5 = 'http://v2.sohu.com/integration-api/mix/region/4360?adapter=pc&page=%d&pvId=1554953785501v72uys5&requestId=190203100555HCGA_%d&callback=jQuery1124038860833709688225_%d&_=%d';
-            for (var i = 1; i < 11; i++) {
-                var time = new Date().getTime();
-                var url = util.format(url5, i, time, time, time);
-                req(url, { json: true }, async (err, res, body) => {
-                    if (err) {
-                        console.log(err);
-                        return;
-                    }
-                    var temp = res.body;
-                    var str = temp.replace(/\/\*\*\/jQuery\w*\(/g, '').slice(0, -2);
-                    var data_json = JSON.parse(str);
-                    var result = data_json.data;
+        
+try {
+    //搜狐新闻
+    const url5 = 'http://v2.sohu.com/public-api/feed?scene=CATEGORY&sceneId=1361&page=%d&size=20&callback=jQuery1124034431425551877504_%d&_=%d';
+    for (var i = 1; i < 100; i++) {
+        var time = new Date().getTime();
+        // console.log(time);
+        var url = util.format(url5, i, time, parseInt(time+123));
+        // console.log(url);
+        req(url, { json: true }, async (err, res, body) => {
+            if (err) {
+                console.log(err);
+                return;
+            }
+            var temp = res.body;
+            var str = temp.replace(/\/\*\*\/jQuery\w*\(/g, '').slice(0, -2);
+            var result = JSON.parse(str);
 
-                    for (var j = 0; j < result.length; j++) {
-                        //去除非新闻内容
-                        if (result[j].title && result[j].id) {
-                            const a = await db.query(
-                                "select * from news where id =? or title=?",
-                                [result[j].id, result[j].title]
-                            );
-                            if (a.length > 0) continue;
-                            else {
-                                var item = [
-                                    result[j].id,
-                                    result[j].title,
-                                    result[j].authorName,
-                                    format(result[j].publicTime),
-                                    "搜狐新闻",
-                                    result[j].url
-                                ];
-                                db.query(
-                                    "insert into news (id,title,author,c_date,source,url) values(?,?,?,?,?,?) ",
-                                    item,
-                                    function (err, data) {
-                                        if (err) {
-                                            console.log(err);
-                                            console.log("数据库错误");
-                                        }
-                                    }
-                                );
+            for (var j = 0; j < result.length; j++) {
+                //去除非新闻内容
+                if (result[j].title && result[j].id) {
+                    const a = await db.query(
+                        "select * from news where id =? or title=?",
+                        [result[j].id, result[j].title]
+                    );
+                    if (a.length > 0) continue;
+                    else {
+                        var item = [
+                            result[j].id,
+                            result[j].title,
+                            result[j].authorName,
+                            format(result[j].publicTime),
+                            "搜狐新闻",
+                            result[j].url
+                        ];
+                        db.query(
+                            "insert into news (id,title,author,c_date,source,url) values(?,?,?,?,?,?) ",
+                            item,
+                            function (err, data) {
+                                if (err) {
+                                    console.log(err);
+                                    console.log("数据库错误");
+                                }
                             }
-                        }
+                        );
                     }
-
-                });
+                }
             }
 
-        } catch (e) {
-            // console.log(e);
-        }
+        });
+    }
+
+} catch (e) {
+    // console.log(e);
+}
 
     });
 }
+
+
 
 
 
@@ -358,14 +362,20 @@ function format(timestamp) {
     
             var M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
     
-            var D = date.getDate() + ' ';
+            var D = (date.getDate()<10? '0'+date.getDate(): date.getDate()+' ');
     
-            var h = date.getHours() + ':';
+            var h = (date.getHours()<10? '0'+date.getHours():date.getHours() + ':');
     
-            var m = date.getMinutes() + ':';
+            var m = (date.getMinutes()<10? '0'+date.getMinutes():date.getMinutes() + ':');
     
-            var s = date.getSeconds();
+            var s = date.getSeconds()<10? '0'+date.getSeconds():date.getSeconds();
     
             return Y+M+D+h+m+s;
     
     }
+
+
+
+
+// http://v2.sohu.com/public-api/feed?scene=CATEGORY&sceneId=1361&page=2&size=20&callback=jQuery1124034431425551877504_1555170976900&_=1555170976944
+// http://v2.sohu.com/public-api/feed?scene=CATEGORY&sceneId=1361&page=23&size=20&callback=jQuery1124034431425551877504_1555170976918&_=1555170977157
