@@ -1,0 +1,1 @@
+_id,year,school_id,id,school_sp_id,is_important,special_id,spname,all,keywords,name,level1,school_nature,dual_class_name,f211,belong,level,school_type,admissions,type,province_name,code_enroll,central,_version_,province_id,department,f985

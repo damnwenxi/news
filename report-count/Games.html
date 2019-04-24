@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>games</title>
+    <script type="text/javascript" src="./front/jquery-1.10.2.min.js"></script>
+
+</head>
+
+<body>
+    <script>
+        window.onload = function () {
+            var rootUrl = "http://www.cgigc.com.cn/cgigc-backend/api";
+            //var rootUrl = "http://192.168.60.18/cgigc-backend/api";
+
+            function getLatestGameISBNSearchListUrl() {
+                return rootUrl + "/mobileGame/getLatestGameISBNSearchList";
+            }
+
+            for (var i = 1; i < 900; i++) {
+                (function (i) {
+                    var result = [];
+                    $.post(getLatestGameISBNSearchListUrl(), { curPage: i, pageCount: 20 }, function (data) {
+                        result = data.data.gameisbn;
+                        postData(result);
+                    }, "jsonp");
+                }(i))
+            }
+
+            function postData(result) {
+                $.post('http://localhost:8123/add', { list: result }, function (res) {
+                    // console.log(res);
+
+                })
+            }
+        }
+
+    </script>
+</body>
+
+</html>
