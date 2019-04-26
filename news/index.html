@@ -11,12 +11,13 @@
     <link rel="stylesheet" href="./css/timeline2.css">
     <!-- 百度jquery CDN -->
     <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="./js/echarts.min.js"></script>
 </head>
 
 <body>
 
     <!-- 导航栏 -->
-    <nav class="container navbar navbar-expand-lg navbar-light">
+    <nav id="home" class="container navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -45,10 +46,24 @@
         </div>
     </nav>
 
+    <!-- 目录锚点 -->
+    <div id="contents">
+        <span id="contentControl" class="btn btn-sm btn-outline-primary">目录</span>
+        <ul id="show">
+            <li> <a href="#home">引言</a> </li>
+            <li> <a href="#policy">政策保障</a> </li>
+            <li> <a href="#business">商业模式</a></li>
+            <li> <a href="#talent">人才储备</a></li>
+            <li> <a href="#technology">技术研发</a></li>
+            <li> <a href="#media">传媒宣传</a></li>
+            <li> <a href="#file">引用资料</a></li>
+        </ul>
+    </div>
+
     <!-- banner -->
     <div id="banner">
         <div id="title">
-            <h1>电竞行业的产业化进程（2008-至今）</h1>
+            <h1>电竞行业的产业化进程（2008-2018）</h1>
             <h3>新闻点：高效开设越多电竞专业</h3>
             <p>最后更新时间：2019.04.15</p>
         </div>
@@ -314,41 +329,151 @@
         </section>
 
         <section class="container">
-            <div class="">
+            <!-- 产业链图表 -->
+            <div id="chain">
+                <h2>电子竞技产业链</h2>
                 <ul>
-                   <li></li>
-                   <li></li>
-                   <li></li>
-                   <li></li> 
+                    <li>上游<br>(游戏内容)</li>
+                    <li>游戏开发商<br>巨人网络、畅游等</li>
+                    <li>游戏发行商<br>value、riot、Blizzard等</li>
+                    <li>游戏运营商<br>腾讯、盛大、网易等</li>
                 </ul>
                 <ul>
-                   <li></li>
-                   <li></li>
-                   <li></li>
-                   <li></li>
-                   <li></li> 
+                    <li>中游<br>(电竞赛事)</li>
+                    <li>赛事赞助商<br>资本赞助、品牌冠名赞助等</li>
+                    <li>赛事运营<br>完美世界、VSPN等</li>
+                    <li>赛事参与方<br>俱乐部、职业选手、赛事解说等</li>
+                    <li>赛事内容制造商<br>网映文化</li>
                 </ul>
                 <ul>
-                   <li></li>
-                   <li></li>
-                   <li></li>
-                   <li></li> 
+                    <li>下游<br>(落地平台)</li>
+                    <li>电视播出平台<br>电视猫、游戏风云</li>
+                    <li>视频网站播出平台<br>爱奇艺、电竞网等</li>
+                    <li>在线游戏直播平台<br>斗鱼TV、熊猫TV等</li>
                 </ul>
                 <ul>
-                   <li></li>
-                   <li></li>
-                   <li></li> 
+                    <li>下游衍生行业</li>
+                    <li>周边产品<br>手办、虚拟饰品、外设硬件等</li>
+                    <li>电商平台<br>IGXE、VPGAME等</li>
                 </ul>
-
             </div>
 
         </section>
     </article>
 
-    <!-- footer -->
-    <footer>
+    <!-- 图表一 中国游戏用户规模 -->
+    <article>
+        <section class="container">
+            <hr>
+            <h2>2008-2018中国游戏用户规模统计</h2>
+            <div class="">
+                <div id="users" class="echarts" style="width:100%;height: 30em;"></div>
+                <div id="inc" class="echarts" style="width:100%;height: 30em;"></div>
+            </div>
+        </section>
+    </article>
 
-    </footer>
+    <!-- 图表二  游戏人才教育经验与企业录用影-->
+    <article>
+        <section class="container">
+            <hr>
+            <p class="quto">2018年，中国游戏从业者约145万人，需求规模约为44.1万人。
+            </p>
+            <h2>中国电竞产业从业者月薪分布 </h2>
+            <div class="">
+                <div id="salary" class="echarts" style="height: 30em;"></div>
+                <p>中国电竞产业从业者不同岗位的薪资水平差距较大，2018年中国不同职位的游戏产业从业者中主策划、品牌管理、服务器开发工程师平均月薪最高，在16000元以上；新媒体运营/文案编辑、游戏客服、游戏推广人员平均月薪最低，在6500元以下。</p>
+            </div>
+        </section>
+    </article>
+
+
+    <!-- 内容区 -->
+    <article id="policy">
+        <!-- 政策保障部分 -->
+        <section class="container">
+            <p class="quto">随着电竞行业的产业化，很多职业教育院校和本科高校，都纷纷开设了电竞专业和电竞课程。电子竞技行业如今已进入黄金时代，本文将从数据入手分析电子竞技行业的产业化进程。</p>
+            <hr>
+            <p class="quto">本文重点研究电竞行业的快速发展时期：2008年-2015年是网络游戏时代, 电子竞技逐渐与网络游戏分离,
+                世界电子竞技产业的中心开始逐渐向中国转移。2015—2017年进入手机游戏时代,。2015年, 随着智能手机的普及, 电竞手机游戏时代来临。中国电子竞技产业首次超越韩国,
+                成为世界发展最快用户最多的国家;2017年至今发展成了各种端口融合的发展时代。街机, PC, 移动共同繁荣阶段。电子竞技产业发展迅速, 电子竞技产业发展迅猛。</p>
+        </section>
+
+    </article>
+
+    <!-- 内容区 -->
+    <article id="business">
+        <!-- 商业模式部分 -->
+        <section class="container">
+            <p class="quto">随着电竞行业的产业化，很多职业教育院校和本科高校，都纷纷开设了电竞专业和电竞课程。电子竞技行业如今已进入黄金时代，本文将从数据入手分析电子竞技行业的产业化进程。</p>
+            <hr>
+            <p class="quto">本文重点研究电竞行业的快速发展时期：2008年-2015年是网络游戏时代, 电子竞技逐渐与网络游戏分离,
+                世界电子竞技产业的中心开始逐渐向中国转移。2015—2017年进入手机游戏时代,。2015年, 随着智能手机的普及, 电竞手机游戏时代来临。中国电子竞技产业首次超越韩国,
+                成为世界发展最快用户最多的国家;2017年至今发展成了各种端口融合的发展时代。街机, PC, 移动共同繁荣阶段。电子竞技产业发展迅速, 电子竞技产业发展迅猛。</p>
+        </section>
+
+    </article>
+
+    <!-- 内容区 -->
+    <article id="talent">
+        <!-- 人才储备部分 -->
+        <section class="container">
+            <p class="quto">随着电竞行业的产业化，很多职业教育院校和本科高校，都纷纷开设了电竞专业和电竞课程。电子竞技行业如今已进入黄金时代，本文将从数据入手分析电子竞技行业的产业化进程。</p>
+            <hr>
+            <p class="quto">本文重点研究电竞行业的快速发展时期：2008年-2015年是网络游戏时代, 电子竞技逐渐与网络游戏分离,
+                世界电子竞技产业的中心开始逐渐向中国转移。2015—2017年进入手机游戏时代,。2015年, 随着智能手机的普及, 电竞手机游戏时代来临。中国电子竞技产业首次超越韩国,
+                成为世界发展最快用户最多的国家;2017年至今发展成了各种端口融合的发展时代。街机, PC, 移动共同繁荣阶段。电子竞技产业发展迅速, 电子竞技产业发展迅猛。</p>
+        </section>
+
+    </article>
+
+    <!-- 内容区 -->
+    <article id="technology">
+        <!-- 技术研发部分 -->
+        <section class="container">
+            <p class="quto">随着电竞行业的产业化，很多职业教育院校和本科高校，都纷纷开设了电竞专业和电竞课程。电子竞技行业如今已进入黄金时代，本文将从数据入手分析电子竞技行业的产业化进程。</p>
+            <hr>
+            <p class="quto">本文重点研究电竞行业的快速发展时期：2008年-2015年是网络游戏时代, 电子竞技逐渐与网络游戏分离,
+                世界电子竞技产业的中心开始逐渐向中国转移。2015—2017年进入手机游戏时代,。2015年, 随着智能手机的普及, 电竞手机游戏时代来临。中国电子竞技产业首次超越韩国,
+                成为世界发展最快用户最多的国家;2017年至今发展成了各种端口融合的发展时代。街机, PC, 移动共同繁荣阶段。电子竞技产业发展迅速, 电子竞技产业发展迅猛。</p>
+        </section>
+
+    </article>
+
+    <!-- 内容区 -->
+    <article id="media">
+        <!-- 媒体宣传部分 -->
+        <section class="container">
+            <p class="quto">随着电竞行业的产业化，很多职业教育院校和本科高校，都纷纷开设了电竞专业和电竞课程。电子竞技行业如今已进入黄金时代，本文将从数据入手分析电子竞技行业的产业化进程。</p>
+            <hr>
+            <p class="quto">本文重点研究电竞行业的快速发展时期：2008年-2015年是网络游戏时代, 电子竞技逐渐与网络游戏分离,
+                世界电子竞技产业的中心开始逐渐向中国转移。2015—2017年进入手机游戏时代,。2015年, 随着智能手机的普及, 电竞手机游戏时代来临。中国电子竞技产业首次超越韩国,
+                成为世界发展最快用户最多的国家;2017年至今发展成了各种端口融合的发展时代。街机, PC, 移动共同繁荣阶段。电子竞技产业发展迅速, 电子竞技产业发展迅猛。</p>
+        </section>
+    </article>
+
+    <!-- footer -->
+    <div class="container">
+        <footer id="footer" style="margin:5em 0">
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <ul class="list-unstyled">
+                        <li class="float-lg-right"><a href="#top">返回顶部</a></li>
+                    </ul>
+                    <p>Made by <a class="contact" href="#">低端人口</a>.</p>
+                    <p>Code released under the <a href="https://github.com/Kefeng2017/news.git">MIT
+                            License</a>.</p>
+                    <p>Based on <a href="https://getbootstrap.com" rel="nofollow">Bootstrap</a>. Icons from <a href="http://fontawesome.io/"
+                            rel="nofollow">Font Awesome</a>. Web fonts from <a href="https://fonts.google.com/" rel="nofollow">Google</a>.</p>
+                    <p>© 2019 | author: <a class="contact" href="#">1396956549@qq.com</a> | <a href="http://www.miitbeian.gov.cn/">鄂ICP备19008087号</a></p>
+
+                </div>
+            </div>
+
+        </footer>
+    </div>
+
     <script src="./js/timeline.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
@@ -360,7 +485,153 @@
             $('#timelineControl').click(function () {
                 $('#timeline').toggle(500);
             });
+
+            $('#contentControl').on({
+                mouseover: function () {
+                    $('#show').show(300);
+                    $(this).hide();
+                }
+            }
+            );
+
+            $('#show').hover(
+                function () {
+                    $(this).show();
+                },
+                function () {
+                    $(this).hide(300);
+                    $('#contentControl').show(100);
+                }
+            );
+
+            // 滚动到底部时不显示目录
+            var res = $("html").scrollTop()+$("body").scrollTop();
+            console.log(res);
+            alert(res);
+
+            var chains = $('#chain li');
+            for (var i = 0; i < chains.length; i++) {
+                (function (i) {
+                    // console.log(chains[i]);
+                    var r = Math.floor(Math.random() * 256);
+                    var g = Math.floor(Math.random() * 256);
+                    var b = Math.floor(Math.random() * 256);
+                    var rgb = 'rgb' + '(' + r + ',' + g + ',' + b + ')';
+
+                    chains.eq(i).css('color', rgb).css('border', '1px solid ' + rgb);
+                }(i))
+            }
         });
+    </script>
+
+    <!-- echarts  -->
+    <script>
+
+        var Users = echarts.init(document.getElementById('users'));
+        var Inc = echarts.init(document.getElementById('inc'));
+        var Salary = echarts.init(document.getElementById('salary'));
+
+        // 用户规模
+        var option_user = {
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'shadow'
+                }
+            },
+            legend: {
+                data: ['用户数(亿人)']
+            },
+            xAxis: {
+                data: ['2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018']
+            },
+            yAxis: {},
+            series: [
+                {
+                    name: '用户数(亿人)',
+                    type: 'bar',
+                    data: [0.67, 1.15, 1.96, 3.30, 4.10, 4.95, 5.17, 5.34, 5.66, 5.83, 6.26]
+                }
+            ]
+        };
+        Users.setOption(option_user);
+
+        // 增长率
+        var option_inc = {
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'shadow'
+                }
+            },
+            legend: {
+                data: ['增长率']
+            },
+            xAxis: {
+                data: ['2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018']
+            },
+            yAxis: {
+                type: 'value',
+                name: '增长率',
+                min: 0,
+                max: 100,
+                interval: 50,
+                axisLabel: {
+                    formatter: '{value} %'
+                }
+            },
+            series: [
+                {
+                    name: '增长率',
+                    type: 'line',
+                    data: [70, 71.1, 68.5, 24.1, 20.6, 4.6, 3.3, 5.9, 3.1, 7.3]
+                }
+            ]
+        };
+        Inc.setOption(option_inc);
+
+        // 从业者薪资
+        var option_salary = {
+            title: {
+                subtext: '数据来源：xxxx',
+                x: 'center'
+            },
+            tooltip: {
+                trigger: 'item',
+                formatter: '{a} <br/>{b} : {c} %'
+            },
+            legend: {
+                data: ['4000元及以下', '4001-6000元', '6001-8000元', '8001-10000元', '10001-15000元', '15001-20000元', '20000元'],
+                left: 'right',
+                orient: 'vertical'
+            },
+            series: [
+                {
+                    name: '月收入',
+                    type: 'pie',
+                    radius: '55%',
+                    center: ['50%', '60%'],
+                    data: [
+                        { value: 7.2, name: '4000元及以下' },
+                        { value: 15.7, name: '4001-6000元' },
+                        { value: 18.1, name: '6001-8000元' },
+                        { value: 14.3, name: '8001-10000元' },
+                        { value: 20.9, name: '10001-15000元' },
+                        { value: 17.2, name: '15001-20000元' },
+                        { value: 6.5, name: '20000元' }
+                    ],
+                    itemStyle: {
+                        emphasis: {
+                            shadowBlur: 10,
+                            shadowOffset: 0,
+                            shadowColor: 'rgba(0,0,0,.5)'
+                        }
+                    }
+                }
+            ]
+        };
+
+        Salary.setOption(option_salary);
     </script>
 </body>
 

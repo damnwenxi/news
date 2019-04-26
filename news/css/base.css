@@ -11,10 +11,53 @@ hr{
     max-width: 800px;
     align-self: center;
 }
-section p{
-    text-align: justify;
+
+/* 目录 */
+#contents span{
+    position: fixed;
+    bottom: 5em;
+    left: 3em;
 }
 
+#show{
+    display: none;
+    border: 2px solid #000;
+    position: fixed;
+    bottom: 8em;
+    left: 3em;
+}
+#show li{
+    
+    list-style: none;
+    line-height: 2em;
+}
+#show li:hover{
+    background-color: #000;
+    color:#fff;
+}
+
+#show li a{
+    width: 100%;
+    display: inline-block;
+    padding: 0 2em;
+    text-decoration: none;
+}
+#show li a:hover{
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+section p{
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+}
+article{
+    margin-bottom: 8em;
+    text-align: center;
+}
 #banner{
     position: relative;
     width: 100%;
@@ -52,4 +95,35 @@ section h1{
     width: 100%;
     height: 100%;
     background-image: linear-gradient(rgba(197,70,69,.5),rgb(221,147,145));
+}
+
+#chain{
+    margin: 0 auto;
+}
+
+#chain ul{
+    display: -webkit-flex;
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+#chain ul li{
+    align-items: flex-start;
+    border-radius: 5px;
+    list-style-type: none;
+    float: left;
+    padding: 1em 1em;
+    margin-right: 1em;
+}
+
+#chain ul li:hover{
+    transform: scale(1.1);
+    background: rgba(254,243,234,.8)
+}
+
+/* 用户数量统计表 */
+.echarts{
+    margin: 0 auto;
 }
