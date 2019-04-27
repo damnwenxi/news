@@ -5,8 +5,8 @@
 }
 
 /* 分割线样式 */
-hr{
-    margin: 1em auto;
+article hr{
+    margin: 3em auto;
     border: 1px dashed #919aa1;
     max-width: 800px;
     align-self: center;
@@ -75,7 +75,7 @@ section h1{
 .quto{
     max-width: 800px;
     margin: 1em auto;
-    font-size: 1.4em;
+    font-size: 1.2em;
 }
 #title{
     position: relative;

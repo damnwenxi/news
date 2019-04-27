@@ -18,7 +18,7 @@
 
     <!-- 导航栏 -->
     <nav id="home" class="container navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">news</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -27,21 +27,18 @@
         <div class="collapse navbar-collapse" id="navbarColor03">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">研究报告 <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
+                    <a class="nav-link" href="#">资料下载</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="#">团队介绍</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                <input id="search" class="form-control mr-sm-2" type="text" placeholder="全文搜索">
+                <button id="submit" class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
             </form>
         </div>
     </nav>
@@ -50,13 +47,13 @@
     <div id="contents">
         <span id="contentControl" class="btn btn-sm btn-outline-primary">目录</span>
         <ul id="show">
-            <li> <a href="#home">引言</a> </li>
-            <li> <a href="#policy">政策保障</a> </li>
-            <li> <a href="#business">商业模式</a></li>
-            <li> <a href="#talent">人才储备</a></li>
-            <li> <a href="#technology">技术研发</a></li>
-            <li> <a href="#media">传媒宣传</a></li>
-            <li> <a href="#file">引用资料</a></li>
+            <li> <a class="label" href="#home">引言</a> </li>
+            <li> <a class="label" href="#policy">政策保障</a> </li>
+            <li> <a class="label" href="#business">商业模式</a></li>
+            <li> <a class="label" href="#talent">人才储备</a></li>
+            <li> <a class="label" href="#technology">技术研发</a></li>
+            <li> <a class="label" href="#media">传媒宣传</a></li>
+            <li> <a class="label" href="#file">引用资料</a></li>
         </ul>
     </div>
 
@@ -87,7 +84,7 @@
     <article class="container">
         <h1 style="text-align:center;"> 时间线 <label id="timelineControl" class="btn btn-sm btn-outline-primary">折叠/展开</label>
         </h1>
-        <div id="timeline" class="row">
+        <div style="display:none" id="timeline" class="row">
             <div class="col-md-12">
                 <div class="VivaTimeline">
                     <dl>
@@ -359,6 +356,7 @@
             </div>
 
         </section>
+        <div style="height:500px"></div>
     </article>
 
     <!-- 图表一 中国游戏用户规模 -->
@@ -367,91 +365,118 @@
             <hr>
             <h2>2008-2018中国游戏用户规模统计</h2>
             <div class="">
-                <div id="users" class="echarts" style="width:100%;height: 30em;"></div>
-                <div id="inc" class="echarts" style="width:100%;height: 30em;"></div>
+                <div id="users" class="echarts" style="max-width:800px;height: 30em;"></div>
+                <div id="inc" class="echarts" style="max-width:800px;height: 30em;"></div>
             </div>
         </section>
+        <div style="height:500px"></div>
     </article>
 
-    <!-- 图表二  游戏人才教育经验与企业录用影-->
-    <article>
+
+    <!-- 政策保障部分 -->
+    <article id="policy">
         <section class="container">
+            <h2>政策保障</h2>
+            <p class="quto">随着电竞行业的产业化，很多职业教育院校和本科高校，都纷纷开设了电竞专业和电竞课程。电子竞技行业如今已进入黄金时代，本文将从数据入手分析电子竞技行业的产业化进程。</p>
             <hr>
-            <p class="quto">2018年，中国游戏从业者约145万人，需求规模约为44.1万人。
-            </p>
+            <p class="quto">本文重点研究电竞行业的快速发展时期：2008年-2015年是网络游戏时代, 电子竞技逐渐与网络游戏分离,
+                世界电子竞技产业的中心开始逐渐向中国转移。2015—2017年进入手机游戏时代,。2015年, 随着智能手机的普及, 电竞手机游戏时代来临。中国电子竞技产业首次超越韩国,
+                成为世界发展最快用户最多的国家;2017年至今发展成了各种端口融合的发展时代。街机, PC, 移动共同繁荣阶段。电子竞技产业发展迅速, 电子竞技产业发展迅猛。</p>
+        </section>
+        <div style="height:500px"></div>
+
+    </article>
+
+    <!-- 商业模式部分 -->
+    <article id="business">
+        <section class="container">
+            <h2>商业模式</h2>
+
+            <p class="quto">随着电竞行业的产业化，很多职业教育院校和本科高校，都纷纷开设了电竞专业和电竞课程。电子竞技行业如今已进入黄金时代，本文将从数据入手分析电子竞技行业的产业化进程。</p>
+            <hr>
+            <p class="quto">本文重点研究电竞行业的快速发展时期：2008年-2015年是网络游戏时代, 电子竞技逐渐与网络游戏分离,
+                世界电子竞技产业的中心开始逐渐向中国转移。2015—2017年进入手机游戏时代,。2015年, 随着智能手机的普及, 电竞手机游戏时代来临。中国电子竞技产业首次超越韩国,
+                成为世界发展最快用户最多的国家;2017年至今发展成了各种端口融合的发展时代。街机, PC, 移动共同繁荣阶段。电子竞技产业发展迅速, 电子竞技产业发展迅猛。</p>
+        </section>
+        <div style="height:500px"></div>
+
+    </article>
+
+
+    <!-- 人才储备部分 -->
+    <article id="talent">
+        <section class="container">
+            <h2>人才储备</h2>
+            <p class="quto">2018年，中国游戏从业者约145万人，需求规模约为44.1万人。</p>
+            <hr>
             <h2>中国电竞产业从业者月薪分布 </h2>
             <div class="">
-                <div id="salary" class="echarts" style="height: 30em;"></div>
-                <p>中国电竞产业从业者不同岗位的薪资水平差距较大，2018年中国不同职位的游戏产业从业者中主策划、品牌管理、服务器开发工程师平均月薪最高，在16000元以上；新媒体运营/文案编辑、游戏客服、游戏推广人员平均月薪最低，在6500元以下。</p>
+                <div id="salary" class="echarts" style="max-width:800px;height: 30em;"></div>
+                <p class="quto">中国电竞产业从业者不同岗位的薪资水平差距较大，2018年中国不同职位的游戏产业从业者中主策划、品牌管理、服务器开发工程师平均月薪最高，在16000元以上；新媒体运营/文案编辑、游戏客服、游戏推广人员平均月薪最低，在6500元以下。</p>
             </div>
-        </section>
-    </article>
 
-
-    <!-- 内容区 -->
-    <article id="policy">
-        <!-- 政策保障部分 -->
-        <section class="container">
-            <p class="quto">随着电竞行业的产业化，很多职业教育院校和本科高校，都纷纷开设了电竞专业和电竞课程。电子竞技行业如今已进入黄金时代，本文将从数据入手分析电子竞技行业的产业化进程。</p>
             <hr>
-            <p class="quto">本文重点研究电竞行业的快速发展时期：2008年-2015年是网络游戏时代, 电子竞技逐渐与网络游戏分离,
-                世界电子竞技产业的中心开始逐渐向中国转移。2015—2017年进入手机游戏时代,。2015年, 随着智能手机的普及, 电竞手机游戏时代来临。中国电子竞技产业首次超越韩国,
-                成为世界发展最快用户最多的国家;2017年至今发展成了各种端口融合的发展时代。街机, PC, 移动共同繁荣阶段。电子竞技产业发展迅速, 电子竞技产业发展迅猛。</p>
-        </section>
+            <h2>不同学历游戏岗位的平均录用薪资情况（元） </h2>
+            <div id="grade" class="echarts" style="max-width:800px;height: 30em;"></div>
 
-    </article>
-
-    <!-- 内容区 -->
-    <article id="business">
-        <!-- 商业模式部分 -->
-        <section class="container">
-            <p class="quto">随着电竞行业的产业化，很多职业教育院校和本科高校，都纷纷开设了电竞专业和电竞课程。电子竞技行业如今已进入黄金时代，本文将从数据入手分析电子竞技行业的产业化进程。</p>
             <hr>
-            <p class="quto">本文重点研究电竞行业的快速发展时期：2008年-2015年是网络游戏时代, 电子竞技逐渐与网络游戏分离,
-                世界电子竞技产业的中心开始逐渐向中国转移。2015—2017年进入手机游戏时代,。2015年, 随着智能手机的普及, 电竞手机游戏时代来临。中国电子竞技产业首次超越韩国,
-                成为世界发展最快用户最多的国家;2017年至今发展成了各种端口融合的发展时代。街机, PC, 移动共同繁荣阶段。电子竞技产业发展迅速, 电子竞技产业发展迅猛。</p>
-        </section>
+            <h2>游戏企业招聘最低学历要求 </h2>
+            <div id="employee" class="echarts" style="max-width:800px;height: 30em;"></div>
 
-    </article>
-
-    <!-- 内容区 -->
-    <article id="talent">
-        <!-- 人才储备部分 -->
-        <section class="container">
-            <p class="quto">随着电竞行业的产业化，很多职业教育院校和本科高校，都纷纷开设了电竞专业和电竞课程。电子竞技行业如今已进入黄金时代，本文将从数据入手分析电子竞技行业的产业化进程。</p>
             <hr>
-            <p class="quto">本文重点研究电竞行业的快速发展时期：2008年-2015年是网络游戏时代, 电子竞技逐渐与网络游戏分离,
-                世界电子竞技产业的中心开始逐渐向中国转移。2015—2017年进入手机游戏时代,。2015年, 随着智能手机的普及, 电竞手机游戏时代来临。中国电子竞技产业首次超越韩国,
-                成为世界发展最快用户最多的国家;2017年至今发展成了各种端口融合的发展时代。街机, PC, 移动共同繁荣阶段。电子竞技产业发展迅速, 电子竞技产业发展迅猛。</p>
+            <h2>不同岗位类别最低学历要求分布情况 </h2>
+            <div id="typeOfGrade" class="echarts" style="max-width:800px;height: 30em;"></div>
+            <p class="">*饼图从内到外依次表示为：策划、开发、设计、运营、其他</p>
+
+            <hr>
+            <h2>不同规模企业对最低学历要求分布情况 </h2>
+            <div id="employeeOfCompany" class="echarts" style="max-width:800px;height: 30em;"></div>
+            <p class="">*饼图半径方向表示公司规模，从内到外依次为：20以下、20-99、100-499、500-999、1000以上</p>
+            <p class="quto">总结：
+                游戏企业对人才的学历要求较高，超过80%的企业要求本科及以上学历，尤其是大公司更青睐高学历人才。
+                学历差异对游戏企业提供的薪资水平差异明显。
+            </p>
+
+
+            <!-- 截止2019年开设与游戏行业强相关专业的高校 -->
+            <hr>
+            <h2>截止2019年开设与游戏行业强相关专业的高校 </h2>
+            <div id="mapOfSchool" class="echarts" style="max-width:1200px;height: 40em;"></div>
         </section>
+        <div style="height:500px"></div>
 
     </article>
 
-    <!-- 内容区 -->
+    <!-- 技术研发部分 -->
     <article id="technology">
-        <!-- 技术研发部分 -->
         <section class="container">
+            <h2>技术研发</h2>
+
             <p class="quto">随着电竞行业的产业化，很多职业教育院校和本科高校，都纷纷开设了电竞专业和电竞课程。电子竞技行业如今已进入黄金时代，本文将从数据入手分析电子竞技行业的产业化进程。</p>
             <hr>
             <p class="quto">本文重点研究电竞行业的快速发展时期：2008年-2015年是网络游戏时代, 电子竞技逐渐与网络游戏分离,
                 世界电子竞技产业的中心开始逐渐向中国转移。2015—2017年进入手机游戏时代,。2015年, 随着智能手机的普及, 电竞手机游戏时代来临。中国电子竞技产业首次超越韩国,
                 成为世界发展最快用户最多的国家;2017年至今发展成了各种端口融合的发展时代。街机, PC, 移动共同繁荣阶段。电子竞技产业发展迅速, 电子竞技产业发展迅猛。</p>
         </section>
+        <div style="height:500px"></div>
 
     </article>
 
-    <!-- 内容区 -->
+    <!-- 媒体宣传部分 -->
     <article id="media">
-        <!-- 媒体宣传部分 -->
         <section class="container">
+            <h2>媒体宣传</h2>
+
             <p class="quto">随着电竞行业的产业化，很多职业教育院校和本科高校，都纷纷开设了电竞专业和电竞课程。电子竞技行业如今已进入黄金时代，本文将从数据入手分析电子竞技行业的产业化进程。</p>
             <hr>
             <p class="quto">本文重点研究电竞行业的快速发展时期：2008年-2015年是网络游戏时代, 电子竞技逐渐与网络游戏分离,
                 世界电子竞技产业的中心开始逐渐向中国转移。2015—2017年进入手机游戏时代,。2015年, 随着智能手机的普及, 电竞手机游戏时代来临。中国电子竞技产业首次超越韩国,
                 成为世界发展最快用户最多的国家;2017年至今发展成了各种端口融合的发展时代。街机, PC, 移动共同繁荣阶段。电子竞技产业发展迅速, 电子竞技产业发展迅猛。</p>
         </section>
+        <div style="height:500px"></div>
     </article>
 
+    <hr style="width:100%; border:1px solid #ddd">
     <!-- footer -->
     <div class="container">
         <footer id="footer" style="margin:5em 0">
@@ -481,11 +506,16 @@
                 carousel: true,
                 carouselTime: 3000
             });
-
+            // 锚点定位控制
+            $(".label").bind("click touch", function () {
+                //根据a标签的href转换为id选择器，获取id元素所处的位置，并高度减50px（这里根据需要自由设置）
+                $('html,body').animate({ scrollTop: ($($(this).attr('href')).offset().top - 50) }, 500);
+            });
+            // 时间线控制
             $('#timelineControl').click(function () {
                 $('#timeline').toggle(500);
             });
-
+            // 目录控制
             $('#contentControl').on({
                 mouseover: function () {
                     $('#show').show(300);
@@ -493,7 +523,6 @@
                 }
             }
             );
-
             $('#show').hover(
                 function () {
                     $(this).show();
@@ -504,10 +533,17 @@
                 }
             );
 
+            // 全文查找
+            $('#submit').click(function () {
+                var search = $('#search').val();
+                window.find(search, false, false, true);
+            });
+
             // 滚动到底部时不显示目录
-            var res = $("html").scrollTop()+$("body").scrollTop();
-            console.log(res);
-            alert(res);
+            var res = $("html").scrollTop() + $("body").scrollTop();
+            if (res == 0) {
+
+            }
 
             var chains = $('#chain li');
             for (var i = 0; i < chains.length; i++) {
@@ -524,12 +560,19 @@
         });
     </script>
 
+    <script src="./js/china.js"></script>
+    <script src="./js/map.js"></script>
+
     <!-- echarts  -->
     <script>
 
         var Users = echarts.init(document.getElementById('users'));
         var Inc = echarts.init(document.getElementById('inc'));
         var Salary = echarts.init(document.getElementById('salary'));
+        var Grade = echarts.init(document.getElementById('grade'));
+        var Employee = echarts.init(document.getElementById('employee'));
+        var TypeOfGrade = echarts.init(document.getElementById('typeOfGrade'));
+        var EmployeeOfCompany = echarts.init(document.getElementById('employeeOfCompany'));
 
         // 用户规模
         var option_user = {
@@ -630,8 +673,282 @@
                 }
             ]
         };
-
         Salary.setOption(option_salary);
+
+        // 不同学历收入
+        var option_grade = {
+            title: {
+                subtext: "数据来源：xxxx",
+                x: 'left'
+            },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'shadow'
+                }
+            },
+            legend: {
+                data: ['本科及以上', '专科', '高中及以下']
+            },
+            xAxis: {
+                type: 'value'
+            },
+            yAxis: {
+                type: 'category',
+                data: ['游戏开发', '游戏设计', '游戏运营', '游戏策划']
+            },
+            series: [
+                {
+                    name: '本科及以上',
+                    type: 'bar',
+                    data: [15000, 12000, 11800, 13500]
+                },
+                {
+                    name: '专科',
+                    type: 'bar',
+                    data: [9500, 8500, 8000, 10000]
+                },
+                {
+                    name: '高中及以下',
+                    type: 'bar',
+                    data: [7000, 7200, 7500, 7300]
+                }
+            ]
+        }
+        Grade.setOption(option_grade);
+
+        // 游戏企业招聘最低学历要求
+        var option_employee = {
+            title: {
+                subtext: '数据来源：xxxx',
+                x: 'center'
+            },
+            tooltip: {
+                trigger: 'item',
+                formatter: '{a} <br/>{b} : {c} %'
+            },
+            legend: {
+                data: ['研究生', '本科', '大专', '高中', '不限'],
+                left: 'right',
+                orient: 'vertical',
+            },
+            series: [
+                {
+                    name: '学历',
+                    type: 'pie',
+                    radius: '55%',
+                    center: ['50%', '60%'],
+                    data: [
+                        { value: 0.2, name: '研究生' },
+                        { value: 29.6, name: '本科' },
+                        { value: 52.3, name: '大专' },
+                        { value: 12.5, name: '高中' },
+                        { value: 5.4, name: '不限' }
+                    ],
+                    itemStyle: {
+                        emphasis: {
+                            shadowBlur: 10,
+                            shadowOffset: 0,
+                            shadowColor: 'rgba(0,0,0,.5)'
+                        }
+                    }
+                }
+            ]
+        }
+        Employee.setOption(option_employee);
+
+        // 不同岗位类别最低学历要求分布情况
+        var option_typeOfGrade = {
+            title: {
+                subtext: '数据来源：xxxx',
+                x: 'center'
+            },
+            tooltip: {
+                trigger: 'item',
+                formatter: '{a} <br/>{b} : {c} %'
+            },
+            legend: {
+                data: ['本科', '大专', '高中', '不限'],
+                left: 'left',
+                orient: 'vertical',
+            },
+            series: [
+                {
+                    name: '游戏策划',
+                    type: 'pie',
+                    radius: [0, '16%'],
+                    label: {
+                        normal: {
+                            show: false
+                        }
+                    },
+                    data: [
+                        { value: 44.1, name: '本科' },
+                        { value: 41.4, name: '大专' },
+                        { value: 8.3, name: '高中' },
+                        { value: 6.2, name: '不限' }
+                    ]
+                },
+                {
+                    name: '游戏开发',
+                    type: 'pie',
+                    radius: ['24%', '32%'],
+                    label: {
+                        normal: {
+                            show: false
+                        }
+                    },
+                    data: [
+                        { value: 34.6, name: '本科' },
+                        { value: 52.2, name: '大专' },
+                        { value: 8.9, name: '高中' },
+                        { value: 4.2, name: '不限' }
+                    ]
+                },
+                {
+                    name: '游戏设计',
+                    type: 'pie',
+                    radius: ['40%', '48%'],
+                    label: {
+                        normal: {
+                            show: false
+                        }
+                    },
+                    data: [
+                        { value: 12.0, name: '本科' },
+                        { value: 56.8, name: '大专' },
+                        { value: 21.8, name: '高中' },
+                        { value: 9.3, name: '不限' }
+                    ]
+                },
+                {
+                    name: '游戏运营',
+                    type: 'pie',
+                    radius: ['56%', '64%'],
+                    label: {
+                        normal: {
+                            show: false
+                        }
+                    },
+                    data: [
+                        { value: 36.6, name: '本科' },
+                        { value: 50.2, name: '大专' },
+                        { value: 9.3, name: '高中' },
+                        { value: 4.0, name: '不限' }
+                    ]
+                },
+                {
+                    name: '其他',
+                    type: 'pie',
+                    radius: ['72%', '80%'],
+                    data: [
+
+                        { value: 36.6, name: '本科' },
+                        { value: 50.9, name: '大专' },
+                        { value: 10.6, name: '高中' },
+                        { value: 1.8, name: '不限' }
+                    ]
+                }
+            ]
+        };
+        TypeOfGrade.setOption(option_typeOfGrade);
+
+        // 不同规模企业对最低学历要求分布情况
+        var option_employeeOfCom = {
+            title: {
+                subtext: '数据来源：xxxx',
+                x: 'center'
+            },
+            tooltip: {
+                trigger: 'item',
+                formatter: '{a} <br/>{b} : {c} %'
+            },
+            legend: {
+                data: ['本科', '大专', '高中', '不限'],
+                left: 'left',
+                orient: 'vertical',
+            },
+            series: [
+                {
+                    name: '1000人以上',
+                    type: 'pie',
+                    radius: ['72%', '80%'],
+                    data: [
+                        { value: 57.2, name: '本科' },
+                        { value: 34.6, name: '大专' },
+                        { value: 5.3, name: '高中' },
+                        { value: 2.9, name: '不限' }
+                    ]
+                },
+                {
+                    name: '500-999',
+                    type: 'pie',
+                    radius: ['56%', '64%'],
+                    label: {
+                        normal: {
+                            show: false
+                        }
+                    },
+                    data: [
+                        { value: 22.8, name: '本科' },
+                        { value: 55.5, name: '大专' },
+                        { value: 20.1, name: '高中' },
+                        { value: 1.6, name: '不限' }
+                    ]
+                },
+                {
+                    name: '100-499',
+                    type: 'pie',
+                    radius: ['40%', '48%'],
+                    label: {
+                        normal: {
+                            show: false
+                        }
+                    },
+                    data: [
+                        { value: 22.7, name: '本科' },
+                        { value: 59.8, name: '大专' },
+                        { value: 13.9, name: '高中' },
+                        { value: 3.6, name: '不限' }
+                    ]
+                },
+                {
+                    name: '20-99',
+                    type: 'pie',
+                    radius: ['24%', '32%'],
+                    label: {
+                        normal: {
+                            show: false
+                        }
+                    },
+                    data: [
+                        { value: 21.2, name: '本科' },
+                        { value: 54.4, name: '大专' },
+                        { value: 13.7, name: '高中' },
+                        { value: 10.7, name: '不限' }
+                    ]
+                },
+                {
+                    name: '20以下',
+                    type: 'pie',
+                    radius: [0, '16%'],
+                    label: {
+                        normal: {
+                            show: false
+                        }
+                    },
+                    data: [
+
+                        { value: 24.2, name: '本科' },
+                        { value: 52.3, name: '大专' },
+                        { value: 4.7, name: '高中' },
+                        { value: 18.8, name: '不限' }
+                    ]
+                }
+            ]
+        };
+        EmployeeOfCompany.setOption(option_employeeOfCom);
+
     </script>
 </body>
 
