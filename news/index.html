@@ -7,15 +7,27 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>news</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/loaders.min.css">
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/timeline2.css">
-    <!-- 百度jquery CDN -->
-    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-    <script src="./js/echarts.min.js"></script>
 </head>
 
 <body>
-
+    <!-- loader -->
+    
+    <div id="load" class="loader">
+        <div class="ball-grid-pulse">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
     <!-- 导航栏 -->
     <nav id="home" class="container navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand" href="#">news</a>
@@ -42,9 +54,10 @@
             </form>
         </div>
     </nav>
-
+    
+    <div id="page">
     <!-- 目录锚点 -->
-    <div id="contents">
+    <div id="contents" style="z-index: 20">
         <span id="contentControl" class="btn btn-sm btn-outline-primary">目录</span>
         <ul id="show">
             <li> <a class="label" href="#home">引言</a> </li>
@@ -498,10 +511,13 @@
 
         </footer>
     </div>
+    </div>
 
+    <script src="./js/jquery-1.10.2.min.js"></script>
     <script src="./js/timeline.js"></script>
     <script type="text/javascript">
-        $(document).ready(function () {
+        window.onload = function () {
+            $('#load').fadeOut(500);
             $('.VivaTimeline').vivaTimeline({
                 carousel: true,
                 carouselTime: 3000
@@ -557,14 +573,16 @@
                     chains.eq(i).css('color', rgb).css('border', '1px solid ' + rgb);
                 }(i))
             }
-        });
+        };
     </script>
 
-    <script src="./js/china.js"></script>
+    <!-- <script type="text/javascript" src="./js/echarts.min.js"></script> -->
+    <script src="https://cdn.bootcss.com/echarts/4.2.1-rc1/echarts-en.min.js"></script>
+    <script type="text/javascript" src="./js/china.js"></script>
     <script src="./js/map.js"></script>
 
     <!-- echarts  -->
-    <script>
+    <script type="text/javascript">
 
         var Users = echarts.init(document.getElementById('users'));
         var Inc = echarts.init(document.getElementById('inc'));

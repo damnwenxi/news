@@ -4,6 +4,24 @@
     margin: 0;
 }
 
+.loader{
+    z-index: 999;
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+}
+.ball-grid-pulse{
+    margin: auto;
+}
+/* loader */
+.loader>.ball-grid-pulse>div{
+    background-color: rgb(255,109,112) !important;
+}
+
 /* 分割线样式 */
 article hr{
     margin: 3em auto;
@@ -63,7 +81,7 @@ article{
     width: 100%;
     padding: 5em 0;
     text-align: center;
-    background-image: url("../static/img/111.jpg");
+    background-image: url("../static/img/111-min.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
