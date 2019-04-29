@@ -3,18 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>news</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/loaders.min.css">
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/timeline2.css">
+    <link rel="Shortcut Icon" href="./favicon.ico">
 </head>
 
 <body>
     <!-- loader -->
-    
+
     <div id="load" class="loader">
         <div class="ball-grid-pulse">
             <div></div>
@@ -28,492 +29,529 @@
             <div></div>
         </div>
     </div>
+
     <!-- 导航栏 -->
-    <nav id="home" class="container navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="#">news</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <div style="width:100%;background-color: #fff">
+        <nav id="home" class="container navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#">news</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
+                aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse" id="navbarColor03">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">研究报告 <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">资料下载</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">团队介绍</a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input id="search" class="form-control mr-sm-2" type="text" placeholder="全文搜索">
-                <button id="submit" class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </div>
-    </nav>
-    
+            <div class="collapse navbar-collapse" id="navbarColor03">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">研究报告 <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">资料下载</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">团队介绍</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input id="search" class="form-control mr-sm-2" type="text" placeholder="全文搜索">
+                    <button id="submit" class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </div>
+
+
     <div id="page">
-    <!-- 目录锚点 -->
-    <div id="contents" style="z-index: 20">
-        <span id="contentControl" class="btn btn-sm btn-outline-primary">目录</span>
-        <ul id="show">
-            <li> <a class="label" href="#home">引言</a> </li>
-            <li> <a class="label" href="#policy">政策保障</a> </li>
-            <li> <a class="label" href="#business">商业模式</a></li>
-            <li> <a class="label" href="#talent">人才储备</a></li>
-            <li> <a class="label" href="#technology">技术研发</a></li>
-            <li> <a class="label" href="#media">传媒宣传</a></li>
-            <li> <a class="label" href="#file">引用资料</a></li>
-        </ul>
-    </div>
 
-    <!-- banner -->
-    <div id="banner">
-        <div id="title">
-            <h1>电竞行业的产业化进程（2008-2018）</h1>
-            <h3>新闻点：高效开设越多电竞专业</h3>
-            <p>最后更新时间：2019.04.15</p>
+        <!-- 目录锚点 -->
+        <div id="contents" style="z-index: 20">
+            <span id="contentControl" class="btn btn-sm btn-outline-primary">目录</span>
+            <ul id="show">
+                <li> <a class="label" href="#home">引言</a> </li>
+                <li> <a class="label" href="#policy">政策保障</a> </li>
+                <li> <a class="label" href="#business">商业模式</a></li>
+                <li> <a class="label" href="#talent">人才储备</a></li>
+                <li> <a class="label" href="#technology">技术研发</a></li>
+                <li> <a class="label" href="#media">传媒宣传</a></li>
+                <li> <a class="label" href="#file">引用资料</a></li>
+            </ul>
         </div>
 
-    </div>
+        <!-- banner -->
+        <div id="banner">
+            <div id="title">
+                <h1>电竞行业的产业化进程（2008-2018）</h1>
+                <h3>新闻点：高效开设越多电竞专业</h3>
+                <p>最后更新时间：2019.04.15</p>
+            </div>
 
-    <!-- 内容区 -->
-    <article>
+        </div>
+
         <!-- 引言部分 -->
-        <section class="container">
-            <p class="quto">随着电竞行业的产业化，很多职业教育院校和本科高校，都纷纷开设了电竞专业和电竞课程。电子竞技行业如今已进入黄金时代，本文将从数据入手分析电子竞技行业的产业化进程。</p>
-            <hr>
-            <p class="quto">本文重点研究电竞行业的快速发展时期：2008年-2015年是网络游戏时代, 电子竞技逐渐与网络游戏分离,
-                世界电子竞技产业的中心开始逐渐向中国转移。2015—2017年进入手机游戏时代,。2015年, 随着智能手机的普及, 电竞手机游戏时代来临。中国电子竞技产业首次超越韩国,
-                成为世界发展最快用户最多的国家;2017年至今发展成了各种端口融合的发展时代。街机, PC, 移动共同繁荣阶段。电子竞技产业发展迅速, 电子竞技产业发展迅猛。</p>
-        </section>
+        <article>
+            <span class="section">引言</span>
+            <!-- 引言部分 -->
+            <section class="container">
+                <p class="quto">随着电竞行业的产业化，很多职业教育院校和本科高校，都纷纷开设了电竞专业和电竞课程。电子竞技行业如今已进入黄金时代，本文将从数据入手分析电子竞技行业的产业化进程。</p>
+                <hr>
+                <p class="quto">本文重点研究电竞行业的快速发展时期：2008年-2015年是网络游戏时代, 电子竞技逐渐与网络游戏分离,
+                    世界电子竞技产业的中心开始逐渐向中国转移。2015—2017年进入手机游戏时代,。2015年, 随着智能手机的普及, 电竞手机游戏时代来临。中国电子竞技产业首次超越韩国,
+                    成为世界发展最快用户最多的国家;2017年至今发展成了各种端口融合的发展时代。街机, PC, 移动共同繁荣阶段。电子竞技产业发展迅速, 电子竞技产业发展迅猛。</p>
+            </section>
 
-    </article>
+        </article>
 
-    <!-- 时间线 -->
-    <article class="container">
-        <h1 style="text-align:center;"> 时间线 <label id="timelineControl" class="btn btn-sm btn-outline-primary">折叠/展开</label>
-        </h1>
-        <div style="display:none" id="timeline" class="row">
-            <div class="col-md-12">
-                <div class="VivaTimeline">
-                    <dl>
-                        <!-- 2018 -->
-                        <dt>2018.7</dt>
-                        <dd class="pos-left clearfix">
-                            <div class="circ"></div>
-                            <div class="time">July 7</div>
-                            <div class="events">
-                                <div class="events-header">《关于举办2018年全国电子竞技公开赛的通知》</div>
-                                <div class="events-body">
-                                    <div class="row">
-                                        <div class="col-md-6 pull-left">
-                                            <!-- <img class="events-object img-responsive img-rounded" src="img/dog01.png" /> -->
-                                        </div>
-                                        <div class="events-desc">
-                                            国家体育总局发布了《关于举办2018年全国电子竞技公开赛的通知》，指出为了进一步促进电子竞技在我国的发展，提高我国电子竞技运动员的综合竞技水平，经研究，拟于2018年12月在四川成都举办2018年全国电子竞技公开赛总决赛，具体时间、场馆待确定后将以补充通知的形式印发。
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </dd>
-                        <dd class="pos-right clearfix">
-                            <div class="circ"></div>
-                            <div class="time">May 5</div>
-                            <div class="events">
-                                <div class="events-header">《关于加强网络表演管理工作的通知》</div>
-                                <div class="events-body">
-                                    <div class="row">
-                                        <div class="col-md-6 pull-right">
-                                            <!-- <img class="events-object img-responsive img-rounded" src="img/dog01.png" /> -->
-                                        </div>
-                                        <div class="events-desc">
-                                            亚洲奥林匹克理事会宣布6款游戏入围亚运会比赛项目，电竞作为表演赛第一次进入亚运会， 是电竞第-次进入世界级的运动赛事《英雄联盟》、( Arena of
-                                            Valor》(王者荣耀海外版) 、《 皇室战争》《炉石传说》、《实况足球》 、《星际争霸2》 。
+        <!-- 时间线 -->
+        <article>
+            <h1 style="text-align:center;"> 中国电竞大事件 <label id="timelineControl" class="btn btn-sm btn-outline-primary">折叠/展开</label>
+            </h1>
+            <div style="display:none" id="timeline" class="row">
+                <div class="col-md-12">
+                    <div class="VivaTimeline">
+                        <dl>
+                            <!-- 2018 -->
+                            <dt>2018.7</dt>
+                            <dd class="pos-left clearfix">
+                                <div class="circ"></div>
+                                <div class="time">July 7</div>
+                                <div class="events">
+                                    <div class="events-header">《关于举办2018年全国电子竞技公开赛的通知》</div>
+                                    <div class="events-body">
+                                        <div class="row">
+                                            <div class="col-md-6 pull-left">
+                                                <!-- <img class="events-object img-responsive img-rounded" src="img/dog01.png" /> -->
+                                            </div>
+                                            <div class="events-desc">
+                                                国家体育总局发布了《关于举办2018年全国电子竞技公开赛的通知》，指出为了进一步促进电子竞技在我国的发展，提高我国电子竞技运动员的综合竞技水平，经研究，拟于2018年12月在四川成都举办2018年全国电子竞技公开赛总决赛，具体时间、场馆待确定后将以补充通知的形式印发。
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </dd>
+                            </dd>
+                            <dd class="pos-right clearfix">
+                                <div class="circ"></div>
+                                <div class="time">May 5</div>
+                                <div class="events">
+                                    <div class="events-header">《关于加强网络表演管理工作的通知》</div>
+                                    <div class="events-body">
+                                        <div class="row">
+                                            <div class="col-md-6 pull-right">
+                                                <!-- <img class="events-object img-responsive img-rounded" src="img/dog01.png" /> -->
+                                            </div>
+                                            <div class="events-desc">
+                                                亚洲奥林匹克理事会宣布6款游戏入围亚运会比赛项目，电竞作为表演赛第一次进入亚运会， 是电竞第-次进入世界级的运动赛事《英雄联盟》、(
+                                                Arena of
+                                                Valor》(王者荣耀海外版) 、《 皇室战争》《炉石传说》、《实况足球》 、《星际争霸2》 。
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </dd>
 
-                        <!-- 2017 -->
-                        <dt>2017.4</dt>
-                        <dd class="pos-left clearfix">
-                            <div class="circ"></div>
-                            <div class="time">April 4</div>
-                            <div class="events">
-                                <div class="events-header">Events</div>
-                                <div class="events-body">
-                                    <div class="row">
-                                        <div class="col-md-6 pull-left">
-                                            <!-- <img class="events-object img-responsive img-rounded" src="img/cat02.png" /> -->
-                                        </div>
-                                        <div class="events-desc">
-                                            腾讯召开2017年电竞战略发布会，战略的核心, 便是效仿NBA模式的电竞体育联盟化。
+                            <!-- 2017 -->
+                            <dt>2017.4</dt>
+                            <dd class="pos-left clearfix">
+                                <div class="circ"></div>
+                                <div class="time">April 4</div>
+                                <div class="events">
+                                    <div class="events-header">Events</div>
+                                    <div class="events-body">
+                                        <div class="row">
+                                            <div class="col-md-6 pull-left">
+                                                <!-- <img class="events-object img-responsive img-rounded" src="img/cat02.png" /> -->
+                                            </div>
+                                            <div class="events-desc">
+                                                腾讯召开2017年电竞战略发布会，战略的核心, 便是效仿NBA模式的电竞体育联盟化。
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </dd>
+                            </dd>
 
-                        <dd class="pos-right clearfix">
-                            <div class="circ"></div>
-                            <div class="time">April 4</div>
-                            <div class="events">
-                                <div class="events-header">《文化部“十三五”时期文化产业发展规划》</div>
-                                <div class="events-body">
-                                    <div class="row">
-                                        <div class="col-md-6 pull-right">
-                                            <!-- <img class="events-object img-responsive img-rounded" src="img/cat02.png" /> -->
-                                        </div>
-                                        <div class="events-desc">
-                                            文化部发布了《文化部“十三五”时期文化产业发展规划》，提出推进游戏产业结构升级，推动网络游戏、电子游戏等游戏门类协调发展，促进移动游戏、电子竞技、游戏直播、虚拟现实游戏等新业态发展。
+                            <dd class="pos-right clearfix">
+                                <div class="circ"></div>
+                                <div class="time">April 4</div>
+                                <div class="events">
+                                    <div class="events-header">《文化部“十三五”时期文化产业发展规划》</div>
+                                    <div class="events-body">
+                                        <div class="row">
+                                            <div class="col-md-6 pull-right">
+                                                <!-- <img class="events-object img-responsive img-rounded" src="img/cat02.png" /> -->
+                                            </div>
+                                            <div class="events-desc">
+                                                文化部发布了《文化部“十三五”时期文化产业发展规划》，提出推进游戏产业结构升级，推动网络游戏、电子游戏等游戏门类协调发展，促进移动游戏、电子竞技、游戏直播、虚拟现实游戏等新业态发展。
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </dd>
+                            </dd>
 
-                        <dd class="pos-left clearfix">
-                            <div class="circ"></div>
-                            <div class="time">January 1</div>
-                            <div class="events">
-                                <div class="events-header">国际奥委会认证电子竞技运动为正式体育项目</div>
-                                <div class="events-body">
-                                    <div class="row">
-                                        <div class="col-md-6 pull-left">
-                                            <!-- <img class="events-object img-responsive img-rounded" src="img/cat02.png" /> -->
-                                        </div>
-                                        <div class="events-desc">
-                                            国际奥委会正式宣布，认证电子竞技运动为正式体育项目，代表着国际奥委会将开始把电子竞技纳入奥运会比赛项目。
+                            <dd class="pos-left clearfix">
+                                <div class="circ"></div>
+                                <div class="time">January 1</div>
+                                <div class="events">
+                                    <div class="events-header">国际奥委会认证电子竞技运动为正式体育项目</div>
+                                    <div class="events-body">
+                                        <div class="row">
+                                            <div class="col-md-6 pull-left">
+                                                <!-- <img class="events-object img-responsive img-rounded" src="img/cat02.png" /> -->
+                                            </div>
+                                            <div class="events-desc">
+                                                国际奥委会正式宣布，认证电子竞技运动为正式体育项目，代表着国际奥委会将开始把电子竞技纳入奥运会比赛项目。
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </dd>
+                            </dd>
 
-                        <!-- 同一年增加时间直接在dd后面增加dd标签 -->
-                        <!-- 2016 -->
-                        <dt>2016.9</dt>
-                        <dd class="pos-right clearfix">
-                            <div class="circ"></div>
-                            <div class="time">September 9</div>
-                            <div class="events">
-                                <div class="events-header">《普通高等学校高等职业教育(专科)专业目录》</div>
-                                <div class="events-body">
-                                    <div class="row">
-                                        <div class="col-md-6 pull-right">
-                                            <!-- <img class="events-object img-responsive img-rounded" src="img/cat02.png" /> -->
-                                        </div>
-                                        <div class="events-desc">
-                                            教育部发布了《普通高等学校高等职业教育(专科)专业目录》,增补了”电子竟技运动与管理”专业。截止到2018年1月，已有13个院校发布了其电子竟技相关专业的开设及招生情况。
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </dd>
-                        <dd class="pos-left clearfix">
-                            <div class="circ"></div>
-                            <div class="time">July 7</div>
-                            <div class="events">
-                                <div class="events-header">Events</div>
-                                <div class="events-body">
-                                    <div class="row">
-                                        <div class="col-md-6 pull-left">
-                                            <!-- <img class="events-object img-responsive img-rounded" src="img/cat02.png" /> -->
-                                        </div>
-                                        <div class="events-desc">
-                                            国家体育总局指出“以冰雹、山地户外、水上、汽摩、航空、电竞等运动项目为重点，引导具有消费引领性的健身休闲项目发展。”
+                            <!-- 同一年增加时间直接在dd后面增加dd标签 -->
+                            <!-- 2016 -->
+                            <dt>2016.9</dt>
+                            <dd class="pos-right clearfix">
+                                <div class="circ"></div>
+                                <div class="time">September 9</div>
+                                <div class="events">
+                                    <div class="events-header">《普通高等学校高等职业教育(专科)专业目录》</div>
+                                    <div class="events-body">
+                                        <div class="row">
+                                            <div class="col-md-6 pull-right">
+                                                <!-- <img class="events-object img-responsive img-rounded" src="img/cat02.png" /> -->
+                                            </div>
+                                            <div class="events-desc">
+                                                教育部发布了《普通高等学校高等职业教育(专科)专业目录》,增补了”电子竟技运动与管理”专业。截止到2018年1月，已有13个院校发布了其电子竟技相关专业的开设及招生情况。
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </dd>
-                        <dd class="pos-right clearfix">
-                            <div class="circ"></div>
-                            <div class="time">April 4</div>
-                            <div class="events">
-                                <div class="events-header">Events</div>
-                                <div class="events-body">
-                                    <div class="row">
-                                        <div class="col-md-6 pull-right">
-                                            <!-- <img class="events-object img-responsive img-rounded" src="img/cat02.png" /> -->
-                                        </div>
-                                        <div class="events-desc">
-                                            国家发改委明确指出在做好知识产权保护和对青少年引导的前提下，以企业为主体，举办全国性或国际性电子竞技游戏游艺赛事活动。
+                            </dd>
+                            <dd class="pos-left clearfix">
+                                <div class="circ"></div>
+                                <div class="time">July 7</div>
+                                <div class="events">
+                                    <div class="events-header">Events</div>
+                                    <div class="events-body">
+                                        <div class="row">
+                                            <div class="col-md-6 pull-left">
+                                                <!-- <img class="events-object img-responsive img-rounded" src="img/cat02.png" /> -->
+                                            </div>
+                                            <div class="events-desc">
+                                                国家体育总局指出“以冰雹、山地户外、水上、汽摩、航空、电竞等运动项目为重点，引导具有消费引领性的健身休闲项目发展。”
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </dd>
+                            </dd>
+                            <dd class="pos-right clearfix">
+                                <div class="circ"></div>
+                                <div class="time">April 4</div>
+                                <div class="events">
+                                    <div class="events-header">Events</div>
+                                    <div class="events-body">
+                                        <div class="row">
+                                            <div class="col-md-6 pull-right">
+                                                <!-- <img class="events-object img-responsive img-rounded" src="img/cat02.png" /> -->
+                                            </div>
+                                            <div class="events-desc">
+                                                国家发改委明确指出在做好知识产权保护和对青少年引导的前提下，以企业为主体，举办全国性或国际性电子竞技游戏游艺赛事活动。
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </dd>
 
-                        <!-- 2013 -->
-                        <dt>2013</dt>
-                        <dd class="pos-left clearfix">
-                            <div class="circ"></div>
-                            <div class="time"></div>
-                            <div class="events">
-                                <div class="events-header">电竞组建国家队，参加运动会</div>
-                                <div class="events-body">
-                                    <div class="row">
-                                        <div class="col-md-6 pull-left">
-                                            <!-- <img class="events-object img-responsive img-rounded" src="img/cat02.png" /> -->
-                                        </div>
-                                        <div class="events-desc">
-                                            国家体育总局决定成立电子竞技国家队，出站第四届亚洲室内和武道运动会。
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </dd>
-                        <dt>2008</dt>
-                        <dd class="pos-right clearfix">
-                            <div class="circ"></div>
-                            <div class="time"></div>
-                            <div class="events">
-                                <div class="events-header">电竞整合为体育运动</div>
-                                <div class="events-body">
-                                    <div class="row">
-                                        <div class="col-md-6 pull-right">
-                                            <!-- <img class="events-object img-responsive img-rounded" src="img/cat02.png" /> -->
-                                        </div>
-                                        <div class="events-desc">
-                                            金融危机爆发的背景下，电竞产业举步维艰。国家体育总局整合现有的运动项目，将电竞重新整合为第78号体育运动。
+                            <!-- 2013 -->
+                            <dt>2013</dt>
+                            <dd class="pos-left clearfix">
+                                <div class="circ"></div>
+                                <div class="time"></div>
+                                <div class="events">
+                                    <div class="events-header">电竞组建国家队，参加运动会</div>
+                                    <div class="events-body">
+                                        <div class="row">
+                                            <div class="col-md-6 pull-left">
+                                                <!-- <img class="events-object img-responsive img-rounded" src="img/cat02.png" /> -->
+                                            </div>
+                                            <div class="events-desc">
+                                                国家体育总局决定成立电子竞技国家队，出站第四届亚洲室内和武道运动会。
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </dd>
+                            </dd>
+                            <dt>2008</dt>
+                            <dd class="pos-right clearfix">
+                                <div class="circ"></div>
+                                <div class="time"></div>
+                                <div class="events">
+                                    <div class="events-header">电竞整合为体育运动</div>
+                                    <div class="events-body">
+                                        <div class="row">
+                                            <div class="col-md-6 pull-right">
+                                                <!-- <img class="events-object img-responsive img-rounded" src="img/cat02.png" /> -->
+                                            </div>
+                                            <div class="events-desc">
+                                                金融危机爆发的背景下，电竞产业举步维艰。国家体育总局整合现有的运动项目，将电竞重新整合为第78号体育运动。
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </dd>
 
-                        <dt>2004</dt>
-                        <dd class="pos-left clearfix">
-                            <div class="circ"></div>
-                            <div class="time"></div>
-                            <div class="events">
-                                <div class="events-header">Events</div>
-                                <div class="events-body">
-                                    <div class="row">
-                                        <div class="col-md-6 pull-left">
-                                            <!-- <img class="events-object img-responsive img-rounded" src="img/cat02.png" /> -->
-                                        </div>
-                                        <div class="events-desc">
-                                            广电总局发布网络游戏类节目的禁播令
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </dd>
-                        <dt>2003.11</dt>
-                        <dd class="pos-right clearfix">
-                            <div class="circ"></div>
-                            <div class="time"></div>
-                            <div class="events">
-                                <div class="events-header">Events</div>
-                                <div class="events-body">
-                                    <div class="row">
-                                        <div class="col-md-6 pull-right">
-                                            <!-- <img class="events-object img-responsive img-rounded" src="img/cat02.png" /> -->
-                                        </div>
-                                        <div class="events-desc">
-                                            国家体育总局批准电子竞技运动项目为第99个正式体育竞赛项目。
+                            <dt>2004</dt>
+                            <dd class="pos-left clearfix">
+                                <div class="circ"></div>
+                                <div class="time"></div>
+                                <div class="events">
+                                    <div class="events-header">Events</div>
+                                    <div class="events-body">
+                                        <div class="row">
+                                            <div class="col-md-6 pull-left">
+                                                <!-- <img class="events-object img-responsive img-rounded" src="img/cat02.png" /> -->
+                                            </div>
+                                            <div class="events-desc">
+                                                广电总局发布网络游戏类节目的禁播令
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </dd>
-                    </dl>
+                            </dd>
+                            <dt>2003.11</dt>
+                            <dd class="pos-right clearfix">
+                                <div class="circ"></div>
+                                <div class="time"></div>
+                                <div class="events">
+                                    <div class="events-header">Events</div>
+                                    <div class="events-body">
+                                        <div class="row">
+                                            <div class="col-md-6 pull-right">
+                                                <!-- <img class="events-object img-responsive img-rounded" src="img/cat02.png" /> -->
+                                            </div>
+                                            <div class="events-desc">
+                                                国家体育总局批准电子竞技运动项目为第99个正式体育竞赛项目。
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
                 </div>
             </div>
-        </div>
-    </article>
+        </article>
 
-    <!-- 内容 -->
-    <article>
-        <section class="container">
-            <hr>
-            <p class="quto">电子竞技行业如今也发展成为相对成熟的产业，该行业现已形成较为完整的产业链。具体由三部分组成。产业上游由游戏开发商、游戏发行商、游戏运行商组成，主要负责游戏的开发、运行和运营。中游包括赛事赞助商、赛事运营、赛事参与方和赛事内容制造商。电视播出平台、视频网站播出平台还有以斗鱼TV、熊猫TV的在线游戏直播平台等落地平台组成了产业下游。除此之外，还出现了一些下游衍生行业。
-            </p>
-        </section>
+        <!-- 内容 -->
+        <article>
+            <section class="container">
+                <hr>
+                <p class="quto">电子竞技行业如今也发展成为相对成熟的产业，该行业现已形成较为完整的产业链。具体由三部分组成。产业上游由游戏开发商、游戏发行商、游戏运行商组成，主要负责游戏的开发、运行和运营。中游包括赛事赞助商、赛事运营、赛事参与方和赛事内容制造商。电视播出平台、视频网站播出平台还有以斗鱼TV、熊猫TV的在线游戏直播平台等落地平台组成了产业下游。除此之外，还出现了一些下游衍生行业。
+                </p>
+            </section>
 
-        <section class="container">
-            <!-- 产业链图表 -->
-            <div id="chain">
-                <h2>电子竞技产业链</h2>
-                <ul>
-                    <li>上游<br>(游戏内容)</li>
-                    <li>游戏开发商<br>巨人网络、畅游等</li>
-                    <li>游戏发行商<br>value、riot、Blizzard等</li>
-                    <li>游戏运营商<br>腾讯、盛大、网易等</li>
-                </ul>
-                <ul>
-                    <li>中游<br>(电竞赛事)</li>
-                    <li>赛事赞助商<br>资本赞助、品牌冠名赞助等</li>
-                    <li>赛事运营<br>完美世界、VSPN等</li>
-                    <li>赛事参与方<br>俱乐部、职业选手、赛事解说等</li>
-                    <li>赛事内容制造商<br>网映文化</li>
-                </ul>
-                <ul>
-                    <li>下游<br>(落地平台)</li>
-                    <li>电视播出平台<br>电视猫、游戏风云</li>
-                    <li>视频网站播出平台<br>爱奇艺、电竞网等</li>
-                    <li>在线游戏直播平台<br>斗鱼TV、熊猫TV等</li>
-                </ul>
-                <ul>
-                    <li>下游衍生行业</li>
-                    <li>周边产品<br>手办、虚拟饰品、外设硬件等</li>
-                    <li>电商平台<br>IGXE、VPGAME等</li>
-                </ul>
-            </div>
-
-        </section>
-        <div style="height:500px"></div>
-    </article>
-
-    <!-- 图表一 中国游戏用户规模 -->
-    <article>
-        <section class="container">
-            <hr>
-            <h2>2008-2018中国游戏用户规模统计</h2>
-            <div class="">
-                <div id="users" class="echarts" style="max-width:800px;height: 30em;"></div>
-                <div id="inc" class="echarts" style="max-width:800px;height: 30em;"></div>
-            </div>
-        </section>
-        <div style="height:500px"></div>
-    </article>
-
-
-    <!-- 政策保障部分 -->
-    <article id="policy">
-        <section class="container">
-            <h2>政策保障</h2>
-            <p class="quto">随着电竞行业的产业化，很多职业教育院校和本科高校，都纷纷开设了电竞专业和电竞课程。电子竞技行业如今已进入黄金时代，本文将从数据入手分析电子竞技行业的产业化进程。</p>
-            <hr>
-            <p class="quto">本文重点研究电竞行业的快速发展时期：2008年-2015年是网络游戏时代, 电子竞技逐渐与网络游戏分离,
-                世界电子竞技产业的中心开始逐渐向中国转移。2015—2017年进入手机游戏时代,。2015年, 随着智能手机的普及, 电竞手机游戏时代来临。中国电子竞技产业首次超越韩国,
-                成为世界发展最快用户最多的国家;2017年至今发展成了各种端口融合的发展时代。街机, PC, 移动共同繁荣阶段。电子竞技产业发展迅速, 电子竞技产业发展迅猛。</p>
-        </section>
-        <div style="height:500px"></div>
-
-    </article>
-
-    <!-- 商业模式部分 -->
-    <article id="business">
-        <section class="container">
-            <h2>商业模式</h2>
-
-            <p class="quto">随着电竞行业的产业化，很多职业教育院校和本科高校，都纷纷开设了电竞专业和电竞课程。电子竞技行业如今已进入黄金时代，本文将从数据入手分析电子竞技行业的产业化进程。</p>
-            <hr>
-            <p class="quto">本文重点研究电竞行业的快速发展时期：2008年-2015年是网络游戏时代, 电子竞技逐渐与网络游戏分离,
-                世界电子竞技产业的中心开始逐渐向中国转移。2015—2017年进入手机游戏时代,。2015年, 随着智能手机的普及, 电竞手机游戏时代来临。中国电子竞技产业首次超越韩国,
-                成为世界发展最快用户最多的国家;2017年至今发展成了各种端口融合的发展时代。街机, PC, 移动共同繁荣阶段。电子竞技产业发展迅速, 电子竞技产业发展迅猛。</p>
-        </section>
-        <div style="height:500px"></div>
-
-    </article>
-
-
-    <!-- 人才储备部分 -->
-    <article id="talent">
-        <section class="container">
-            <h2>人才储备</h2>
-            <p class="quto">2018年，中国游戏从业者约145万人，需求规模约为44.1万人。</p>
-            <hr>
-            <h2>中国电竞产业从业者月薪分布 </h2>
-            <div class="">
-                <div id="salary" class="echarts" style="max-width:800px;height: 30em;"></div>
-                <p class="quto">中国电竞产业从业者不同岗位的薪资水平差距较大，2018年中国不同职位的游戏产业从业者中主策划、品牌管理、服务器开发工程师平均月薪最高，在16000元以上；新媒体运营/文案编辑、游戏客服、游戏推广人员平均月薪最低，在6500元以下。</p>
-            </div>
-
-            <hr>
-            <h2>不同学历游戏岗位的平均录用薪资情况（元） </h2>
-            <div id="grade" class="echarts" style="max-width:800px;height: 30em;"></div>
-
-            <hr>
-            <h2>游戏企业招聘最低学历要求 </h2>
-            <div id="employee" class="echarts" style="max-width:800px;height: 30em;"></div>
-
-            <hr>
-            <h2>不同岗位类别最低学历要求分布情况 </h2>
-            <div id="typeOfGrade" class="echarts" style="max-width:800px;height: 30em;"></div>
-            <p class="">*饼图从内到外依次表示为：策划、开发、设计、运营、其他</p>
-
-            <hr>
-            <h2>不同规模企业对最低学历要求分布情况 </h2>
-            <div id="employeeOfCompany" class="echarts" style="max-width:800px;height: 30em;"></div>
-            <p class="">*饼图半径方向表示公司规模，从内到外依次为：20以下、20-99、100-499、500-999、1000以上</p>
-            <p class="quto">总结：
-                游戏企业对人才的学历要求较高，超过80%的企业要求本科及以上学历，尤其是大公司更青睐高学历人才。
-                学历差异对游戏企业提供的薪资水平差异明显。
-            </p>
-
-
-            <!-- 截止2019年开设与游戏行业强相关专业的高校 -->
-            <hr>
-            <h2>截止2019年开设与游戏行业强相关专业的高校 </h2>
-            <div id="mapOfSchool" class="echarts" style="max-width:1200px;height: 40em;"></div>
-        </section>
-        <div style="height:500px"></div>
-
-    </article>
-
-    <!-- 技术研发部分 -->
-    <article id="technology">
-        <section class="container">
-            <h2>技术研发</h2>
-
-            <p class="quto">随着电竞行业的产业化，很多职业教育院校和本科高校，都纷纷开设了电竞专业和电竞课程。电子竞技行业如今已进入黄金时代，本文将从数据入手分析电子竞技行业的产业化进程。</p>
-            <hr>
-            <p class="quto">本文重点研究电竞行业的快速发展时期：2008年-2015年是网络游戏时代, 电子竞技逐渐与网络游戏分离,
-                世界电子竞技产业的中心开始逐渐向中国转移。2015—2017年进入手机游戏时代,。2015年, 随着智能手机的普及, 电竞手机游戏时代来临。中国电子竞技产业首次超越韩国,
-                成为世界发展最快用户最多的国家;2017年至今发展成了各种端口融合的发展时代。街机, PC, 移动共同繁荣阶段。电子竞技产业发展迅速, 电子竞技产业发展迅猛。</p>
-        </section>
-        <div style="height:500px"></div>
-
-    </article>
-
-    <!-- 媒体宣传部分 -->
-    <article id="media">
-        <section class="container">
-            <h2>媒体宣传</h2>
-
-            <p class="quto">随着电竞行业的产业化，很多职业教育院校和本科高校，都纷纷开设了电竞专业和电竞课程。电子竞技行业如今已进入黄金时代，本文将从数据入手分析电子竞技行业的产业化进程。</p>
-            <hr>
-            <p class="quto">本文重点研究电竞行业的快速发展时期：2008年-2015年是网络游戏时代, 电子竞技逐渐与网络游戏分离,
-                世界电子竞技产业的中心开始逐渐向中国转移。2015—2017年进入手机游戏时代,。2015年, 随着智能手机的普及, 电竞手机游戏时代来临。中国电子竞技产业首次超越韩国,
-                成为世界发展最快用户最多的国家;2017年至今发展成了各种端口融合的发展时代。街机, PC, 移动共同繁荣阶段。电子竞技产业发展迅速, 电子竞技产业发展迅猛。</p>
-        </section>
-        <div style="height:500px"></div>
-    </article>
-
-    <hr style="width:100%; border:1px solid #ddd">
-    <!-- footer -->
-    <div class="container">
-        <footer id="footer" style="margin:5em 0">
-            <div class="row">
-                <div class="col-lg-12">
-
-                    <ul class="list-unstyled">
-                        <li class="float-lg-right"><a href="#top">返回顶部</a></li>
+            <section class="container">
+                <!-- 产业链图表 -->
+                <div id="chain">
+                    <h2>电子竞技产业链</h2>
+                    <ul>
+                        <li>上游<br>(游戏内容)</li>
+                        <li>游戏开发商<br>巨人网络、畅游等</li>
+                        <li>游戏发行商<br>value、riot、Blizzard等</li>
+                        <li>游戏运营商<br>腾讯、盛大、网易等</li>
                     </ul>
-                    <p>Made by <a class="contact" href="#">低端人口</a>.</p>
-                    <p>Code released under the <a href="https://github.com/Kefeng2017/news.git">MIT
-                            License</a>.</p>
-                    <p>Based on <a href="https://getbootstrap.com" rel="nofollow">Bootstrap</a>. Icons from <a href="http://fontawesome.io/"
-                            rel="nofollow">Font Awesome</a>. Web fonts from <a href="https://fonts.google.com/" rel="nofollow">Google</a>.</p>
-                    <p>© 2019 | author: <a class="contact" href="#">1396956549@qq.com</a> | <a href="http://www.miitbeian.gov.cn/">鄂ICP备19008087号</a></p>
-
+                    <ul>
+                        <li>中游<br>(电竞赛事)</li>
+                        <li>赛事赞助商<br>资本赞助、品牌冠名赞助等</li>
+                        <li>赛事运营<br>完美世界、VSPN等</li>
+                        <li>赛事参与方<br>俱乐部、职业选手、赛事解说等</li>
+                        <li>赛事内容制造商<br>网映文化</li>
+                    </ul>
+                    <ul>
+                        <li>下游<br>(落地平台)</li>
+                        <li>电视播出平台<br>电视猫、游戏风云</li>
+                        <li>视频网站播出平台<br>爱奇艺、电竞网等</li>
+                        <li>在线游戏直播平台<br>斗鱼TV、熊猫TV等</li>
+                    </ul>
+                    <ul>
+                        <li>下游衍生行业</li>
+                        <li>周边产品<br>手办、虚拟饰品、外设硬件等</li>
+                        <li>电商平台<br>IGXE、VPGAME等</li>
+                    </ul>
                 </div>
-            </div>
 
-        </footer>
-    </div>
+            </section>
+            <div style="height:500px"></div>
+        </article>
+
+        <!-- 图表一 中国游戏用户规模 -->
+        <article>
+            <section class="container">
+                <hr>
+                <h2>2008-2018中国游戏用户规模统计</h2>
+                <div class="">
+                    <div id="users" class="echarts" style="max-width:800px;height: 30em;"></div>
+                    <div id="inc" class="echarts" style="max-width:800px;height: 30em;"></div>
+                </div>
+            </section>
+            <div style="height:500px"></div>
+        </article>
+
+
+        <!-- 政策保障部分 -->
+        <article id="policy">
+            <span class="section">section 1</span>
+            <section class="container">
+                <h2>政策保障</h2>
+                <p class="quto">随着电竞行业的产业化，很多职业教育院校和本科高校，都纷纷开设了电竞专业和电竞课程。电子竞技行业如今已进入黄金时代，本文将从数据入手分析电子竞技行业的产业化进程。</p>
+                <hr>
+                <p class="quto">本文重点研究电竞行业的快速发展时期：2008年-2015年是网络游戏时代, 电子竞技逐渐与网络游戏分离,
+                    世界电子竞技产业的中心开始逐渐向中国转移。2015—2017年进入手机游戏时代,。2015年, 随着智能手机的普及, 电竞手机游戏时代来临。中国电子竞技产业首次超越韩国,
+                    成为世界发展最快用户最多的国家;2017年至今发展成了各种端口融合的发展时代。街机, PC, 移动共同繁荣阶段。电子竞技产业发展迅速, 电子竞技产业发展迅猛。</p>
+            </section>
+            <div style="height:500px"></div>
+
+        </article>
+
+        <!-- 商业模式部分 -->
+        <article id="business">
+            <span class="section">section 2</span>
+            <section class="container">
+                <h2>商业模式</h2>
+
+                <p class="quto">随着电竞行业的产业化，很多职业教育院校和本科高校，都纷纷开设了电竞专业和电竞课程。电子竞技行业如今已进入黄金时代，本文将从数据入手分析电子竞技行业的产业化进程。</p>
+                <hr>
+                <p class="quto">本文重点研究电竞行业的快速发展时期：2008年-2015年是网络游戏时代, 电子竞技逐渐与网络游戏分离,
+                    世界电子竞技产业的中心开始逐渐向中国转移。2015—2017年进入手机游戏时代,。2015年, 随着智能手机的普及, 电竞手机游戏时代来临。中国电子竞技产业首次超越韩国,
+                    成为世界发展最快用户最多的国家;2017年至今发展成了各种端口融合的发展时代。街机, PC, 移动共同繁荣阶段。电子竞技产业发展迅速, 电子竞技产业发展迅猛。</p>
+            </section>
+            <div style="height:500px"></div>
+
+        </article>
+
+
+        <!-- 人才储备部分 -->
+        <article id="talent">
+            <span class="section">section 3</span>
+            <section class="container">
+                <h2>人才储备</h2>
+                <p class="quto">2018年，中国游戏从业者约145万人，需求规模约为44.1万人。</p>
+                <hr>
+                <h2>中国电竞产业从业者月薪分布 </h2>
+                <div class="">
+                    <div id="salary" class="echarts" style="max-width:800px;height: 30em;"></div>
+                    <p class="quto">中国电竞产业从业者不同岗位的薪资水平差距较大，2018年中国不同职位的游戏产业从业者中主策划、品牌管理、服务器开发工程师平均月薪最高，在16000元以上；新媒体运营/文案编辑、游戏客服、游戏推广人员平均月薪最低，在6500元以下。</p>
+                </div>
+
+                <hr>
+                <h2>不同学历游戏岗位的平均录用薪资情况（元） </h2>
+                <div id="grade" class="echarts" style="max-width:800px;height: 30em;"></div>
+
+                <hr>
+                <h2>游戏企业招聘最低学历要求 </h2>
+                <div id="employee" class="echarts" style="max-width:800px;height: 30em;"></div>
+
+                <hr>
+                <h2>不同岗位类别最低学历要求分布情况 </h2>
+                <div id="typeOfGrade" class="echarts" style="max-width:800px;height: 30em;"></div>
+                <p class="">*饼图从内到外依次表示为：策划、开发、设计、运营、其他</p>
+
+                <hr>
+                <h2>不同规模企业对最低学历要求分布情况 </h2>
+                <div id="employeeOfCompany" class="echarts" style="max-width:800px;height: 30em;"></div>
+                <p class="">*饼图半径方向表示公司规模，从内到外依次为：20以下、20-99、100-499、500-999、1000以上</p>
+                <p class="quto">总结：
+                    游戏企业对人才的学历要求较高，超过80%的企业要求本科及以上学历，尤其是大公司更青睐高学历人才。
+                    学历差异对游戏企业提供的薪资水平差异明显。
+                </p>
+
+
+                <!-- 截止2019年开设与游戏行业强相关专业的高校 -->
+                <hr>
+                <h2>截止2019年开设与游戏行业强相关专业的高校 </h2>
+                <div id="mapOfSchool" class="echarts" style="max-width:1200px;height: 40em;"></div>
+            </section>
+            <div style="height:500px"></div>
+
+        </article>
+
+        <!-- 技术研发部分 -->
+        <article id="technology">
+            <span class="section">section 4</span>
+            <section class="container">
+                <h2>技术研发</h2>
+                <p class="quto">随着我国信息网络基础设施建设加速，移动互联网宽带资费价格下降，互联网与电子竞技产业的融合不断加深。部分国内虚拟运营商已经全面普及４G覆盖，既放宽了用户的体验环境，也为丰富我国电子竞技产品内容提供更多可能。随着智能终端的普及与设备的升级换代，移动端游戏日趋完善成熟。伴随着硬件设施的完善，电子竞技游戏研发愈发趋于精品化，内容技术变得更加成熟。同时，VR和AR技术的发展促使我国电子竞技朝向VR化发展，电子竞技的体验场景更加丰富，提高了用户体验的质量。
+                </p>
+                <p>*部分游戏产品如下：</p>
+                <h2>给这张图起个标题</h2>
+                <div id="radial" class="echarts" style="max-width:800px;height: 40em;"></div>
+                <hr>
+                <p class="quto">总结：电子竞技产业的源头是电子竞技游戏的开发与制作，核心在于为整个电子竞技产业提供丰富的电子竞技游戏产品内容，若这一环节出现问题则整个电子竞技产业便如同无米之炊，因此这一环节身为整个产业的内容提供的源泉在整个产业链中十分重要。
+                </p>
+                <p class="quto">电子竞技游戏研发这一环节对应的主体是游戏研发商，游戏研发商是整个电子竞技产业内容的提供者。电竞游戏研发商的功能是从开发游戏开始到最终实现游戏的产品化。游戏研发环节包括与电竞游戏相关的创作剧本、策划情节、开发程序等。</p>
+                <br>
+                <!-- 2008-2018年中国自主研发游戏产品数量和公司数量 -->
+                <h2>2008-2018年中国自主研发游戏产品数量和公司数量</h2>
+                <div id="company" class="echarts" style="max-width:800px;height: 30em;"></div>
+                <hr>
+                <p class="quto">
+                    总结：我国自主研发的游戏产品数量呈现逐年增长的态势，但是我国自主研发的游戏公司数量一直偏少。说明我国自主研发的游戏公司逐渐壮大，专业性更强，那些不知名的微小企业在竞争中没有生存下来。同时，电子竞技产业的发展，很大程度上依赖于电子竞技产品的开发，而电子竞技产品来自于游戏产品的开发。目前，我国电子竞技有关的企业，都争相代理国外研发的高知名度电子竞技产品，很少参与和组织电子竞技产品的自主研发，很难形成企业自身的核心竞争力。原因就是代理一款成功的游戏，其收入远远大于自主研发一款游戏带来的回报。电子竞技产品开发成功与否，决定了一个国家在电子竞技产业领域是否具有影响力。虽然我国投入了大量的资金，IT
+                    行业也发展迅速，但 IT 行业的人才却未能有效分流到电子竞技游戏开发中，为我国自主研发的电子竞技产品带来直观的改变。
+                </p>
+                <br>
+                <!-- 2008-2018年中国自主研发网络游戏市场实际销售收入  -->
+                <h2>2008-2018年中国自主研发网络游戏市场实际销售收入 </h2>
+                <div id="market" class="echarts" style="max-width:800px;height: 30em;"></div>
+                <hr>
+                <p class="quto">
+                    总结：2008年以后，我国互联网的普及率越来越高，中国网民的特征朝着年轻化方向发展，我国自主研发的网络游戏市场销售收入呈现逐年增长的状态。在4G网络全面覆盖以后，我国自主研发的手机游戏也受到了越来越多的年轻人的喜爱。同时，由于外国的游戏产业起步时间早，研发技术较先进，我国自主研发的网络游戏市场会受到外国游戏产品的冲击。
+                </p>
+                <br>
+                <p class="quto">
+                    由于全球游戏用户的规模的逐渐扩大、全球化让走向海外门槛降低和政府相关政策的扶持力度增加，我国自主研发的网络游戏海外市场销售收入逐年增加，但是增长率并不高。可以看出我国的自主研发的游戏产品创新力不足，游戏公司对海外用户、市场、政策了解不够。
+                </p>
+            </section>
+            <div style="height:500px"></div>
+
+        </article>
+
+        <!-- 媒体宣传部分 -->
+        <article id="media">
+            <span class="section">section 5</span>
+            <section class="container">
+                <h2>媒体宣传</h2>
+
+                <p class="quto">随着电竞行业的产业化，很多职业教育院校和本科高校，都纷纷开设了电竞专业和电竞课程。电子竞技行业如今已进入黄金时代，本文将从数据入手分析电子竞技行业的产业化进程。</p>
+                <hr>
+                <p class="quto">本文重点研究电竞行业的快速发展时期：2008年-2015年是网络游戏时代, 电子竞技逐渐与网络游戏分离,
+                    世界电子竞技产业的中心开始逐渐向中国转移。2015—2017年进入手机游戏时代,。2015年, 随着智能手机的普及, 电竞手机游戏时代来临。中国电子竞技产业首次超越韩国,
+                    成为世界发展最快用户最多的国家;2017年至今发展成了各种端口融合的发展时代。街机, PC, 移动共同繁荣阶段。电子竞技产业发展迅速, 电子竞技产业发展迅猛。</p>
+            </section>
+            <div style="height:500px"></div>
+        </article>
+
+        <hr style="width:100%; border:1px solid #ddd">
+        <!-- footer -->
+        <div class="container">
+            <footer id="footer" style="margin:5em 0">
+                <div class="row">
+                    <div class="col-lg-12">
+
+                        <ul class="list-unstyled">
+                            <li class="float-lg-right"><a href="#top">返回顶部</a></li>
+                        </ul>
+                        <p>Made by <a class="contact" href="#">低端人口</a>.</p>
+                        <p>Code released under the <a href="https://github.com/Kefeng2017/news.git">MIT
+                                License</a>.</p>
+                        <p>Based on <a href="https://getbootstrap.com" rel="nofollow">Bootstrap</a>. Icons from <a href="http://fontawesome.io/"
+                                rel="nofollow">Font Awesome</a>. Web fonts from <a href="https://fonts.google.com/" rel="nofollow">Google</a>.</p>
+                        <p>© 2019 | author: <a class="contact" href="#">1396956549@qq.com</a> | <a href="http://www.miitbeian.gov.cn/">鄂ICP备19008087号</a></p>
+
+                    </div>
+                </div>
+
+            </footer>
+        </div>
     </div>
 
-    <script src="./js/jquery-1.10.2.min.js"></script>
+    <!-- <script src="./js/jquery-1.10.2.min.js"></script> -->
+    <script src="https://cdn.bootcss.com/jquery/3.4.0/jquery.min.js"></script>
     <script src="./js/timeline.js"></script>
     <script type="text/javascript">
         window.onload = function () {
@@ -577,7 +615,8 @@
     </script>
 
     <!-- <script type="text/javascript" src="./js/echarts.min.js"></script> -->
-    <script src="https://cdn.bootcss.com/echarts/4.2.1-rc1/echarts-en.min.js"></script>
+    <!-- <script src="https://cdn.bootcss.com/echarts/4.2.1-rc1/echarts-en.min.js"></script> -->
+    <script src="https://cdn.bootcss.com/echarts/4.2.1-rc.3/echarts-en.min.js"></script>
     <script type="text/javascript" src="./js/china.js"></script>
     <script src="./js/map.js"></script>
 
@@ -591,6 +630,9 @@
         var Employee = echarts.init(document.getElementById('employee'));
         var TypeOfGrade = echarts.init(document.getElementById('typeOfGrade'));
         var EmployeeOfCompany = echarts.init(document.getElementById('employeeOfCompany'));
+        var Radial = echarts.init(document.getElementById('radial'));
+        var Company = echarts.init(document.getElementById('company'));
+        var Market = echarts.init(document.getElementById('market'));
 
         // 用户规模
         var option_user = {
@@ -967,6 +1009,466 @@
         };
         EmployeeOfCompany.setOption(option_employeeOfCom);
 
+        // 放射状呈现游戏与技术之间的关系
+        var option_radail = {
+            // backgroundColor: new echarts.graphic.RadialGradient(0.3, 0.3, 0.8, [{
+            //     offset: 0,
+            //     color: '#f7f8fa'
+            // }, {
+            //     offset: 1,
+            //     color: '#cdd0d5'
+            // }]),
+            title: {
+                subtext: "数据来源：xxxx",
+                top: "top",
+                left: "left"
+            },
+            tooltip: {},
+            legend: [{
+                formatter: function (name) {
+                    return echarts.format.truncateText(name, 40, '14px Microsoft Yahei', '…');
+                },
+                tooltip: {
+                    show: true
+                },
+                selectedMode: 'false',
+                bottom: 20,
+                left: 'left',
+                data: ['互联网的普及', '4G（移动游戏）', 'VR/AR（VR/AR游戏）']
+            }],
+            toolbox: {
+                show: true,
+                feature: {
+                    dataView: {
+                        show: true,
+                        readOnly: true
+                    },
+                    restore: {
+                        show: true
+                    },
+                    saveAsImage: {
+                        show: true
+                    }
+                }
+            },
+            animationDuration: 3000,
+            animationEasingUpdate: 'quinticInOut',
+            series: [{
+                name: '游戏名称',
+                type: 'graph',
+                layout: 'force',
+
+                force: {
+                    repulsion: 300
+                },
+                data: [
+                    {
+                        "name": "互联网的普及",
+                        // "x": 0,
+                        "category": "互联网的普及",
+                        // y: 0,
+                        "symbolSize": 90,
+                        "draggable": "true"
+
+                    }, {
+                        "name": "极品飞车",
+                        "symbolSize": 40,
+                        "category": "互联网的普及",
+                        "draggable": "true"
+                    }, {
+                        "name": "愤怒的小鸟",
+                        "symbolSize": 40,
+                        "category": "互联网的普及",
+                        "draggable": "true"
+                    }, {
+                        "name": "生化危机",
+                        "symbolSize": 40,
+                        "category": "互联网的普及",
+                        "draggable": "true"
+                    }, {
+                        "name": "超级街霸",
+                        "symbolSize": 40,
+                        "category": "互联网的普及",
+                        "draggable": "true"
+                    }, {
+                        "name": "植物大战僵尸",
+                        "symbolSize": 40,
+                        "category": "互联网的普及",
+                        "draggable": "true"
+                    }, {
+                        "name": "最终幻想",
+                        "symbolSize": 40,
+                        "category": "互联网的普及",
+                        "draggable": "true"
+                    }, {
+                        "name": "龙权天下",
+                        "symbolSize": 40,
+                        "category": "互联网的普及",
+                        "draggable": "true"
+                    }, {
+                        "name": "武林三",
+                        "symbolSize": 40,
+                        "category": "互联网的普及",
+                        "draggable": "true"
+                    },
+                    {
+                        "name": "4G（移动游戏）",
+                        // "x": 0,
+                        // y: 0,
+                        "category": "4G（移动游戏）",
+                        "symbolSize": 90,
+                        "draggable": "true"
+
+                    }, {
+                        "name": "旅行青蛙",
+                        "symbolSize": 40,
+                        "category": "4G（移动游戏）",
+                        "draggable": "true"
+                    }, {
+                        "name": "卡车跑酷",
+                        "symbolSize": 40,
+                        "category": "4G（移动游戏）",
+                        "draggable": "true"
+                    }, {
+                        "name": "王者荣耀",
+                        "symbolSize": 40,
+                        "category": "4G（移动游戏）",
+                        "draggable": "true"
+                    }, {
+                        "name": "荒野求生",
+                        "symbolSize": 40,
+                        "category": "4G（移动游戏）",
+                        "draggable": "true"
+                    }, {
+                        "name": "迷你世界",
+                        "symbolSize": 40,
+                        "category": "4G（移动游戏）",
+                        "draggable": "true"
+                    }, {
+                        "name": "三国霸",
+                        "symbolSize": 40,
+                        "category": "4G（移动游戏）",
+                        "draggable": "true"
+                    }, {
+                        "name": "小冰冰传奇",
+                        "symbolSize": 40,
+                        "category": "4G（移动游戏）",
+                        "draggable": "true"
+                    }, {
+                        "name": "暗夜狂奔",
+                        "symbolSize": 40,
+                        "category": "4G（移动游戏）",
+                        "draggable": "true"
+                    },
+                    {
+                        "name": "VR/AR（VR/AR游戏）",
+                        // "x": 0,
+                        // y: 0,
+                        "category": "VR/AR（VR/AR游戏）",
+                        "symbolSize": 90,
+                        "draggable": "true"
+
+                    }, {
+                        "name": "天际VR",
+                        "symbolSize": 40,
+                        "category": "VR/AR（VR/AR游戏）",
+                        "draggable": "true"
+                    }, {
+                        "name": "Beat Saber",
+                        "symbolSize": 40,
+                        "category": "VR/AR（VR/AR游戏）",
+                        "draggable": "true"
+                    }, {
+                        "name": "Population：One",
+                        "symbolSize": 40,
+                        "category": "VR/AR（VR/AR游戏）",
+                        "draggable": "true"
+                    }, {
+                        "name": "我的世界",
+                        "symbolSize": 40,
+                        "category": "VR/AR（VR/AR游戏）",
+                        "draggable": "true"
+                    }, {
+                        "name": "深海",
+                        "symbolSize": 40,
+                        "category": "VR/AR（VR/AR游戏）",
+                        "draggable": "true"
+                    }, {
+                        "name": "无处可逃",
+                        "symbolSize": 40,
+                        "category": "VR/AR（VR/AR游戏）",
+                        "draggable": "true"
+                    }, {
+                        "name": "重返恐龙岛",
+                        "symbolSize": 40,
+                        "category": "VR/AR（VR/AR游戏）",
+                        "draggable": "true"
+                    }, {
+                        "name": "一起来抓妖",
+                        "symbolSize": 40,
+                        "category": "VR/AR（VR/AR游戏）",
+                        "draggable": "true"
+                    }],
+                links: [{
+                    "source": "互联网的普及",
+                    "target": "极品飞车"
+                }, {
+                    "source": "互联网的普及",
+                    "target": "武林三"
+                }, {
+                    "source": "互联网的普及",
+                    "target": "龙权天下"
+                }, {
+                    "source": "互联网的普及",
+                    "target": "最终幻想"
+                }, {
+                    "source": "互联网的普及",
+                    "target": "植物大战僵尸"
+                }, {
+                    "source": "互联网的普及",
+                    "target": "超级街霸"
+                }, {
+                    "source": "互联网的普及",
+                    "target": "生化危机"
+                }, {
+                    "source": "互联网的普及",
+                    "target": "愤怒的小鸟"
+                },
+                {
+                    "source": "VR/AR（VR/AR游戏）",
+                    "target": "一起来抓妖"
+                }, {
+                    "source": "VR/AR（VR/AR游戏）",
+                    "target": "重返恐龙岛"
+                }, {
+                    "source": "VR/AR（VR/AR游戏）",
+                    "target": "无处可逃"
+                }, {
+                    "source": "VR/AR（VR/AR游戏）",
+                    "target": "深海"
+                }, {
+                    "source": "VR/AR（VR/AR游戏）",
+                    "target": "我的世界"
+                }, {
+                    "source": "VR/AR（VR/AR游戏）",
+                    "target": "Population：One"
+                }, {
+                    "source": "VR/AR（VR/AR游戏）",
+                    "target": "Beat Saber"
+                }, {
+                    "source": "VR/AR（VR/AR游戏）",
+                    "target": "天际VR"
+                },
+                {
+                    "source": "4G（移动游戏）",
+                    "target": "旅行青蛙"
+                }, {
+                    "source": "4G（移动游戏）",
+                    "target": "卡车跑酷"
+                }, {
+                    "source": "4G（移动游戏）",
+                    "target": "王者荣耀"
+                }, {
+                    "source": "4G（移动游戏）",
+                    "target": "荒野求生"
+                }, {
+                    "source": "4G（移动游戏）",
+                    "target": "迷你世界"
+                }, {
+                    "source": "4G（移动游戏）",
+                    "target": "三国霸"
+                }, {
+                    "source": "4G（移动游戏）",
+                    "target": "小冰冰传奇"
+                }, {
+                    "source": "4G（移动游戏）",
+                    "target": "暗夜狂奔"
+                }],
+                categories: [
+                    {
+                        'name': '互联网的普及'
+                    }, {
+                        'name': '4G（移动游戏）'
+                    }, {
+                        'name': 'VR/AR（VR/AR游戏）'
+                    }],
+                focusNodeAdjacency: true,
+                roam: true,
+                label: {
+                    normal: {
+                        show: true,
+                        top: '50%'
+                    }
+                },
+                lineStyle: {
+                    normal: {
+                        color: 'source',
+                        curveness: 0,
+                        type: "solid"
+                    }
+                }
+            }]
+        };
+        Radial.setOption(option_radail);
+
+        // 2008-2018年中国自主研发游戏产品数量和公司数量
+        var option_company = {
+            title: {
+                subtext: "数据来源：中国游戏产业报告&中国游企版图",
+                top: "20",
+                left: "center"
+            },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'cross',
+                    crossStyle: {
+                        color: '#999'
+                    }
+                }
+            },
+            toolbox: {
+                left:'center',
+                bottom:'0',
+                feature: {
+                    dataView: { show: true, readOnly: false },
+                    magicType: { show: true, type: ['line', 'bar'] },
+                    restore: { show: true },
+                    saveAsImage: { show: true }
+                }
+            },
+            legend: {
+                data: ['产品数量', '公司数量']
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    data: ['2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018'],
+                    axisPointer: {
+                        type: 'shadow'
+                    }
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    name: '产品数量',
+                    min: 0,
+                    max: 10000,
+                    axisLabel: {
+                        formatter: '{value} 款'
+                    }
+                },
+                {
+                    type: 'value',
+                    name: '公司数量',
+                    min: 0,
+                    max: 180,
+                    axisLabel: {
+                        formatter: '{value} 家'
+                    }
+                }
+            ],
+            series: [
+                {
+                    name: '产品数量',
+                    type: 'bar',
+                    data: [286, 321, 356, 425, 580, 582, 588, 873, 4026, 9872, 2216]
+                },
+                {
+                    name: '公司数量',
+                    type: 'bar',
+                    yAxisIndex: 1,
+                    data: [131, 161, 154, 68, 80, 90, 125, 68, 35, 82, 96]
+                }
+            ]
+        };
+        Company.setOption(option_company);
+
+        // 2008-2018年中国自主研发网络游戏市场实际销售收入
+        var option_market = {
+            title: {
+                subtext: "数据来源：中国音数协游戏工委（GPC）& CNG中新游戏研究（伽马数据）",
+                top: "20",
+                left: "center"
+            },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'cross',
+                    crossStyle: {
+                        color: '#999'
+                    }
+                }
+            },
+            toolbox: {
+                left:'center',
+                bottom:'0',
+                feature: {
+                    dataView: { show: true, readOnly: false },
+                    magicType: { show: true, type: ['line', 'bar'] },
+                    restore: { show: true },
+                    saveAsImage: { show: true }
+                }
+            },
+            legend: {
+                data: ['总销售收入', '总增长率','海外销售收入','海外增长率']
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    data: ['2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018'],
+                    axisPointer: {
+                        type: 'shadow'
+                    }
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    name: '销售收入',
+                    min: 0,
+                    max: 1700,
+                    axisLabel: {
+                        formatter: '{value} 亿元'
+                    }
+                },
+                {
+                    type: 'value',
+                    name: '增长率',
+                    min: 0,
+                    max: 120,
+                    axisLabel: {
+                        formatter: '{value} %'
+                    }
+                }
+            ],
+            series: [
+                {
+                    name: '总销售收入',
+                    type: 'bar',
+                    data: [110.1, 165.3, 193.0, 271.5, 368.1, 476.6, 726.6, 986.7, 1182.5, 1397.4, 1643.9]
+                },
+                {
+                    name: '总增长率',
+                    type: 'line',
+                    yAxisIndex: 1,
+                    data: [60, 50.1, 16.8, 40.7, 35.6, 29.5, 52.5, 35.8, 19.9, 18.2, 17.6]
+                },
+                {
+                    name: '海外销售收入',
+                    type: 'bar',
+                    data: [0.7, 1.1, 2.3, 3.6, 5.7, 18.2, 30.8, 53.1, 72.3, 82.8, 95.9]
+                },
+                {
+                    name: '海外增长率',
+                    type: 'line',
+                    yAxisIndex: 1,
+                    data: [28.6, 55.7, 111, 56.5, 57.5, 219.3, 69.0, 72.4, 36.2, 14.5, 15.8]
+                }
+            ]
+        };
+        Market.setOption(option_market);
     </script>
 </body>
 

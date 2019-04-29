@@ -3,6 +3,26 @@
     padding: 0;
     margin: 0;
 }
+body{
+    background-color: #EAE8E6;
+}
+
+.section{
+    top: 1em;
+    left: 5em;
+    display: block;
+    position: absolute;
+    text-transform: uppercase;
+}
+
+@media (max-width: 600px){
+    #contentControl{
+        display: none;
+    }
+    .section{
+        display: none;
+    }
+}
 
 .loader{
     z-index: 999;
@@ -32,12 +52,14 @@ article hr{
 
 /* 目录 */
 #contents span{
+    z-index: 100;
     position: fixed;
     bottom: 5em;
     left: 3em;
 }
 
 #show{
+    z-index: 100;
     display: none;
     border: 2px solid #000;
     position: fixed;
@@ -73,7 +95,10 @@ section p{
     text-align: justify;
 }
 article{
-    margin-bottom: 8em;
+    position: relative;
+    background-color: #fff;
+    padding: 3em 5px;
+    margin-bottom: .5em;
     text-align: center;
 }
 #banner{
