@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/timeline2.css">
     <link rel="Shortcut Icon" href="./favicon.ico">
+
+    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
 </head>
 
 <body>
@@ -81,7 +83,8 @@
             <div id="title">
                 <h1>电竞行业的产业化进程（2008-2018）</h1>
                 <h3>新闻点：高效开设越多电竞专业</h3>
-                <p>最后更新时间：2019.04.15</p>
+                <p>最后更新时间：2019.05.03</p>
+                <p id="visitor">访问量：</p>
             </div>
 
         </div>
@@ -387,7 +390,6 @@
                 <h2>2008-2018中国游戏用户规模统计</h2>
                 <div class="">
                     <div id="users" class="echarts" style="max-width:800px;height: 30em;"></div>
-                    <div id="inc" class="echarts" style="max-width:800px;height: 30em;"></div>
                 </div>
             </section>
             <div style="height:500px"></div>
@@ -611,6 +613,14 @@
                     chains.eq(i).css('color', rgb).css('border', '1px solid ' + rgb);
                 }(i))
             }
+
+            //   ip统计 
+            $.get("http://www.kkboom.cn:8123/ip", { ip: returnCitySN["cip"], addr: returnCitySN["cname"] }, function (res) {
+                // console.log(res);
+                $("#visitor").html("访问量："+res.count[0]['count(*)']);
+            });
+
+
         };
     </script>
 
@@ -624,7 +634,6 @@
     <script type="text/javascript">
 
         var Users = echarts.init(document.getElementById('users'));
-        var Inc = echarts.init(document.getElementById('inc'));
         var Salary = echarts.init(document.getElementById('salary'));
         var Grade = echarts.init(document.getElementById('grade'));
         var Employee = echarts.init(document.getElementById('employee'));
@@ -643,55 +652,47 @@
                 }
             },
             legend: {
-                data: ['用户数(亿人)']
+                data: ['用户数(亿人)','增长率']
             },
             xAxis: {
                 data: ['2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018']
             },
-            yAxis: {},
+            yAxis: [
+                {
+                    type: 'value',
+                    name: '用户数(亿人)',
+                    min: 0,
+                    max: 7,
+                    axisLabel: {
+                        formatter: '{value} 亿人'
+                    }
+                },
+                {
+                    type: 'value',
+                    name: '增长率',
+                    min: 0,
+                    max: 100,
+                    axisLabel: {
+                        formatter: '{value} %'
+                    }
+                }
+            ],
             series: [
                 {
                     name: '用户数(亿人)',
                     type: 'bar',
+                    yAxisIndex: 0,
                     data: [0.67, 1.15, 1.96, 3.30, 4.10, 4.95, 5.17, 5.34, 5.66, 5.83, 6.26]
+                },
+                {
+                    name: '增长率',
+                    type: 'line',
+                    yAxisIndex: 1,
+                    data: [0,70, 71.1, 68.5, 24.1, 20.6, 4.6, 3.3, 5.9, 3.1, 7.3]
                 }
             ]
         };
         Users.setOption(option_user);
-
-        // 增长率
-        var option_inc = {
-            tooltip: {
-                trigger: 'axis',
-                axisPointer: {
-                    type: 'shadow'
-                }
-            },
-            legend: {
-                data: ['增长率']
-            },
-            xAxis: {
-                data: ['2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018']
-            },
-            yAxis: {
-                type: 'value',
-                name: '增长率',
-                min: 0,
-                max: 100,
-                interval: 50,
-                axisLabel: {
-                    formatter: '{value} %'
-                }
-            },
-            series: [
-                {
-                    name: '增长率',
-                    type: 'line',
-                    data: [70, 71.1, 68.5, 24.1, 20.6, 4.6, 3.3, 5.9, 3.1, 7.3]
-                }
-            ]
-        };
-        Inc.setOption(option_inc);
 
         // 从业者薪资
         var option_salary = {
@@ -1235,6 +1236,10 @@
                     "target": "愤怒的小鸟"
                 },
                 {
+                    "source": "互联网的普及",
+                    "target": "VR/AR（VR/AR游戏）"
+                },
+                {
                     "source": "VR/AR（VR/AR游戏）",
                     "target": "一起来抓妖"
                 }, {
@@ -1258,6 +1263,10 @@
                 }, {
                     "source": "VR/AR（VR/AR游戏）",
                     "target": "天际VR"
+                },
+                {
+                    "source": "VR/AR（VR/AR游戏）",
+                    "target": "4G（移动游戏）"
                 },
                 {
                     "source": "4G（移动游戏）",
@@ -1328,8 +1337,8 @@
                 }
             },
             toolbox: {
-                left:'center',
-                bottom:'0',
+                left: 'center',
+                bottom: '0',
                 feature: {
                     dataView: { show: true, readOnly: false },
                     magicType: { show: true, type: ['line', 'bar'] },
@@ -1402,8 +1411,8 @@
                 }
             },
             toolbox: {
-                left:'center',
-                bottom:'0',
+                left: 'center',
+                bottom: '0',
                 feature: {
                     dataView: { show: true, readOnly: false },
                     magicType: { show: true, type: ['line', 'bar'] },
@@ -1412,7 +1421,7 @@
                 }
             },
             legend: {
-                data: ['总销售收入', '总增长率','海外销售收入','海外增长率']
+                data: ['总销售收入', '总增长率', '海外销售收入', '海外增长率']
             },
             xAxis: [
                 {
