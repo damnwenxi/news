@@ -48,6 +48,29 @@ router.get('/', async ctx => {
     }
 });
 
+router.get('/ip', async ctx => {
+    try {
+        const ip = ctx.query.ip;
+        const addr = ctx.query.addr;
+
+        const saveIp = await ctx.db.query(
+            "insert into visitor set ip = ?, addr = ? ",
+            [ip,addr]
+        );
+        if(saveIp.affectedRows > 0){
+            ctx.body = {msg:"success"};
+            ctx.status = 200;
+        }else{
+            ctx.body = {msg:"db err"};
+            ctx.status = 500;
+        }
+    } catch (e) {
+        console.log(e);
+        ctx.status = 500;
+        ctx.body = { msg: "崩了" };
+    }
+});
+
 app.use(router.routes()).use(router.allowedMethods());
 app.listen(8123, () => {
     console.log('app id running on port 8123');
@@ -351,10 +374,10 @@ const souhu = function scheduleCronstyle() {
 
 
 
-souhu();
-toutiao();
-xinlang();
-tengxun();
+// souhu();
+// toutiao();
+// xinlang();
+// tengxun();
 
 
 
