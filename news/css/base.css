@@ -5,6 +5,13 @@
 }
 body{
     background-color: #EAE8E6;
+    color: #777;
+    font-weight: 900;
+}
+
+.height{
+    color: #000;
+    font-weight: 600;
 }
 
 .section{
@@ -117,9 +124,9 @@ article{
 #banner{
     position: relative;
     width: 100%;
-    padding: 5em 0;
+    padding: 8em 0;
     text-align: center;
-    background-image: url("../static/img/111-min.jpg");
+    background-image: url("../static/img/111.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -132,16 +139,43 @@ section h1{
     display: block;
     max-width: 800px;
     margin: 1em auto;
+    text-indent: 2.5em;
     font-size: 1.2em;
 }
 #title{
     position: relative;
     z-index: 10;
 }
-#title p,#title h1,#title h3{
+#title h1{
+    padding: .5em 1em;
+    display: inline-block;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    font-size: 3em;
     margin: 1em;
     color: #fff;
 }
+#title h2{
+    color: white;
+}
+
+#begin{
+    line-height: 1.5em;
+    display: block;
+    color: #fff;
+    font-size: 1.5em;
+    padding: 2em;
+    border-radius: 10px;
+    margin-bottom: 2em;
+    background-image: url("../static/img/begin.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#begin span{
+    font-size: 2em;
+}
+
 
 #banner::before{
     z-index: 5;
@@ -152,6 +186,29 @@ section h1{
     width: 100%;
     height: 100%;
     background-image: linear-gradient(rgba(197,70,69,.5),rgb(221,147,145));
+}
+
+.container .title{
+    display: block;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 3em;
+}
+.echarts ul{
+    margin: 0;
+    padding: 1em 0 1em 1.5em;
+    text-align: left;
+    color: rgb(255,109,112);
+    list-style-type: square;
+}
+
+.echarts li{
+    line-height: .5em;
+}
+
+.echarts li a{
+    color: #fff !important;
+    text-decoration: none !important;
 }
 
 #chain{

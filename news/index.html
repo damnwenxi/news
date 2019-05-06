@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>news</title>
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="./css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.css">
     <link rel="stylesheet" href="./css/loaders.min.css">
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/timeline2.css">
@@ -73,7 +74,7 @@
                 <li> <a class="label" href="#business">商业模式</a></li>
                 <li> <a class="label" href="#talent">人才储备</a></li>
                 <li> <a class="label" href="#technology">技术研发</a></li>
-                <li> <a class="label" href="#media">传媒宣传</a></li>
+                <li> <a class="label" href="#result">结论</a></li>
                 <li> <a class="label" href="#file">引用资料</a></li>
             </ul>
         </div>
@@ -81,27 +82,24 @@
         <!-- banner -->
         <div id="banner">
             <div id="title">
-                <h1>电竞行业的产业化进程（2008-2018）</h1>
-                <!-- <h3>新闻点：高效开设越多电竞专业</h3> -->
-                <p>最后更新时间：2019.05.03</p>
-                <p id="visitor">访问量：</p>
+                <h1>电竞行业的产业化进程</h1>
+                <h2>Industrialization process of the e-sports industry</h2>
             </div>
 
         </div>
 
         <!-- 引言部分 -->
         <article>
-            <span class="section">引言</span>
             <!-- 引言部分 -->
             <section class="container">
-                <p class="quto">随着电竞行业的产业化，很多职业教育院校和本科高校，都纷纷开设了电竞专业和电竞课程。电子竞技行业如今已进入黄金时代，本文将从数据入手分析电子竞技行业的产业化进程。</p>
-                <p class="quto">本文重点研究电竞行业的快速发展时期：2008年-2015年是网络游戏时代, 电子竞技逐渐与网络游戏分离,
-                    世界电子竞技产业的中心开始逐渐向中国转移。2015—2017年进入手机游戏时代,。2015年, 随着智能手机的普及, 电竞手机游戏时代来临。中国电子竞技产业首次超越韩国,
-                    成为世界发展最快用户最多的国家;2017年至今发展成了各种端口融合的发展时代。街机, PC, 移动共同繁荣阶段。电子竞技产业发展迅速, 电子竞技产业发展迅猛。</p>
-                <hr>
-                <p class="quto">本文重点从政策保障、商业模式、人才储备、技术研发、传媒宣传五个方向来研究中电子竞技行业的产业化进程。</p>
+                <div id="begin"><span>“</span>随着电子竞技行业的产业化，很多职业教育院校和本科高校都纷纷开设了电竞专业和电竞课程。从2008年开始，电子竞技行业迅猛发展，电子竞技行业如今已进入黄金时代。<span>”</span></div>
             </section>
 
+
+            <br>
+            <!-- 截止2019年开设与游戏行业强相关专业的高校 -->
+            <h2>截止2019年开设与游戏行业强相关专业的高校 </h2>
+            <div id="mapOfSchool" class="echarts" style="max-width:1200px;height: 50em;"></div>
         </article>
 
 
@@ -109,10 +107,9 @@
         <article id="policy">
             <span class="section">section 1</span>
             <section class="container">
-                <h2>政策保障</h2>
-                <br>
+                <img class="title" src="./static/img/政策保障.png" alt="技术研发" />
                 <hr>
-                <p class="quto">电子竞技行业如今也发展成为相对成熟的产业，该行业现已形成较为完整的产业链。具体由三部分组成。产业上游由游戏开发商、游戏发行商、游戏运行商组成，主要负责游戏的开发、运行和运营。中游包括赛事赞助商、赛事运营、赛事参与方和赛事内容制造商。电视播出平台、视频网站播出平台还有以斗鱼TV、熊猫TV的在线游戏直播平台等落地平台组成了产业下游。除此之外，还出现了一些下游衍生行业。
+                <p class="quto">电子竞技行业如今也发展成为相对成熟的产业，该行业现已形成较为完整的产业链。
                 </p>
                 <!-- 产业链图表 -->
                 <div id="chain">
@@ -145,7 +142,7 @@
 
                 <br><br><br>
 
-                <h3 style="text-align:center;"> 中国电竞大事件 <label id="timelineControl" class="btn btn-sm btn-outline-primary">折叠/展开</label>
+                <h3 style="text-align:center;"> 相关政策扶持 <label id="timelineControl" class="btn btn-sm btn-outline-primary">折叠/展开</label>
                 </h3>
                 <div style="display:none" id="timeline" class="row">
                     <div class="col-md-12">
@@ -164,7 +161,8 @@
                                                     <!-- <img class="events-object img-responsive img-rounded" src="img/dog01.png" /> -->
                                                 </div>
                                                 <div class="events-desc">
-                                                    国家体育总局发布了《关于举办2018年全国电子竞技公开赛的通知》，指出为了进一步促进电子竞技在我国的发展，提高我国电子竞技运动员的综合竞技水平，经研究，拟于2018年12月在四川成都举办2018年全国电子竞技公开赛总决赛，具体时间、场馆待确定后将以补充通知的形式印发。
+                                                    <span class="height">国家体育总局</span>
+                                                    发布了《关于举办2018年全国电子竞技公开赛的通知》，拟于2018年12月在四川成都举办2018年全国<span class="height">电子竞技公开赛</span>总决赛。
                                                 </div>
                                             </div>
                                         </div>
@@ -181,9 +179,8 @@
                                                     <!-- <img class="events-object img-responsive img-rounded" src="img/dog01.png" /> -->
                                                 </div>
                                                 <div class="events-desc">
-                                                    亚洲奥林匹克理事会宣布6款游戏入围亚运会比赛项目，电竞作为表演赛第一次进入亚运会， 是电竞第-次进入世界级的运动赛事《英雄联盟》、(
-                                                    Arena of
-                                                    Valor》(王者荣耀海外版) 、《 皇室战争》《炉石传说》、《实况足球》 、《星际争霸2》 。
+                                                    亚洲奥林匹克理事会宣布6款游戏入围 <span class="height">亚运会比赛项目</span>
+                                                    ，电竞作为表演赛第一次进入亚运会。
                                                 </div>
                                             </div>
                                         </div>
@@ -196,7 +193,7 @@
                                     <div class="circ"></div>
                                     <div class="time">April 4</div>
                                     <div class="events">
-                                        <div class="events-header">Events</div>
+                                        <!-- <div class="events-header">Events</div> -->
                                         <div class="events-body">
                                             <div class="row">
                                                 <div class="col-md-6 pull-left">
@@ -221,7 +218,9 @@
                                                     <!-- <img class="events-object img-responsive img-rounded" src="img/cat02.png" /> -->
                                                 </div>
                                                 <div class="events-desc">
-                                                    文化部发布了《文化部“十三五”时期文化产业发展规划》，提出推进游戏产业结构升级，推动网络游戏、电子游戏等游戏门类协调发展，促进移动游戏、电子竞技、游戏直播、虚拟现实游戏等新业态发展。
+                                                    文化部提出推进游戏 <span class="height">产业结构升级</span> ，推动网络游戏、电子游戏等游戏 <span
+                                                        class="height">门类协调发展</span> ，促进移动游戏、电子竞技、游戏直播、虚拟现实游戏等 <span
+                                                        class="height"> 新业态发展</span> 。
                                                 </div>
                                             </div>
                                         </div>
@@ -232,7 +231,7 @@
                                     <div class="circ"></div>
                                     <div class="time">January 1</div>
                                     <div class="events">
-                                        <div class="events-header">国际奥委会认证电子竞技运动为正式体育项目</div>
+                                        <!-- <div class="events-header">国际奥委会认证电子竞技运动为正式体育项目</div> -->
                                         <div class="events-body">
                                             <div class="row">
                                                 <div class="col-md-6 pull-left">
@@ -260,7 +259,7 @@
                                                     <!-- <img class="events-object img-responsive img-rounded" src="img/cat02.png" /> -->
                                                 </div>
                                                 <div class="events-desc">
-                                                    教育部发布了《普通高等学校高等职业教育(专科)专业目录》,增补了”电子竟技运动与管理”专业。截止到2018年1月，已有13个院校发布了其电子竟技相关专业的开设及招生情况。
+                                                    教育部增补了”电子竟技运动与管理”专业。截止到2018年1月，已有13个院校发布了其电子竟技相关专业的开设及招生情况。
                                                 </div>
                                             </div>
                                         </div>
@@ -270,7 +269,7 @@
                                     <div class="circ"></div>
                                     <div class="time">July 7</div>
                                     <div class="events">
-                                        <div class="events-header">Events</div>
+                                        <!-- <div class="events-header">Events</div> -->
                                         <div class="events-body">
                                             <div class="row">
                                                 <div class="col-md-6 pull-left">
@@ -287,7 +286,7 @@
                                     <div class="circ"></div>
                                     <div class="time">April 4</div>
                                     <div class="events">
-                                        <div class="events-header">Events</div>
+                                        <!-- <div class="events-header">Events</div> -->
                                         <div class="events-body">
                                             <div class="row">
                                                 <div class="col-md-6 pull-right">
@@ -388,10 +387,7 @@
                     <div id="users" class="echarts" style="max-width:800px;height: 30em;"></div>
                 </div>
 
-                <p class="quto">总结：政策扶持方面，从2008年到2018年颁布的相关政策能看出政府是鼓励中国电子竞技行业发展的。从2003年开始，电子竞技运动项目被纳入正式体育竞赛项目。此后，无论是人才培养还是在行业发展方面，国家都出台了不少政策来提供支持。目前，国家颁布的政策主要在“娱乐产业”方面和“运动”产业两方面，积极推动着电子竞技行业作为竞技和赛事项目的发展。这些政策都为电子竞技行业引入金融资本和社会资源提供了更多机遇。然而，同样通过统计的数据能发现国家同样持观望的态度。由上文给出的产业链构成，可看到电子竞技目前只在一些网络视频直播平台上线，受众群体相对比较局限。遗憾的是，我国电视渠道仍没有对电子竞技这项新兴运动全面开放。
-                </p>
-                <p class="quto">
-                    总的来说，国内在近年来对电子竞技行业出台了不少相关扶持政策，为电子竞技行业引入资本投资和社会资源奠定了基础。不足的是，缺乏相关如韩国在投资、技术研发、监管行政等方面将电子竞技行业推动发展为支柱产业涉及多元充分的政策。电子竞技产业在这几年来已迈入发展的“黄金时期”，笔者相信未来政府如能继续积极扶持，形成一定完善的体系，电子竞技行业仍会在以后蓬勃发展，成为富有宝贵经济价值和文化价值的产业。
+                <p class="quto">国内在近年来对电子竞技行业出台了不少相关扶持政策，为电子竞技行业引入资本投资和社会资源奠定了基础。
                 </p>
             </section>
         </article>
@@ -400,135 +396,23 @@
         <article id="business">
             <span class="section">section 2</span>
             <section class="container">
-                <h2>商业模式</h2>
-                <br>
+                <img class="title" src="./static/img/商业模式.png" alt="技术研发" />
                 <hr>
                 <!-- 2008—2018年中国游戏市场实际销售收入 -->
                 <h2>2008—2018年中国游戏市场实际销售收入</h2>
                 <div id="income" class="echarts" style="max-width:800px;height: 30em;"></div>
                 <br>
 
-                <!-- 移动端 -->
                 <div>
-                    <hr>
                     <br>
                     <!-- <h4 class="leftalign">多重因素促使移动游戏增长放缓</h4> -->
-                    <h4 class="leftalign"> 多重因素促使移动游戏增长放缓</h4>
-                    <p class="quto">
-                        2008至2018年中国移动游戏市场依然保持增长，但近年来增速出现快速下滑，销售收入增长放缓。这主要受用户需求改变、用户获取难度提升、新产品竞争力减弱等因素影响。</p>
+                    <p class="quto"> 资本投资的增长为电子竞技行业产业提供了机遇。电子竞技通过加快赛事城市化进程、产业地方化、多元化、内容与商业融合发展等方式，其赛事价值将逐渐得到更充分的展现。</p>
 
-                    <p>
-                        <span class="secondTitle"> 一、用户需求发生变化。</span><br>
-                        一方面，在移动互联网人口流量接近饱和的趋势下，移动游戏用户数量增量有限；另一方面，以短视频为主的新型娱乐内容对于用户的注意力争夺日益激烈，移动游戏用户的黏性有所松动，移动游戏用户使用时长在移动互联网总使用时长中占比不断下降。
-                    </p>
                     <br>
-                    <p>
-                        <span class="secondTitle"> 二、产品获取用户难度提升。</span><br>
-                        首先，从推广角度来看，广告投放价格自上半年大幅上涨后维持在较高水平，传统品类游戏在游戏广告投放市场完成一轮洗牌后价格逐渐企稳，而二线题材品类的投放价格仍在攀升。同时，视频广告逐渐成为主流的广告投放方式，对于企业的资金、制作经验等综合实力要求进一步提升。其次，存量用户固化在少数产品中，用户获取难度不断增加，老产品通过长线运营获取了市场上大部分存量用户。再次，用户的游戏体验需求已经升级，主动选择产品的意愿更加明确，对游戏品质和体验的要求也更严格，反向推动产品进行定制化研发和精细化运营，所需周期和成本大幅增加。
-                    </p>
-                    <br>
-                    <p>
-                        <span class="secondTitle"> 三、新产品的竞争力较弱，导致市场收入增长动力不足。</span><br>
-                        受外部因素影响，不少新游戏上线计划被打断，导致数量大幅减少。同时，少数热门游戏占据了大部分流量份额，市场格局固化加深，存量市场竞争推动游戏产品越来越精品化，提升新产品进入门槛。
-                    </p>
-                    <br>
-                    <br>
-                    <!-- 2008—2018年中国移动游戏市场实际销售收入 -->
-                    <h2>2008—2018年中国移动游戏市场实际销售收入</h2>
-                    <div id="incomeMobile" class="echarts" style="max-width:800px;height: 30em;"></div>
                     <br>
                 </div>
 
-                <!-- 客户端 -->
-                <div>
-                    <hr>
-                    <br>
-                    <h4 class="leftalign">精品大作支撑客户端游戏市场发展 </h4>
-                    <p class="quto">近年来，客户端游戏更加强调画面精致、玩法硬核，精品化趋势加强，质量成为竞争的核心。市场产品呈现“少而精”的特征，精品支撑客户端游戏发展</p>
-
-                    <p>
-                        <span class="secondTitle"> 一、客户端游戏市场新增用户减少，存量用户是保证客户端游戏市场发展的关键。</span><br>
-                        客户端游戏市场用户基础稳定，产品由于硬件方面优势更具舒适性和稳定性，市场热度保持较好。老产品凭借高用户忠诚度，市场表现依然较为稳定。同时，部分企业推出符合核心用户体验的新产品，推动客户端游戏市场发展。
-                    </p><br>
-                    <p>
-                        <span class="secondTitle"> 二、客户端游戏企业更加注重产品品牌效应，关注长期持续的收益而非短期盈利，推动精品的持续产生。</span><br>
-                        一方面，客户端游戏产品受到市场的培育后，品质不断提高，愈加强调画面精致度、玩法丰富性，运营更加注重长线。游戏企业通过优化数值体系、玩法创新、不过度倚重“氪金”模式等方式维系核心用户的忠诚度，树立品牌效应。另一方面，借助客户端游戏IP（知识产权）的文化价值和粉丝效应，游戏企业将其改编为移动游戏、影视、动漫等内容形态或者对产品进行迭代，延长IP（知识产权）的生命力，从而能够获取更大的价值
-                    </p><br>
-                    <p>
-                        <span class="secondTitle"> 三、市场资源与用户资源向精品大作倾斜。</span><br>
-                        客户端游戏市场的“二八效应”明显，少数几家企业代理和研发的游戏牢牢占据市场主要地位，存量用户被长期吸附在少数产品中。同时，资金、技术和人才资源纷纷向少数企业集中，使得这些企业能够拥有更高的研发投入和更长的产品制作周期，保证新产品品质。
-                    </p>
-                    <br>
-
-                    <!-- 2008—2018年中国客户端游戏市场实际销售收入 -->
-                    <h2>2008—2018年中国客户端游戏市场实际销售收入</h2>
-                    <div id="incomeClient" class="echarts" style="max-width:800px;height: 30em;"></div>
-                    <br>
-                </div>
-
-                <!-- 网页端 -->
-                <div>
-                    <hr>
-                    <br>
-                    <h4 class="leftalign">网页游戏市场增长乏力</h4>
-                    <p class="quto">网页游戏市场在用户持续流失和广告投放成本上升的压力下延续下滑态势，市场增长乏力，市场销售收入连续三年出现负增长。</p>
-
-                    <p>
-                        <span class="secondTitle"> 一、用户偏好发生转移，用户获取难。</span><br>
-                        互联网用户整体面临增长瓶颈和向移动端迁移的态势，移动互联网用户日均上网时长近5小时，高于整体互联网用户的日均4小时。移动游戏市场高度活跃不断分食网页游戏市场的人口红利，加大用户获取难度。同时，网页游戏受限于网页端载体和技术性能，在游戏的便捷体验、画面创新、社交互动等方面均面临挑战。</p><br>
-                    <p>
-                        <span class="secondTitle"> 二、网页游戏精品稀缺、新产品不断减少，加速用户流失</span><br>
-                        一方面，网页游戏同质化现象依然普遍存在，品质和玩法缺乏创新，无法满足用户需求；另一方面，移动游戏以及小游戏等细分市场的高成长前景吸引大批中小型网页游戏研发团队转型离开，网页游戏新产品数量不断减少，进一步削弱市场的吸引力。
-                    </p><br>
-                    <p>
-                        <span class="secondTitle"> 三、网页游戏企业的持续盈利能力减弱。</span><br>
-                        一方面，网页游戏的营销方式仍然依赖于广告投放，而广告投放成本持续上升不断压缩产品的利润空间；另一方面，受到同质化产品反复清洗后，用户的付费意愿大幅下降，缩短了产品的生命周期，大多数产品收入出现快速下滑的现象。
-                    </p>
-                    <br>
-
-                    <p class="quto">
-                        目前，针对这一市场状况，网页游戏企业不断加强精品化，甚至通过改编客户端游戏IP（知识产权）为网页游戏市场提供生机。在成熟的技术、高质量研发和运营体系资源的支持下，网页游戏借助客户端游戏IP（知识产权）积累的流量，通过打磨游戏质量和市场联动提升产品的关注度和用户体验。例如，腾讯自研的由客户端游戏IP（知识产权）改编而成的《御龙在天WEB》和《逆战页游》等网页游戏，专注于渲染画质、更迭玩法和创意。
-                    </p>
-                    <br>
-                    <p class="quto">
-                        在营销方面，网页游戏企业越来越注重精细化运营，延长游戏的生命周期。网页游戏长期以来以“洗量”为主要手段的盈利方式不断削弱降低用户的好感度，是导致用户流失的主因。通过精细化运营不断优化产品和用户需求之间的契合度，在延长游戏的生命周期、提升用户的游戏体验和付费意愿的同时，还有利于营造公平、健康的游戏环境，维持网页游戏市场长期稳定发展。
-                    </p>
-
-                    <!-- 2008—2018年中国网页端游戏市场实际销售收入 -->
-                    <h2>2008—2018年中国网页端游戏市场实际销售收入</h2>
-                    <div id="incomeWeb" class="echarts" style="max-width:800px;height: 30em;"></div>
-                    <br>
-                </div>
-
-                <!-- 总结 -->
                 <br>
-                <hr>
-                <br>
-                <h2>2008-2018年中国电子竞技行业</h2>
-                <br>
-                <p class="quto">
-                    目前来看，中国电子竞技市场收入主要包括游戏收入、直播收入、电子竞技赛事的相关收入以及其他收入。其中，电子竞技游戏收入占据主要地位，游戏直播以及赛事带来的收入占比较低。随着电子竞技行业的成熟，以上海地区为代表，未来电子赛事带来的相关收入将会提高，其价值将开始展现。</p>
-
-                <p>
-                    <span class="secondTitle"> 一、电子竞技赛事影响力媲美传统体育。</span><br>
-                    对比传统的体育赛事，电子竞技赛事的收入在电子竞技市场收入中所占比例偏低，依然存在增长空间。电子竞技赛事拥有庞大的粉丝群体，且用户活跃度高，部分电子竞技游戏中的单项赛事影响力已经能够赶超传统体育赛事。以2018年英雄联盟全球总决赛为例，该赛事在社交媒体表现、视频播放情况、观众规模三方面的表现均接近或者比肩美国职业篮球联赛。影响力是赛事商业价值的基础，电子竞技赛事影响力媲美传统体育赛事，有利于其未来的商业化，带动企业积极布局，并以电子竞技为重点，同时通过拓展内容品类、线下娱乐来构建数字娱乐平台，从而以更深度的方式满足用户广泛的娱乐需求，并提高用户黏性和产品活力。以创梦天地为例，其以新型线下娱乐综合体好时光影游社为依托，整合赛事、电子竞技关键意见领袖指导服务、电子竞技设备、直播、战队、电子竞技游戏等资源，建立了一个全民电子竞技平台。
-                </p>
-                <br>
-                <p>
-                    <span class="secondTitle"> 二、价值展现需要借助于经济、人口、地理、用户、交通等优势。</span><br>
-                    以上海为例，上海以建设“电竞之都”为目标，拥有电子竞技赛事举办的基础，将率先体现价值。其一，上海在国内生产总值（GDP）、人口规模方面常年领先，得益于交通便利等因素，上海年接待旅游者超过3亿人次，GDP、人口、旅游人数将为赛事的用户规模、付费用户数量提供用户基础。同时，上海文化产业新成立基金达到数百亿元规模，电子竞技作为文化产业的重要组成部分也明确在多只基金的重点投资范围内，为电子竞技赛事举办提供财力、人力和物力基础。其二，上海具有丰富的电子竞技赛事举办经验，有超过四成的赛事在上海举办，以巨人网络旗下的《球球大作战》为代表的一批移动游戏，致力于构建绿色、健康的电子竞技价值观，也已经取得了突出的成果。其三，上海举办的电子竞技赛事受关注度高，在媒体报道数量前10的赛事中，上海举办或参与的赛事占六成。其四，上海企业也有较高的赛事举办意愿，在所统计的赛事中，超过四分之一的举办方来自上海。其五，江浙沪地区历来是游戏用户的主要聚集地，其用户约占中国游戏用户的两成。其六，上海支持建设或改建可承办国际顶级电子竞技赛事的专业场馆有1至2个，东方明珠发布了电子竞技相关战略，将整合旗下包括电视台等在内的诸多资源，上述举措将直接推动电子竞技比赛、交易、直播、培训的发展。
-                </p>
-                <br>
-                <p>
-                    <span class="secondTitle"> 三、电子竞技赛事商业化进程将加速发展。</span><br>
-                    其一，在电子竞技赛事商业化的过程中，赛事转播是其中的重要一环。目前，电子竞技赛事发展仍然处于投入期，赛事能够直接带来的收入较小。在条件具备的情况下，未来有望快速增长。出售转播权是当前电子竞技赛事的一个重要变现方式，这种方式不仅能够直接为电子竞技赛事创造收入，还能进一步提升赛事影响力，触及更多用户。其二，企业赞助是电子竞技赛事创造收入的另一个手段。近两年的电子竞技赛事赞助商分布状况显示，来自快消品、汽车、手机等传统领域的赞助商占比已经高于来自硬件外设等领域的赞助商。赞助商的变化显示了电子竞技赛事的商业价值正在逐渐得到认可，随着电子竞技赛事发展日益成熟，未来，这种认可将继续增强，电子竞技赛事赞助商收入也有望进一步提升。其三，电子竞技还有可能打破传统“高端用户电子竞技模式”壁垒,构建起一个以大众电子竞技用户为中心的社群经济新电子竞技生态。例如盛天网络的“战吧电子竞技”模式，根据其承办NEST（全国电子竞技大赛）、腾讯LNL（全国网吧冠军联赛）之后的数据，战吧电子竞技赛事体系正快速发展，目前已覆盖近2万家网吧，超300万用户。
-                </p>
-                <br>
-
-                <p class="quto">
-                    总之，电子竞技通过加快赛事城市化进程、产业地方化、多元化、内容与商业融合发展等方式，其赛事价值将逐渐得到更充分的展现。
-                </p>
-
                 <!-- 2009—2019年中国电子竞技市场规模 -->
                 <h2>2009—2018年中国电子竞技市场规模</h2>
                 <div id="incomeMarket" class="echarts" style="max-width:800px;height: 30em;"></div>
@@ -542,43 +426,23 @@
         <article id="talent">
             <span class="section">section 3</span>
             <section class="container">
-                <h2>人才储备</h2>
-                <p class="quto">2018年，中国游戏从业者约145万人，需求规模约为44.1万人。</p>
+                <img class="title" src="./static/img/人才储备.png" alt="技术研发" />
                 <hr>
+                <p class="quto">2018年，中国游戏从业者约145万人，需求规模约为44.1万人。</p>
                 <h2>中国电竞产业从业者月薪分布 </h2>
                 <div class="">
                     <div id="salary" class="echarts" style="max-width:800px;height: 30em;"></div>
-                    <p class="quto">中国电竞产业从业者不同岗位的薪资水平差距较大，2018年中国不同职位的游戏产业从业者中主策划、品牌管理、服务器开发工程师平均月薪最高，在16000元以上；新媒体运营/文案编辑、游戏客服、游戏推广人员平均月薪最低，在6500元以下。</p>
+                    <br>
                 </div>
-
-                <hr>
-                <h2>不同学历游戏岗位的平均录用薪资情况（元） </h2>
-                <div id="grade" class="echarts" style="max-width:800px;height: 30em;"></div>
-
-                <hr>
-                <h2>游戏企业招聘最低学历要求 </h2>
-                <div id="employee" class="echarts" style="max-width:800px;height: 30em;"></div>
-
-                <hr>
-                <h2>不同岗位类别最低学历要求分布情况 </h2>
-                <div id="typeOfGrade" class="echarts" style="max-width:800px;height: 30em;"></div>
-                <p class="">*饼图从内到外依次表示为：策划、开发、设计、运营、其他</p>
-                <p class="">*鼠标滑动以查看具体数值</p>
 
                 <hr>
                 <h2>不同规模企业对最低学历要求分布情况 </h2>
                 <div id="employeeOfCompany" class="echarts" style="max-width:800px;height: 30em;"></div>
                 <p class="">*饼图半径方向表示公司规模，从内到外依次为：20以下、20-99、100-499、500-999、1000以上</p>
-                <p class="quto">总结：
+                <p class="quto">
                     游戏企业对人才的学历要求较高，超过80%的企业要求本科及以上学历，尤其是大公司更青睐高学历人才。
                     学历差异对游戏企业提供的薪资水平差异明显。
                 </p>
-
-
-                <!-- 截止2019年开设与游戏行业强相关专业的高校 -->
-                <hr>
-                <h2>截止2019年开设与游戏行业强相关专业的高校 </h2>
-                <div id="mapOfSchool" class="echarts" style="max-width:1200px;height: 40em;"></div>
             </section>
 
         </article>
@@ -587,53 +451,49 @@
         <article id="technology">
             <span class="section">section 4</span>
             <section class="container">
-                <h2>技术研发</h2>
-                <p class="quto">随着我国信息网络基础设施建设加速，移动互联网宽带资费价格下降，互联网与电子竞技产业的融合不断加深。部分国内虚拟运营商已经全面普及４G覆盖，既放宽了用户的体验环境，也为丰富我国电子竞技产品内容提供更多可能。随着智能终端的普及与设备的升级换代，移动端游戏日趋完善成熟。伴随着硬件设施的完善，电子竞技游戏研发愈发趋于精品化，内容技术变得更加成熟。同时，VR和AR技术的发展促使我国电子竞技朝向VR化发展，电子竞技的体验场景更加丰富，提高了用户体验的质量。
+                <img class="title" src="./static/img/技术研发.png" alt="技术研发" />
+                <hr>
+                <p class="quto">我国信息网络基础设施建设加速，互联网与电子竞技产业的融合不断加深。
                 </p>
                 <p>*部分游戏产品如下：</p>
-                <h2>给这张图起个标题</h2>
                 <div id="radial" class="echarts" style="max-width:800px;height: 40em;"></div>
                 <hr>
-                <p class="quto">总结：电子竞技产业的源头是电子竞技游戏的开发与制作，核心在于为整个电子竞技产业提供丰富的电子竞技游戏产品内容，若这一环节出现问题则整个电子竞技产业便如同无米之炊，因此这一环节身为整个产业的内容提供的源泉在整个产业链中十分重要。
+                <p class="quto">电子竞技游戏的开发与制作这一环节为整个产业的内容提供了源泉，而游戏研发商是整个电子竞技产业内容的提供者。
                 </p>
-                <p class="quto">电子竞技游戏研发这一环节对应的主体是游戏研发商，游戏研发商是整个电子竞技产业内容的提供者。电竞游戏研发商的功能是从开发游戏开始到最终实现游戏的产品化。游戏研发环节包括与电竞游戏相关的创作剧本、策划情节、开发程序等。</p>
                 <br>
                 <!-- 2008-2018年中国自主研发游戏产品数量和公司数量 -->
                 <h2>2008-2018年中国自主研发游戏产品数量和公司数量</h2>
                 <div id="company" class="echarts" style="max-width:800px;height: 30em;"></div>
                 <hr>
                 <p class="quto">
-                    总结：我国自主研发的游戏产品数量呈现逐年增长的态势，但是我国自主研发的游戏公司数量一直偏少。说明我国自主研发的游戏公司逐渐壮大，专业性更强，那些不知名的微小企业在竞争中没有生存下来。同时，电子竞技产业的发展，很大程度上依赖于电子竞技产品的开发，而电子竞技产品来自于游戏产品的开发。目前，我国电子竞技有关的企业，都争相代理国外研发的高知名度电子竞技产品，很少参与和组织电子竞技产品的自主研发，很难形成企业自身的核心竞争力。原因就是代理一款成功的游戏，其收入远远大于自主研发一款游戏带来的回报。电子竞技产品开发成功与否，决定了一个国家在电子竞技产业领域是否具有影响力。虽然我国投入了大量的资金，IT
-                    行业也发展迅速，但 IT 行业的人才却未能有效分流到电子竞技游戏开发中，为我国自主研发的电子竞技产品带来直观的改变。
+                    我国自主研发的游戏产品数量呈现逐年增长的态势，但是我国自主研发的游戏公司数量一直偏少。我国自主研发的游戏公司逐渐壮大，专业性更强，那些不知名的微小企业在竞争中没有生存下来。
                 </p>
                 <br>
                 <!-- 2008-2018年中国自主研发网络游戏市场实际销售收入  -->
                 <h2>2008-2018年中国自主研发网络游戏市场实际销售收入 </h2>
-                <div id="market" class="echarts" style="max-width:800px;height: 30em;"></div>
+                <div id="market" class="echarts" style="max-width:800px;height: 35em;"></div>
                 <hr>
                 <p class="quto">
-                    总结：2008年以后，我国互联网的普及率越来越高，中国网民的特征朝着年轻化方向发展，我国自主研发的网络游戏市场销售收入呈现逐年增长的状态。在4G网络全面覆盖以后，我国自主研发的手机游戏也受到了越来越多的年轻人的喜爱。同时，由于外国的游戏产业起步时间早，研发技术较先进，我国自主研发的网络游戏市场会受到外国游戏产品的冲击。
+                    2008年以后，我国互联网的普及率越来越高，中国网民的特征朝着年轻化方向发展，我国自主研发的网络游戏市场销售收入呈现逐年增长的状态。
                 </p>
                 <br>
-                <p class="quto">
-                    由于全球游戏用户的规模的逐渐扩大、全球化让走向海外门槛降低和政府相关政策的扶持力度增加，我国自主研发的网络游戏海外市场销售收入逐年增加，但是增长率并不高。可以看出我国的自主研发的游戏产品创新力不足，游戏公司对海外用户、市场、政策了解不够。
-                </p>
+
             </section>
 
         </article>
 
-        <!-- 媒体宣传部分 -->
-        <article id="media">
-            <span class="section">section 5</span>
+        <!-- 结论 -->
+        <article id="result">
+            <span class="section">结论</span>
             <section class="container">
-                <h2>媒体宣传</h2>
-
-                <p class="quto">随着电竞行业的产业化，很多职业教育院校和本科高校，都纷纷开设了电竞专业和电竞课程。电子竞技行业如今已进入黄金时代，本文将从数据入手分析电子竞技行业的产业化进程。</p>
+                <img class="title" src="./static/img/结论.png" alt="技术研发" />
                 <hr>
-                <p class="quto">本文重点研究电竞行业的快速发展时期：2008年-2015年是网络游戏时代, 电子竞技逐渐与网络游戏分离,
-                    世界电子竞技产业的中心开始逐渐向中国转移。2015—2017年进入手机游戏时代,。2015年, 随着智能手机的普及, 电竞手机游戏时代来临。中国电子竞技产业首次超越韩国,
-                    成为世界发展最快用户最多的国家;2017年至今发展成了各种端口融合的发展时代。街机, PC, 移动共同繁荣阶段。电子竞技产业发展迅速, 电子竞技产业发展迅猛。</p>
+                <p class="quto">
+                    在这十年间，中国电子竞技行业发展迅猛，离不开国家政策的支持、商业资本的投入、研发人才的培养和信息技术的提高，由以上数据我们可以看出，未来中国电子竞技行业蓬勃发展需要多元充分的政策来推动，形成完善的体系，加强技术研发，只有创新才能为电子竞技行业提供源源不断的动力。
+                </p>
+
             </section>
+
         </article>
 
         <hr style="width:100%; border:1px solid #ddd">
@@ -727,8 +587,6 @@
                 // console.log(res);
                 $("#visitor").html("访问量：" + res.count[0]['count(*)']);
             });
-
-
         };
     </script>
 
@@ -743,19 +601,14 @@
 
         var Users = echarts.init(document.getElementById('users'));
         var Salary = echarts.init(document.getElementById('salary'));
-        var Grade = echarts.init(document.getElementById('grade'));
-        var Employee = echarts.init(document.getElementById('employee'));
-        var TypeOfGrade = echarts.init(document.getElementById('typeOfGrade'));
         var EmployeeOfCompany = echarts.init(document.getElementById('employeeOfCompany'));
         var Radial = echarts.init(document.getElementById('radial'));
         var Company = echarts.init(document.getElementById('company'));
         var Market = echarts.init(document.getElementById('market'));
         var Income = echarts.init(document.getElementById('income'));
-        var IncomeMobile = echarts.init(document.getElementById('incomeMobile'));
-        var IncomeClient = echarts.init(document.getElementById('incomeClient'));
-        var IncomeWeb = echarts.init(document.getElementById('incomeWeb'));
         var IncomeMarket = echarts.init(document.getElementById('incomeMarket'));
 
+        
         // 用户规模
         var option_user = {
             tooltip: {
@@ -834,7 +687,7 @@
                 }
             ]
         };
-        Users.setOption(option_user);
+        // Users.setOption(option_user);
 
         // 从业者薪资
         var option_salary = {
@@ -888,267 +741,7 @@
                 }
             ]
         };
-        Salary.setOption(option_salary);
-
-        // 不同学历收入
-        var option_grade = {
-            title: {
-                subtext: "数据来源：xxxx",
-                x: 'left'
-            },
-            tooltip: {
-                trigger: 'axis',
-                axisPointer: {
-                    type: 'shadow'
-                }
-            },
-            legend: {
-                data: ['本科及以上', '专科', '高中及以下']
-            },
-            xAxis: {
-                type: 'value'
-            },
-            yAxis: {
-                type: 'category',
-                data: ['游戏开发', '游戏设计', '游戏运营', '游戏策划']
-            },
-            series: [
-                {
-                    name: '本科及以上',
-                    type: 'bar',
-                    data: [15000, 12000, 11800, 13500],
-                    itemStyle: {
-                        normal: {
-                            label: {
-                                show: true, //开启显示
-                                position: 'right', //在上方显示
-                                textStyle: { //数值样式
-                                    fontSize: 12
-                                },
-                                formatter: function (p) {
-                                    return (p.value > 0 ? (p.value) : '') + '元';
-                                }
-                            },
-                        }
-                    },
-                },
-                {
-                    name: '专科',
-                    type: 'bar',
-                    data: [9500, 8500, 8000, 10000],
-                    itemStyle: {
-                        normal: {
-                            label: {
-                                show: true, //开启显示
-                                position: 'right', //在上方显示
-                                textStyle: { //数值样式
-                                    fontSize: 12
-                                },
-                                formatter: function (p) {
-                                    return (p.value > 0 ? (p.value) : '') + '元';
-                                }
-                            },
-                        }
-                    },
-                },
-                {
-                    name: '高中及以下',
-                    type: 'bar',
-                    data: [7000, 7200, 7500, 7300],
-                    itemStyle: {
-                        normal: {
-                            label: {
-                                show: true, //开启显示
-                                position: 'right', //在上方显示
-                                textStyle: { //数值样式
-                                    fontSize: 12
-                                },
-                                formatter: function (p) {
-                                    return (p.value > 0 ? (p.value) : '') + '元';
-                                }
-                            },
-                        }
-                    },
-                }
-            ]
-        }
-        Grade.setOption(option_grade);
-
-        // 游戏企业招聘最低学历要求
-        var option_employee = {
-            title: {
-                subtext: '数据来源：xxxx',
-                x: 'center'
-            },
-            tooltip: {
-                trigger: 'item',
-                formatter: '{a} <br/>{b} : {c} %'
-            },
-            legend: {
-                data: ['研究生', '本科', '大专', '高中', '不限'],
-                left: 'right',
-                orient: 'vertical',
-            },
-            series: [
-                {
-                    name: '学历',
-                    type: 'pie',
-                    radius: '55%',
-                    center: ['50%', '60%'],
-                    data: [
-                        { value: 0.2, name: '研究生' },
-                        { value: 29.6, name: '本科' },
-                        { value: 52.3, name: '大专' },
-                        { value: 12.5, name: '高中' },
-                        { value: 5.4, name: '不限' }
-                    ],
-                    itemStyle: {
-                        emphasis: {
-                            shadowBlur: 10,
-                            shadowOffset: 0,
-                            shadowColor: 'rgba(0,0,0,.5)'
-                        },
-                        normal: {
-                            label: {
-                                show: true, //开启显示
-                                // position: 'top', //在上方显示
-                                textStyle: { //数值样式
-                                    fontSize: 12
-                                },
-                                formatter: function (p) {
-                                    return (p.value > 0 ? (p.value) : '') + '%';
-                                }
-                            }
-                        }
-                    }
-                }
-            ]
-        }
-        Employee.setOption(option_employee);
-
-        // 不同岗位类别最低学历要求分布情况
-        var option_typeOfGrade = {
-            title: {
-                subtext: '数据来源：xxxx',
-                x: 'center'
-            },
-            tooltip: {
-                trigger: 'item',
-                formatter: '{a} <br/>{b} : {c} %'
-            },
-            legend: {
-                data: ['本科', '大专', '高中', '不限'],
-                left: 'left',
-                orient: 'vertical',
-            },
-            series: [
-                {
-                    name: '游戏策划',
-                    type: 'pie',
-                    radius: [0, '16%'],
-                    label: {
-                        normal: {
-                            show: false
-                        }
-                    },
-                    data: [
-                        { value: 44.1, name: '本科' },
-                        { value: 41.4, name: '大专' },
-                        { value: 8.3, name: '高中' },
-                        { value: 6.2, name: '不限' }
-                    ]
-                },
-                {
-                    name: '游戏开发',
-                    type: 'pie',
-                    radius: ['24%', '32%'],
-                    label: {
-                        normal: {
-                            show: false
-                        }
-                    },
-                    data: [
-                        { value: 34.6, name: '本科' },
-                        { value: 52.2, name: '大专' },
-                        { value: 8.9, name: '高中' },
-                        { value: 4.2, name: '不限' }
-                    ]
-                },
-                {
-                    name: '游戏设计',
-                    type: 'pie',
-                    radius: ['40%', '48%'],
-                    label: {
-                        normal: {
-                            show: false
-                        }
-                    },
-                    data: [
-                        { value: 12.0, name: '本科' },
-                        { value: 56.8, name: '大专' },
-                        { value: 21.8, name: '高中' },
-                        { value: 9.3, name: '不限' }
-                    ]
-                },
-                {
-                    name: '游戏运营',
-                    type: 'pie',
-                    radius: ['56%', '64%'],
-                    label: {
-                        normal: {
-                            show: false
-                        }
-                    },
-                    data: [
-                        { value: 36.6, name: '本科' },
-                        { value: 50.2, name: '大专' },
-                        { value: 9.3, name: '高中' },
-                        { value: 4.0, name: '不限' }
-                    ],
-                    itemStyle:{
-                        normal: {
-                            label: {
-                                show: true, //开启显示
-                                // position: 'top', //在上方显示
-                                textStyle: { //数值样式
-                                    fontSize: 12
-                                },
-                                formatter: function (p) {
-                                    return (p.value > 0 ? (p.value) : '') + '%';
-                                }
-                            }
-                        }
-                    }
-                },
-                {
-                    name: '其他',
-                    type: 'pie',
-                    radius: ['72%', '80%'],
-                    data: [
-
-                        { value: 36.6, name: '本科' },
-                        { value: 50.9, name: '大专' },
-                        { value: 10.6, name: '高中' },
-                        { value: 1.8, name: '不限' }
-                    ],
-                    itemStyle:{
-                        normal: {
-                            label: {
-                                show: true, //开启显示
-                                // position: 'top', //在上方显示
-                                textStyle: { //数值样式
-                                    fontSize: 12
-                                },
-                                formatter: function (p) {
-                                    return (p.value > 0 ? (p.value) : '') + '%';
-                                }
-                            }
-                        }
-                    }
-                }
-            ]
-        };
-        TypeOfGrade.setOption(option_typeOfGrade);
+        // Salary.setOption(option_salary);
 
         // 不同规模企业对最低学历要求分布情况
         var option_employeeOfCom = {
@@ -1176,7 +769,7 @@
                         { value: 5.3, name: '高中' },
                         { value: 2.9, name: '不限' }
                     ],
-                    itemStyle:{
+                    itemStyle: {
                         normal: {
                             label: {
                                 show: true, //开启显示
@@ -1258,7 +851,7 @@
                 }
             ]
         };
-        EmployeeOfCompany.setOption(option_employeeOfCom);
+        // EmployeeOfCompany.setOption(option_employeeOfCom);
 
         // 放射状呈现游戏与技术之间的关系
         var option_radail = {
@@ -1306,6 +899,12 @@
                     repulsion: 300
                 },
                 data: [
+                    {
+                        "name": "信息技术发展",
+                        "symbolSize": 120,
+                        "category": "信息技术发展",
+                        "draggable": "true"
+                    },
                     {
                         "name": "互联网的普及",
                         // "x": 0,
@@ -1479,8 +1078,8 @@
                     "target": "愤怒的小鸟"
                 },
                 {
-                    "source": "互联网的普及",
-                    "target": "VR/AR（VR/AR游戏）"
+                    "source": "信息技术发展",
+                    "target": "互联网的普及"
                 },
                 {
                     "source": "VR/AR（VR/AR游戏）",
@@ -1508,8 +1107,8 @@
                     "target": "天际VR"
                 },
                 {
-                    "source": "VR/AR（VR/AR游戏）",
-                    "target": "4G（移动游戏）"
+                    "source": "信息技术发展",
+                    "target": "VR/AR（VR/AR游戏）"
                 },
                 {
                     "source": "4G（移动游戏）",
@@ -1535,7 +1134,12 @@
                 }, {
                     "source": "4G（移动游戏）",
                     "target": "暗夜狂奔"
-                }],
+                },
+                {
+                    "source": "信息技术发展",
+                    "target": "4G（移动游戏）"
+                }
+                ],
                 categories: [
                     {
                         'name': '互联网的普及'
@@ -1543,6 +1147,9 @@
                         'name': '4G（移动游戏）'
                     }, {
                         'name': 'VR/AR（VR/AR游戏）'
+                    },
+                    {
+                        'name': '信息技术发展'
                     }],
                 focusNodeAdjacency: true,
                 roam: true,
@@ -1561,7 +1168,7 @@
                 }
             }]
         };
-        Radial.setOption(option_radail);
+        // Radial.setOption(option_radail);
 
         // 2008-2018年中国自主研发游戏产品数量和公司数量
         var option_company = {
@@ -1663,7 +1270,7 @@
                 }
             ]
         };
-        Company.setOption(option_company);
+        // Company.setOption(option_company);
 
         // 2008-2018年中国自主研发网络游戏市场实际销售收入
         var option_market = {
@@ -1725,11 +1332,30 @@
             ],
             series: [
                 {
-                    name: '总销售收入',
                     type: 'bar',
+                    barWidth: 10,
+                    itemStyle: {
+                        normal: {
+                            barBorderRadius: 5,
+                            color: new echarts.graphic.LinearGradient(
+                                0, 0, 0, 1,
+                                [
+                                    {offset: 0, color: '#14c8d4'},
+                                    {offset: 1, color: '#43eec6'}
+                                ]
+                            )
+                        }
+                    },
+                    data: [0.7, 1.1, 2.3, 3.6, 5.7, 18.2, 30.8, 53.1, 72.3, 82.8, 95.9],
+                },
+                {
+                    name: '总销售收入',
+                    type: 'pictorialBar',
+                    symbol: 'rect',
                     data: [110.1, 165.3, 193.0, 271.5, 368.1, 476.6, 726.6, 986.7, 1182.5, 1397.4, 1643.9],
                     itemStyle: {
                         normal: {
+                            color: '#0f375f',
                             label: {
                                 show: true, //开启显示
                                 position: 'top', //在上方显示
@@ -1742,17 +1368,25 @@
                             },
                         }
                     },
+                    symbolRepeat: true,
+                    symbolSize: [12, 4],
+                    symbolMargin: 1,
+                    z: -10,
                 },
                 {
                     name: '总增长率',
                     type: 'line',
                     yAxisIndex: 1,
                     data: [60, 50.1, 16.8, 40.7, 35.6, 29.5, 52.5, 35.8, 19.9, 18.2, 17.6],
+                    smooth: true,
+                    showAllSymbol: true,
+                    symbol: 'emptyCircle',
+                    symbolSize: 15,
                     itemStyle: {
                         normal: {
                             label: {
-                                show: true, //开启显示
-                                position: 'right', //在上方显示
+                                show: false, //开启显示
+                                // position: 'right', //在上方显示
                                 textStyle: { //数值样式
                                     fontSize: 12
                                 },
@@ -1766,12 +1400,22 @@
                 {
                     name: '海外销售收入',
                     type: 'bar',
+                    barWidth: 10,
+                    barGap: '-100%',
                     data: [0.7, 1.1, 2.3, 3.6, 5.7, 18.2, 30.8, 53.1, 72.3, 82.8, 95.9],
                     itemStyle: {
                         normal: {
+                            color: new echarts.graphic.LinearGradient(
+                                0, 0, 0, 1,
+                                [
+                                    {offset: 0, color: 'rgba(20,200,212,0.5)'},
+                                    {offset: 0.2, color: 'rgba(20,200,212,0.2)'},
+                                    {offset: 1, color: 'rgba(20,200,212,0)'}
+                                ]
+                            ),
                             label: {
                                 show: true, //开启显示
-                                position: 'top', //在上方显示
+                                position: 'right', //在上方显示
                                 textStyle: { //数值样式
                                     fontSize: 12
                                 },
@@ -1781,8 +1425,13 @@
                             },
                         }
                     },
+                    z: -12,
                 },
                 {
+                    smooth: true,
+                    showAllSymbol: true,
+                    symbol: 'emptyCircle',
+                    symbolSize: 15,
                     name: '海外增长率',
                     type: 'line',
                     yAxisIndex: 1,
@@ -1790,8 +1439,8 @@
                     itemStyle: {
                         normal: {
                             label: {
-                                show: true, //开启显示
-                                position: 'top', //在上方显示
+                                show: false, //开启显示
+                                // position: 'top', //在上方显示
                                 textStyle: { //数值样式
                                     fontSize: 12
                                 },
@@ -1804,7 +1453,7 @@
                 }
             ]
         };
-        Market.setOption(option_market);
+        // Market.setOption(option_market);
 
         // 2008—2018年中国游戏市场实际销售收入
         var option_income = {
@@ -1907,313 +1556,7 @@
             ]
 
         };
-        Income.setOption(option_income);
-
-        // 2008-2018中国移动游戏市场实际销售收
-        var option_incomeMobile = {
-            title: {
-                subtext: "数据来源：中国音数协游戏工委（GPC）& CNG中新游戏研究（伽马数据）",
-                top: "20",
-                left: "center"
-            },
-            tooltip: {
-                trigger: 'axis',
-                axisPointer: {
-                    type: 'cross',
-                    crossStyle: {
-                        color: '#999'
-                    }
-                }
-            },
-            toolbox: {
-                left: 'center',
-                bottom: '0',
-                feature: {
-                    dataView: { show: true, readOnly: false },
-                    magicType: { show: true, type: ['line', 'bar'] },
-                    restore: { show: true },
-                    saveAsImage: { show: true }
-                }
-            },
-            legend: {
-                data: ['中国移动游戏市场实际销售收入', '增长率']
-            },
-            xAxis: [
-                {
-                    type: 'category',
-                    data: ['2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018'],
-                    axisPointer: {
-                        type: 'shadow'
-                    }
-                }
-            ],
-            yAxis: [
-                {
-                    type: 'value',
-                    name: '中国移动游戏市场实际销售收入',
-                    min: 0,
-                    max: 1400,
-                    axisLabel: {
-                        formatter: '{value} 亿元'
-                    }
-                },
-                {
-                    type: 'value',
-                    name: '增长率',
-                    min: 0,
-                    max: 400,
-                    axisLabel: {
-                        formatter: '{value} %'
-                    }
-                }
-            ],
-            series: [
-                {
-                    name: '中国移动游戏市场实际销售收入',
-                    type: 'bar',
-                    data: [1.5, 6.4, 9.1, 17.0, 32.4, 112.4, 274.9, 514.6, 819.2, 116.2, 1339.6],
-                    itemStyle: {
-                        normal: {
-                            label: {
-                                show: true, //开启显示
-                                position: 'top', //在上方显示
-                                textStyle: { //数值样式
-                                    fontSize: 12
-                                },
-                                formatter: function (p) {
-                                    return (p.value > 0 ? (p.value) : '') + '亿';
-                                }
-                            },
-                        }
-                    },
-                },
-                {
-                    name: '增长率',
-                    type: 'line',
-                    yAxisIndex: 1,
-                    data: [25, 326.7, 42.0, 86.8, 90.6, 246.9, 144.6, 87.2, 59.2, 41.0, 15.4],
-                    itemStyle: {
-                        normal: {
-                            label: {
-                                show: true, //开启显示
-                                position: 'top', //在上方显示
-                                textStyle: { //数值样式
-                                    fontSize: 12
-                                },
-                                formatter: function (p) {
-                                    return (p.value > 0 ? (p.value) : '') + '%';
-                                }
-                            },
-                        }
-                    },
-                }
-            ]
-        };
-        IncomeMobile.setOption(option_incomeMobile);
-
-        // 2008-2018中国客户端游戏市场实际销售收
-        var option_incomeClient = {
-            title: {
-                subtext: "数据来源：中国音数协游戏工委（GPC）& CNG中新游戏研究（伽马数据）",
-                top: "20",
-                left: "center"
-            },
-            tooltip: {
-                trigger: 'axis',
-                axisPointer: {
-                    type: 'cross',
-                    crossStyle: {
-                        color: '#999'
-                    }
-                }
-            },
-            toolbox: {
-                left: 'center',
-                bottom: '0',
-                feature: {
-                    dataView: { show: true, readOnly: false },
-                    magicType: { show: true, type: ['line', 'bar'] },
-                    restore: { show: true },
-                    saveAsImage: { show: true }
-                }
-            },
-            legend: {
-                data: ['中国客户端游戏市场实际销售收入', '增长率']
-            },
-            xAxis: [
-                {
-                    type: 'category',
-                    data: ['2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018'],
-                    axisPointer: {
-                        type: 'shadow'
-                    }
-                }
-            ],
-            yAxis: [
-                {
-                    type: 'value',
-                    name: '中国客户端游戏市场实际销售收入',
-                    min: 0,
-                    max: 700,
-                    axisLabel: {
-                        formatter: '{value} 亿元'
-                    }
-                },
-                {
-                    type: 'value',
-                    name: '增长率',
-                    min: -10,
-                    max: 50,
-                    axisLabel: {
-                        formatter: '{value} %'
-                    }
-                }
-            ],
-            series: [
-                {
-                    name: '中国客户端游戏市场实际销售收入',
-                    type: 'bar',
-                    data: [167.1, 233.2, 271.6, 366.9, 451.2, 536.6, 608.9, 611.6, 582.5, 648.6, 619.6],
-                    itemStyle: {
-                        normal: {
-                            label: {
-                                show: true, //开启显示
-                                position: 'top', //在上方显示
-                                textStyle: { //数值样式
-                                    fontSize: 12
-                                },
-                                formatter: function (p) {
-                                    return (p.value > 0 ? (p.value) : '') + '亿';
-                                }
-                            },
-                        }
-                    },
-                },
-                {
-                    name: '增长率',
-                    type: 'line',
-                    yAxisIndex: 1,
-                    data: [21.7, 39.5, 16.5, 35.1, 23.0, 18.9, 13.5, 0.4, -4.8, 11.4, -4.5],
-                    itemStyle: {
-                        normal: {
-                            label: {
-                                show: true, //开启显示
-                                position: 'top', //在上方显示
-                                textStyle: { //数值样式
-                                    fontSize: 12
-                                },
-                                formatter: function (p) {
-                                    return (p.value > 0 ? (p.value) : '') + '%';
-                                }
-                            },
-                        }
-                    },
-                }
-            ]
-        };
-        IncomeClient.setOption(option_incomeClient);
-
-        // 2008-2018中国网页游戏市场实际销售收
-        var option_incomeWeb = {
-            title: {
-                subtext: "数据来源：中国音数协游戏工委（GPC）& CNG中新游戏研究（伽马数据）",
-                top: "20",
-                left: "center"
-            },
-            tooltip: {
-                trigger: 'axis',
-                axisPointer: {
-                    type: 'cross',
-                    crossStyle: {
-                        color: '#999'
-                    }
-                }
-            },
-            toolbox: {
-                left: 'center',
-                bottom: '0',
-                feature: {
-                    dataView: { show: true, readOnly: false },
-                    magicType: { show: true, type: ['line', 'bar'] },
-                    restore: { show: true },
-                    saveAsImage: { show: true }
-                }
-            },
-            legend: {
-                data: ['中国网页游戏市场实际销售收入', '增长率']
-            },
-            xAxis: [
-                {
-                    type: 'category',
-                    data: ['2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018'],
-                    axisPointer: {
-                        type: 'shadow'
-                    }
-                }
-            ],
-            yAxis: [
-                {
-                    type: 'value',
-                    name: '中国网页游戏市场实际销售收入',
-                    min: 0,
-                    max: 300,
-                    axisLabel: {
-                        formatter: '{value} 亿元'
-                    }
-                },
-                {
-                    type: 'value',
-                    name: '增长率',
-                    min: -100,
-                    max: 300,
-                    axisLabel: {
-                        formatter: '{value} %'
-                    }
-                }
-            ],
-            series: [
-                {
-                    name: '中国网页游戏市场实际销售收入',
-                    type: 'bar',
-                    data: [4.5, 14.0, 41.8, 55.4, 81.1, 127.7, 202.7, 219.6, 187.1, 156.0, 126.5],
-                    itemStyle: {
-                        normal: {
-                            label: {
-                                show: true, //开启显示
-                                position: 'top', //在上方显示
-                                textStyle: { //数值样式
-                                    fontSize: 12
-                                },
-                                formatter: function (p) {
-                                    return (p.value > 0 ? (p.value) : '') + '亿';
-                                }
-                            },
-                        }
-                    },
-                },
-                {
-                    name: '增长率',
-                    type: 'line',
-                    yAxisIndex: 1,
-                    data: [161.2, 211.1, 198.9, 32.4, 81.1, 57.4, 58.5, 8.0, -14.8, -16.6, -18.9],
-                    itemStyle: {
-                        normal: {
-                            label: {
-                                show: true, //开启显示
-                                position: 'top', //在上方显示
-                                textStyle: { //数值样式
-                                    fontSize: 12
-                                },
-                                formatter: function (p) {
-                                    return (p.value > 0 ? (p.value) : '') + '%';
-                                }
-                            },
-                        }
-                    },
-                }
-            ]
-        };
-        IncomeWeb.setOption(option_incomeWeb);
+        // Income.setOption(option_income);
 
         // 2009-2018中国电子竞技市场规模
         var option_incomeMarket = {
@@ -2236,7 +1579,7 @@
                 bottom: '0',
                 feature: {
                     dataView: { show: true, readOnly: false },
-                    magicType: { show: true, type: ['line', 'bar'] },
+                    magicType: { show: true, type: ['line'] },
                     restore: { show: true },
                     saveAsImage: { show: true }
                 }
@@ -2253,30 +1596,33 @@
                     }
                 }
             ],
-            yAxis: [
-                {
-                    type: 'value',
-                    name: '中国电子竞技市场规模',
-                    min: 0,
-                    max: 1000,
-                    axisLabel: {
-                        formatter: '{value} 亿元'
-                    }
-                },
-                {
-                    type: 'value',
-                    name: '增长率',
-                    min: 0,
-                    max: 100,
-                    axisLabel: {
-                        formatter: '{value} %'
-                    }
-                }
-            ],
+            yAxis: {
+                splitLine: {show: false},
+                axisTick: {show: false},
+                axisLine: {show: false},
+                axisLabel: {show: false}
+            },
             series: [
                 {
                     name: '中国电子竞技市场规模',
-                    type: 'bar',
+                    type: 'pictorialBar',
+                    barCategoryGap: '-130%',
+                    // symbol: 'path://M0,10 L10,10 L5,0 L0,10 z',
+                    symbol: 'path://M0,10 L10,10 C5.5,10 5.5,5 5,0 C4.5,5 4.5,10 0,10 z',
+                    itemStyle: {
+                        normal: {
+                            opacity: 0.5
+                        },
+                        emphasis: {
+                            opacity: 1
+                        }
+                    },
+                    data: [24.0, 44.1, 85.0, 131.3, 174.8, 226.3, 269.1, 429.8, 706.1, 940.5],
+                    z: 10
+                },
+                {
+                    name: '中国电子竞技市场规模',
+                    type: 'line',
                     data: [24.0, 44.1, 85.0, 131.3, 174.8, 226.3, 269.1, 429.8, 706.1, 940.5],
                     itemStyle: {
                         normal: {
@@ -2292,31 +1638,121 @@
                             },
                         }
                     },
-                },
-                {
-                    name: '增长率',
-                    type: 'line',
-                    yAxisIndex: 1,
-                    data: [, 84.0, 93.0, 54.4, 33.1, 29.4, 19.0, 16.0, 64.3, 33.2],
-                    itemStyle: {
-                        normal: {
-                            label: {
-                                show: true, //开启显示
-                                position: 'top', //在上方显示
-                                textStyle: { //数值样式
-                                    fontSize: 12
-                                },
-                                formatter: function (p) {
-                                    return (p.value > 0 ? (p.value) : '') + '%';
-                                }
-                            },
-                        }
-                    },
                 }
             ]
         };
-        IncomeMarket.setOption(option_incomeMarket);
+        // IncomeMarket.setOption(option_incomeMarket);
 
+
+    </script>
+
+    <script>
+        $(window).ready(function () {
+            var a = $(window).height();
+            var x = parseInt(a / 2);
+            var b;
+            var Ousers = $("#users");
+            var Osalary = $("#salary");
+            var OemployeeOfCompany = $("#employeeOfCompany");
+            var Oradial = $("#radial");
+            var Ocompany = $("#company");
+            var Omarket = $("#market");
+            var Oincome = $("#income");
+            var OincomeMarket = $("#incomeMarket");
+            var Map = $("#mapOfSchool");
+
+            // 滚动到指定位置加载动画
+            $(window).scroll(function () {
+                b = $(this).scrollTop();
+                var c = Map.offset().top + x;
+                if (a + b > c && a + b < c + 40 && c > b) {
+                    MapOfSchool.clear();
+                    MapOfSchool.setOption(option);
+                    return;
+                }
+            });
+
+
+            $(window).scroll(function () {
+                b = $(this).scrollTop();
+                var c = Ousers.offset().top + x;
+                if (a + b > c && a + b < c + 40 && c > b) {
+                    Users.clear();
+                    Users.setOption(option_user);
+                    return;
+                }
+            });
+
+            $(window).scroll(function () {
+                b = $(this).scrollTop();
+                var c = Osalary.offset().top + x;
+                if (a + b > c && a + b < c + 40 && c > b) {
+                    Salary.clear();
+                    Salary.setOption(option_salary);
+                    return;
+                }
+            });
+
+            $(window).scroll(function () {
+                b = $(this).scrollTop();
+                var c = OemployeeOfCompany.offset().top + x;
+                if (a + b > c && a + b < c + 40 && c > b) {
+                    EmployeeOfCompany.clear();
+                    EmployeeOfCompany.setOption(option_employeeOfCom);
+                    return;
+                }
+            });
+
+            $(window).scroll(function () {
+                b = $(this).scrollTop();
+                var c = Oradial.offset().top + x;
+                if (a + b > c && a + b < c + 40 && c > b) {
+                    Radial.clear();
+                    Radial.setOption(option_radail);
+                    return;
+                }
+            });
+
+            $(window).scroll(function () {
+                b = $(this).scrollTop();
+                var c = Ocompany.offset().top + x;
+                if (a + b > c && a + b < c + 40 && c > b) {
+                    Company.clear();
+                    Company.setOption(option_company);
+                    return;
+                }
+            });
+
+            $(window).scroll(function () {
+                b = $(this).scrollTop();
+                var c = Omarket.offset().top + x;
+                if (a + b > c && a + b < c + 40 && c > b) {
+                    Market.clear();
+                    Market.setOption(option_market);
+                    return;
+                }
+            });
+
+            $(window).scroll(function () {
+                b = $(this).scrollTop();
+                var c = Oincome.offset().top + x;
+                if (a + b > c && a + b < c + 40 && c > b) {
+                    Income.clear();
+                    Income.setOption(option_income);
+                    return;
+                }
+            });
+
+            $(window).scroll(function () {
+                b = $(this).scrollTop();
+                var c = OincomeMarket.offset().top + x;
+                if (a + b > c && a + b < c + 40 && c > b) {
+                    IncomeMarket.clear();
+                    IncomeMarket.setOption(option_incomeMarket);
+                    return;
+                }
+            });
+        })
 
     </script>
 </body>

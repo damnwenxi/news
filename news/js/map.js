@@ -56,7 +56,7 @@ var school = [
     {name:"天津",value:0},
     {name:"河北",value:['石家庄职业技术学院(游戏设计)','张家口职业技术学院(软件技术-手机游戏开发方向)','河北软件职业技术学院(软件技术-手机游戏开发方向)','河北工程技术学院(软件技术-游戏开发方向)','石家庄科技信息职业学院(软件技术-游戏开发方向)','河北软件职业技术学院(电子竞技运动与管理)','河北美术学院(游戏设计)']},
     {name:"山西",value:['山西体育职业学院(电子竞技运动与管理)']},
-    {name:"内蒙古",value:['内蒙古电子信息职业技术学院(游戏设计、开发)','兴安职业技术学院(计算机应用、计算机网络技术、电子竞技运动与管理、云计算技术与应用)','锡林郭勒职业学院(电子竞技)']},
+    {name:"内蒙古",value:['内蒙古电子信息职业技术学院(游戏设计、开发)','兴安职业技术学院(电子竞技运动与管理)','锡林郭勒职业学院(电子竞技)']},
     {name:"辽宁",value:['大连东软信息学院(游戏设计方向)']},
     {name:"吉林",value:0},
     {name:"黑龙江",value:['哈尔滨科学技术职业学院(游戏设计)','黑龙江商业职业学院(电子竞技运动与管理)']},
@@ -89,10 +89,10 @@ var geoCoordMap = {};
 var getSchool = function(name){
     for(var i=0; i<school.length; i++){
         if(name == school[i].name && !school[i].value){
-            return "该地区没有电竞相关高校"
+            return "<ul> <li><a>"+ school[i].name+":</a></li> <br/> <li><a>"+"该地区没有电竞相关高校"+"</a></li>"+"</ul>"
         }
         else if(name == school[i].name && school[i].value){
-            var list = school[i].value.join("<br/>");
+            var list = "<ul><li><a>" +school[i].name+":</a></li> <br/> <li><a>"+school[i].value.join("</a></li><br/><li><a>") + "</a></li>"+"</ul>";
             return list;
         }
     }
@@ -163,7 +163,7 @@ option = {
             // color: ['#3C3B3F', '#605C3C'] // 黑绿
             // color: ['#0f0c29', '#302b63', '#24243e'] // 黑紫黑
             // color: ['#23074d', '#cc5333'] // 紫红
-            color: ['#00467F', '#A5CC82'] // 蓝绿
+            color: ['#A5CC82','#00467F' ] // 蓝绿
             // color: ['#1488CC', '#2B32B2'] // 浅蓝
             // color: ['#00467F', '#A5CC82'] // 蓝绿
             // color: ['#00467F', '#A5CC82'] // 蓝绿
@@ -197,7 +197,7 @@ option = {
                 show: false,
             }
         },
-        roam: true,
+        roam: false,
         itemStyle: {
             normal: {
                 areaColor: '#031525',
@@ -226,7 +226,7 @@ option = {
             },
             itemStyle: {
                 normal: {
-                    color: '#05C3F9'
+                    color: '#0d2349'
                 }
             }
         },
@@ -291,6 +291,5 @@ option = {
         }
     ]
 };
-
 
 MapOfSchool.setOption(option);
