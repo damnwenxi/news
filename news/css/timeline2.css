@@ -112,6 +112,7 @@
 .VivaTimeline dl dd .events .events-body .events-desc {
     text-indent: 2em;
     padding: 0 15px;
+    text-align: left;
 }
 
 .VivaTimeline dl dd .events .events-footer {
@@ -212,6 +213,12 @@
         display: none;
     }
     */
+}
+
+#timeline{
+    margin: 0 auto;
+    max-width: 800px;
+    margin-bottom: 5em;
 }
 
 @media screen and (max-width: 500px) {

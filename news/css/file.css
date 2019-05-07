@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+}
+/* 
+.split{
+    width: 100%;
+    height: 1em;
+    background-color: #EAE8E6;
+    color: #777;
+} */
+
+.hidden{
+    display: none;
+}
+
+h3{
+    font-size: 1.2em;
+    display: inline-block;
+    padding-left: 1em; 
+    margin: 1em auto;
+    border-left: 5px solid rgb(255,109,112);
+}
+

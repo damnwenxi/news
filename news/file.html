@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.css">
+    <link rel="stylesheet" href="./css/file.css">
+    <title>文件列表</title>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <div style="width:100%;background-color: #fff">
+        <nav id="home" class="container navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#">news</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
+                aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor03">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">研究报告 </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./file.html">资料下载 </a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input id="search" class="form-control mr-sm-2" type="text" placeholder="全文搜索">
+                    <button id="submit" class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+    <h2>资料下载及预览</h2>
+    <hr>
+    <p>*为了减轻服务器压力，每张表仅展示50条数据记录，要获取完整数据请下载。</p>    
+    <h3>
+        开设电竞相关专业的高校统计
+        <span class="btn btn-sm btn-outline-primary">折叠/展开</span>
+        <a href="./files/school.csv" download="school.csv" class="btn btn-sm btn-outline-primary">下载</a>
+    </h3>   
+    <table id="school" align="center" class="hidden container table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">所属省份</th>
+                <th scope="col">学校名称</th>
+                <th scope="col">相关专业名称</th>
+                <th scope="col">是否211</th>
+                <th scope="col">是否985</th>
+                <th scope="col">本科/专科</th> 
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <div class="split"></div>
+    <!--  -->
+    <h3>
+        中国游企版图企业数量统计
+        <span class="btn btn-sm btn-outline-primary">折叠/展开</span>
+        <a href="./files/company.csv" download="company.csv" class="btn btn-sm btn-outline-primary">下载</a>
+    </h3>
+    <table id="product" align="center" class="hidden container table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">游戏名称</th>
+                <th scope="col">类型</th>
+                <th scope="col">出版公司</th>
+                <th scope="col">版号</th>
+                <th scope="col">出版时间</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <div class="split"></div>
+    <!--  -->
+    <h3>
+        中国游企版图企业数量统计
+        <span class="btn btn-sm btn-outline-primary">折叠/展开</span>
+        <a href="./files/product.csv" download="product.csv" class="btn btn-sm btn-outline-primary">下载</a>
+    </h3>
+    <table id="company" align="center" class="hidden container table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">企业名称</th>
+                <th scope="col">简称</th>
+                <th scope="col">英文名称</th>
+                <th scope="col">简介</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</div>
+
+    <script src="https://cdn.bootcss.com/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+        var BASE_URL = "http://www.kkboom.cn:8123";
+        window.onload = function () {
+            $.get(BASE_URL+"/school?page=0", (res) => {
+                const row = res.school;
+                for (var i = 0; i < row.length; i++) {
+                    var is985 = row[i].f985 == 2?"否":"是";
+                    var is211 = row[i].f211 == 2?"否":"是";
+                    var item = document.createElement('tr');
+                    item.innerHTML = 
+                    `   <td>`+row[i].province_name+`</td>
+                        <td>`+row[i].name+`</td>
+                        <td>`+row[i].spname+`</td>
+                        <td>`+is211+`</td>
+                        <td>`+is985+`</td>
+                        <td>`+row[i].type+`</td>
+                        `
+                    $("#school tbody").append(item);
+                }
+            });
+
+            $.get(BASE_URL+"/company?page=0", (res) => {
+                // console.log(res.company);
+                const row = res.company;
+                for (var i = 0; i < row.length; i++) {
+                    var item = document.createElement('tr');
+                    item.innerHTML = 
+                    `   <td>`+row[i].name+`</td>
+                        <td>`+row[i].short_name+`</td>
+                        <td>`+row[i].english_name+`</td>
+                        <td>`+row[i].description+'...'+`</td>
+                        `
+                    $("#company tbody").append(item);
+                }
+            });
+
+            $.get(BASE_URL+"/product?page=0", (res) => {
+                const row = res.product;
+                for (var i = 0; i < row.length; i++) {
+                    var item = document.createElement('tr');
+                    item.innerHTML = 
+                    `   <td>`+row[i].gamename+`</td>
+                        <td>`+row[i].type+`</td>
+                        <td>`+row[i].copyrightname+`</td>
+                        <td>`+row[i].isbnno+`</td>
+                        <td>`+row[i].year+`</td>
+                        `
+                    $("#product tbody").append(item);
+                }
+            });
+
+            // table控制
+            $('h3 span').click(function () {
+                $(this).parent().next().toggle(500);
+            });
+        };
+    </script>
+</body>
+
+</html>

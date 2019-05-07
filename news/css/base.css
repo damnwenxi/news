@@ -108,6 +108,18 @@ article hr{
 }
 
 
+.tips{
+    text-align: left;
+    max-width: 800px;
+    margin: 2em auto;
+    padding: .5em 1.2em;
+    border-left: 5px solid rgb(255,109,112);
+}
+
+.tips a{
+    color: rgb(255,109,112);
+}
+
 
 section p{
     max-width: 800px;
@@ -211,31 +223,40 @@ section h1{
     text-decoration: none !important;
 }
 
-#chain{
+#logo_list{
     margin: 0 auto;
 }
 
-#chain ul{
+#logo_list ul{
     display: -webkit-flex;
-    display: inline-flex;
+    display: flex;
     width: 100%;
     justify-content: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
-#chain ul li{
-    align-items: flex-start;
-    border-radius: 5px;
+#logo_list ul li{
+    margin: 2em;
+    max-width: 15em;
+    align-items: center;
     list-style-type: none;
     float: left;
-    padding: 1em 1em;
     margin-right: 1em;
 }
 
-#chain ul li:hover{
-    transform: scale(1.1);
-    background: rgba(254,243,234,.8)
+#logo_list li img{
+    margin: auto;
+    display: block;
+    height: auto;
+    width: auto;
+    max-height: 5em;
+    max-width: 15em;
 }
+
+#logo_list li .name{
+    color: rgb(255,109,112);
+}
+
 
 /* 用户数量统计表 */
 .echarts{

@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./css/timeline2.css">
     <link rel="Shortcut Icon" href="./favicon.ico">
 
-    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+    <!-- <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script> -->
 </head>
 
 <body>
@@ -45,13 +45,10 @@
             <div class="collapse navbar-collapse" id="navbarColor03">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">研究报告 <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="./index.html">研究报告</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">资料下载</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">团队介绍</a>
+                        <a class="nav-link" href="./file.html">资料下载</a>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
@@ -75,7 +72,7 @@
                 <li> <a class="label" href="#talent">人才储备</a></li>
                 <li> <a class="label" href="#technology">技术研发</a></li>
                 <li> <a class="label" href="#result">结论</a></li>
-                <li> <a class="label" href="#file">引用资料</a></li>
+                <li> <a class="label" href="#thanks">致谢</a></li>
             </ul>
         </div>
 
@@ -97,6 +94,11 @@
 
 
             <br>
+            <!-- 数据说明 -->
+            <p class="tips">
+                我们从中国教育在线<a href="https://gkcx.eol.cn/">https://gkcx.eol.cn/</a>爬取并筛选出了所有开设了电竞相关专业的学校信息，按照地理位置分布做了地理数据可视化图表。您还可以在此<a href="./file.html">查看数据源</a>。
+            </p>
+            <hr>
             <!-- 截止2019年开设与游戏行业强相关专业的高校 -->
             <h2>截止2019年开设与游戏行业强相关专业的高校 </h2>
             <div id="mapOfSchool" class="echarts" style="max-width:1200px;height: 50em;"></div>
@@ -109,39 +111,15 @@
             <section class="container">
                 <img class="title" src="./static/img/政策保障.png" alt="技术研发" />
                 <hr>
+                <h2>电子竞技产业链</h2>
                 <p class="quto">电子竞技行业如今也发展成为相对成熟的产业，该行业现已形成较为完整的产业链。
                 </p>
                 <!-- 产业链图表 -->
-                <div id="chain">
-                    <h3>电子竞技产业链</h3>
-                    <ul>
-                        <li>上游<br>(游戏内容)</li>
-                        <li>游戏开发商<br>巨人网络、畅游等</li>
-                        <li>游戏发行商<br>value、riot、Blizzard等</li>
-                        <li>游戏运营商<br>腾讯、盛大、网易等</li>
-                    </ul>
-                    <ul>
-                        <li>中游<br>(电竞赛事)</li>
-                        <li>赛事赞助商<br>资本赞助、品牌冠名赞助等</li>
-                        <li>赛事运营<br>完美世界、VSPN等</li>
-                        <li>赛事参与方<br>俱乐部、职业选手、赛事解说等</li>
-                        <li>赛事内容制造商<br>网映文化</li>
-                    </ul>
-                    <ul>
-                        <li>下游<br>(落地平台)</li>
-                        <li>电视播出平台<br>电视猫、游戏风云</li>
-                        <li>视频网站播出平台<br>爱奇艺、电竞网等</li>
-                        <li>在线游戏直播平台<br>斗鱼TV、熊猫TV等</li>
-                    </ul>
-                    <ul>
-                        <li>下游衍生行业</li>
-                        <li>周边产品<br>手办、虚拟饰品、外设硬件等</li>
-                        <li>电商平台<br>IGXE、VPGAME等</li>
-                    </ul>
-                </div>
+                <img style="max-width: 800px;" src="./static/img/chain.png" alt="电子竞技产业链">
 
                 <br><br><br>
 
+                <!-- 时间线 -->
                 <h3 style="text-align:center;"> 相关政策扶持 <label id="timelineControl" class="btn btn-sm btn-outline-primary">折叠/展开</label>
                 </h3>
                 <div style="display:none" id="timeline" class="row">
@@ -343,7 +321,7 @@
                                     <div class="circ"></div>
                                     <div class="time"></div>
                                     <div class="events">
-                                        <div class="events-header">Events</div>
+                                        <!-- <div class="events-header">Events</div> -->
                                         <div class="events-body">
                                             <div class="row">
                                                 <div class="col-md-6 pull-left">
@@ -361,7 +339,7 @@
                                     <div class="circ"></div>
                                     <div class="time"></div>
                                     <div class="events">
-                                        <div class="events-header">Events</div>
+                                        <!-- <div class="events-header">Events</div> -->
                                         <div class="events-body">
                                             <div class="row">
                                                 <div class="col-md-6 pull-right">
@@ -378,9 +356,14 @@
                         </div>
                     </div>
                 </div>
+                <br>
             </section>
             <!-- 图表一 中国游戏用户规模 -->
             <section class="container">
+                <!-- 数据说明 -->
+                <!-- <p class="tips">
+                    我们从中国教育在线<a href="https://gkcx.eol.cn/">https://gkcx.eol.cn/</a>爬取并筛选出了所有开设了电竞相关专业的学校信息，按照地理位置分布做了地理数据可视化图表。您还可以在此<a href="#">查看数据源</a>。
+                </p> -->
                 <hr>
                 <h2>2008-2018中国游戏用户规模统计</h2>
                 <div class="">
@@ -397,6 +380,11 @@
             <span class="section">section 2</span>
             <section class="container">
                 <img class="title" src="./static/img/商业模式.png" alt="技术研发" />
+
+                <!-- 数据说明 -->
+                <p class="tips">
+                        根据中国音数协游戏工委官方网站<a href="http://www.cgigc.com.cn/">http://www.cgigc.com.cn/</a>以及伽马数据<a href="http://www.joynews.cn/">http://www.joynews.cn/</a>相关报告内容，我们统计了2008-2018年间中国游戏市场情况，并对相关资料进行了整理和内容输出。您还可以在此<a href="./file.html">查看所有源报告内容</a>。
+                    </p>
                 <hr>
                 <!-- 2008—2018年中国游戏市场实际销售收入 -->
                 <h2>2008—2018年中国游戏市场实际销售收入</h2>
@@ -413,6 +401,12 @@
                 </div>
 
                 <br>
+                <br>
+                <!-- 数据说明 -->
+                <p class="tips">
+                    我们整理了艾瑞咨询(iresearch)<a href="https://www.iresearch.com.cn/">https://www.iresearch.com.cn/</a>和博思数据中心<a href="http://www.bosidata.com/">http://www.bosidata.com/</a>部分研究报告，并利用象形柱状图的形式来反应2008-2018中国游戏市场规模的变化。
+                </p>
+                <hr>
                 <!-- 2009—2019年中国电子竞技市场规模 -->
                 <h2>2009—2018年中国电子竞技市场规模</h2>
                 <div id="incomeMarket" class="echarts" style="max-width:800px;height: 30em;"></div>
@@ -437,8 +431,7 @@
 
                 <hr>
                 <h2>不同规模企业对最低学历要求分布情况 </h2>
-                <div id="employeeOfCompany" class="echarts" style="max-width:800px;height: 30em;"></div>
-                <p class="">*饼图半径方向表示公司规模，从内到外依次为：20以下、20-99、100-499、500-999、1000以上</p>
+                <div id="employeeOfCompany" class="echarts" style="max-width:800px;height: 60em;"></div>
                 <p class="quto">
                     游戏企业对人才的学历要求较高，超过80%的企业要求本科及以上学历，尤其是大公司更青睐高学历人才。
                     学历差异对游戏企业提供的薪资水平差异明显。
@@ -461,6 +454,12 @@
                 <p class="quto">电子竞技游戏的开发与制作这一环节为整个产业的内容提供了源泉，而游戏研发商是整个电子竞技产业内容的提供者。
                 </p>
                 <br>
+
+                <!-- 数据来源说明 -->
+                <p class="tips">
+                    我们在<a href="http://www.cgigc.com.cn/isbn/">中国音数协游戏工委</a>根据游戏版号爬取并统计了该了网站收录的所有<span class="height">游戏产品</span>相关信息；在<a href="http://gamemap.cgigc.com.cn/list.html?type=2">中国游企版图</a>爬取并统计了该网站收录的所有<span class="height">游戏企业</span>信息；我们根据这些信息以及相关报告内容整理出了如下图表以反映近年来游戏产品以及游戏公司的数量变化规律。您可以在这里 <a href="./file.html">查看相关数据源</a>。
+                </p>
+                <hr>
                 <!-- 2008-2018年中国自主研发游戏产品数量和公司数量 -->
                 <h2>2008-2018年中国自主研发游戏产品数量和公司数量</h2>
                 <div id="company" class="echarts" style="max-width:800px;height: 30em;"></div>
@@ -475,6 +474,9 @@
                 <hr>
                 <p class="quto">
                     2008年以后，我国互联网的普及率越来越高，中国网民的特征朝着年轻化方向发展，我国自主研发的网络游戏市场销售收入呈现逐年增长的状态。
+                </p>
+                <p class="quto">
+                    可以看到，2013年中国自主网络游戏海外市场销售收入<span class="height">增长率高达219.3%</span>。这一年的增长率如此之高的主要原因是，网页游戏和移动游戏成为海外出口的新锐力量，全球平台化趋势使得移动游戏和网页游戏获得更多助力。并且，中国更多的游戏企业在海外出口中选择建立海外子公司直接经营，拥有更大的自主权和灵活性，可以真正了解当地的用户行为和习惯，与当地合作伙伴建立长期稳定关系，获得更大的收益。
                 </p>
                 <br>
 
@@ -493,6 +495,63 @@
                 </p>
 
             </section>
+
+        </article>
+
+        <!-- 致谢及团队介绍 -->
+        <article id="thanks">
+            <h1>致谢</h1>
+            <p class="tips">
+                在我们的研究调查过程中，引用参考并从相关网站获取了部分数据资料，除此之外，我们还利用了一些工具来构建我们的网站，在此我们团队对以下网站及相关机构表示感谢！    
+            </p>
+            <!-- 鸣谢名单 -->
+            <div id="logo_list" class="container">
+                    <ul>
+                        <li>
+                            <img style="background-color:rgb(27, 42, 87)" src="http://gamemap.cgigc.com.cn/images/logo.png" alt=""><br>
+                            <a class="name" href="">中国游企版图</a><br>
+                            <a href="http://gamemap.cgigc.com.cn">http://gamemap.cgigc.com.cn</a>
+                        </li>
+                        <li>
+                            <img src="http://www.cgigc.com.cn/cgigc/2018new/images/logo-2.png?1" alt=""><br>
+                            <a class="name" href="">中国音数协游戏工委</a><br>
+                            <a href="http://www.cgigc.com.cn/">http://www.cgigc.com.cn/</a>
+                        </li>  
+
+                        <li>
+                            <img src="https://www.iresearch.com.cn/images/base/logo.png?v1" alt=""><br>
+                            <a class="name" href="">艾瑞咨询(iResearch)</a><br>
+                            <a href="https://www.iresearch.com.cn/">https://www.iresearch.com.cn/</a>
+                        </li>
+                        <li>
+                            <img src="http://www.bosidata.com/themes/images/logo.gif" alt=""><br>
+                            <a class="name" href="">博思数据中心</a><br>
+                            <a href="http://www.bosidata.com/">http://www.bosidata.com/</a>
+                        </li>
+                        <li>
+                            <img style="background-color:rgb(44, 59, 83);padding: 2px 5px" src="https://www.echartsjs.com/images/logo.png" alt=""><br>
+                            <a class="name" href="">Echarts</a><br>
+                            <a href="https://www.echartsjs.com/">https://www.echartsjs.com/</a>
+                        </li>
+
+                        <li>
+                            <img src="./static/img/logo.jpg" alt=""><br>
+                            <a href="">伽马数据</a><br>
+                            <a href="http://www.joynews.cn/">http://www.joynews.cn/</a>
+                        </li>
+                    </ul>
+            </div>
+            <hr>
+
+            <h1>团队介绍</h1>
+            <ul>
+                <li>指导教师：</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+                <li>xxx</li>
+            </ul>
 
         </article>
 
@@ -583,10 +642,10 @@
             }
 
             //   ip统计 
-            $.get("http://www.kkboom.cn:8123/ip", { ip: returnCitySN["cip"], addr: returnCitySN["cname"] }, function (res) {
-                // console.log(res);
-                $("#visitor").html("访问量：" + res.count[0]['count(*)']);
-            });
+            // $.get("http://www.kkboom.cn:8123/ip", { ip: returnCitySN["cip"], addr: returnCitySN["cname"] }, function (res) {
+            //     // console.log(res);
+            //     $("#visitor").html("访问量：" + res.count[0]['count(*)']);
+            // });
         };
     </script>
 
@@ -692,7 +751,7 @@
         // 从业者薪资
         var option_salary = {
             title: {
-                subtext: '数据来源：xxxx',
+                subtext: 'CNG中新游戏研究（伽马数据）',
                 x: 'center'
             },
             tooltip: {
@@ -744,113 +803,157 @@
         // Salary.setOption(option_salary);
 
         // 不同规模企业对最低学历要求分布情况
+
+
+        var labelSetting = {
+            normal: {
+                show: true,
+                position: 'right',
+                offset: [10, 0],
+                textStyle: {
+                    fontSize: 16
+                },
+                formatter:"{a}{c}%"
+            }
+        };
+
+
         var option_employeeOfCom = {
             title: {
-                subtext: '数据来源：xxxx',
-                x: 'center'
-            },
-            tooltip: {
-                trigger: 'item',
-                formatter: '{a} <br/>{b} : {c} %'
+                text: '企业规模'
             },
             legend: {
-                data: ['本科', '大专', '高中', '不限'],
-                left: 'left',
-                orient: 'vertical',
+                data: ['本科', '大专','高中','不限']
             },
-            series: [
-                {
-                    name: '1000人以上',
-                    type: 'pie',
-                    radius: ['72%', '80%'],
-                    data: [
-                        { value: 57.2, name: '本科' },
-                        { value: 34.6, name: '大专' },
-                        { value: 5.3, name: '高中' },
-                        { value: 2.9, name: '不限' }
-                    ],
-                    itemStyle: {
-                        normal: {
-                            label: {
-                                show: true, //开启显示
-                                // position: 'top', //在上方显示
-                                textStyle: { //数值样式
-                                    fontSize: 12
-                                },
-                                formatter: function (p) {
-                                    return (p.value > 0 ? (p.value) : '') + '%';
-                                }
-                            }
-                        }
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'shadow'
+                }
+            },
+            grid: {
+                containLabel: true,
+                left: 20
+            },
+            yAxis: {
+                data: ['1000人以上', '500-999人', '100-499人', '20-99人', '20人以下'],
+                inverse: true,
+                axisLine: {show: false},
+                axisTick: {show: false},
+                axisLabel: {
+                    margin: 30,
+                    textStyle: {
+                        fontSize: 14
                     }
                 },
-                {
-                    name: '500-999',
-                    type: 'pie',
-                    radius: ['56%', '64%'],
+                axisPointer: {
                     label: {
-                        normal: {
-                            show: false
-                        }
-                    },
-                    data: [
-                        { value: 22.8, name: '本科' },
-                        { value: 55.5, name: '大专' },
-                        { value: 20.1, name: '高中' },
-                        { value: 1.6, name: '不限' }
-                    ]
-                },
-                {
-                    name: '100-499',
-                    type: 'pie',
-                    radius: ['40%', '48%'],
-                    label: {
-                        normal: {
-                            show: false
-                        }
-                    },
-                    data: [
-                        { value: 22.7, name: '本科' },
-                        { value: 59.8, name: '大专' },
-                        { value: 13.9, name: '高中' },
-                        { value: 3.6, name: '不限' }
-                    ]
-                },
-                {
-                    name: '20-99',
-                    type: 'pie',
-                    radius: ['24%', '32%'],
-                    label: {
-                        normal: {
-                            show: false
-                        }
-                    },
-                    data: [
-                        { value: 21.2, name: '本科' },
-                        { value: 54.4, name: '大专' },
-                        { value: 13.7, name: '高中' },
-                        { value: 10.7, name: '不限' }
-                    ]
-                },
-                {
-                    name: '20以下',
-                    type: 'pie',
-                    radius: [0, '16%'],
-                    label: {
-                        normal: {
-                            show: false
-                        }
-                    },
-                    data: [
-
-                        { value: 24.2, name: '本科' },
-                        { value: 52.3, name: '大专' },
-                        { value: 4.7, name: '高中' },
-                        { value: 18.8, name: '不限' }
-                    ]
+                        show: true,
+                    }
                 }
-            ]
+            },
+            xAxis: {
+                splitLine: {show: false},
+                axisLabel: {show: false},
+                axisTick: {show: false},
+                axisLine: {show: false}
+            },
+            series: [{
+                name: '本科',
+                type: 'pictorialBar',
+                label: labelSetting,
+                symbolRepeat: true,
+                symbolSize: ['70%', '60%'],
+                barCategoryGap: '10%',
+                data: [{
+                    value: 52.7,
+                    symbol: college
+                }, {
+                    value: 22.8,
+                    symbol: college
+                }, {
+                    value: 22.7,
+                    symbol: college
+                }, {
+                    value: 21.2,
+                    symbol: college
+                }, {
+                    value: 24.2,
+                    symbol: college
+                }]
+            }, {
+                name: '大专',
+                type: 'pictorialBar',
+                barGap: '10%',
+                label: labelSetting,
+                symbolRepeat: true,
+                symbolSize: ['80%', '80%'],
+                data: [{
+                    value: 34.6,
+                    symbol: college2
+                }, {
+                    value: 55.5,
+                    symbol: college2
+                }, {
+                    value: 59.8,
+                    symbol: college2
+                }, {
+                    value: 54.4,
+                    symbol: college2
+                }, {
+                    value: 52.3,
+                    symbol: college2
+                }]
+            },{
+                name: '高中',
+                type: 'pictorialBar',
+                barGap: '10%',
+                label: labelSetting,
+                symbolRepeat: true,
+                symbolSize: ['80%', '60%'],
+                data: [{
+                    value: 5.2,
+                    symbol: college3
+                }, {
+                    value: 20.9,
+                    symbol: college3
+                }, {
+                    value: 13.9,
+                    symbol: college3
+                }, {
+                    value: 13.7,
+                    symbol: college3
+                }, {
+                    value: 4.7,
+                    symbol: college3
+                }]
+            },{
+                name: '不限',
+                type: 'pictorialBar',
+                barGap: '10%',
+                label: labelSetting,
+                symbolRepeat: true,
+                symbolSize: ['80%', '60%'],
+                data: [{
+                    value: 2.9,
+                    symbol: college4
+                }, {
+                    value: 1.6,
+                    symbol: college4
+                }, {
+                    value: 3.6,
+                    symbol: college4
+                }, {
+                    value: 10.7,
+                    symbol: college4
+                }, {
+                    value: 18.8,
+                    symbol: college4
+                }]
+            }
+        ]
         };
+
         // EmployeeOfCompany.setOption(option_employeeOfCom);
 
         // 放射状呈现游戏与技术之间的关系
@@ -1496,27 +1599,40 @@
             yAxis: [
                 {
                     type: 'value',
-                    name: '中国游戏市场实际销售收入',
+                    name: '',
                     min: 0,
                     max: 2200,
                     axisLabel: {
                         formatter: '{value} 亿元'
-                    }
+                    },
+                    splitLine: {show: false},
+                    axisTick: {show: false},
+                    axisLine: {show: false},
+                    axisLabel: {show: false}  
                 },
                 {
                     type: 'value',
-                    name: '增长率',
+                    name: '',
                     min: 0,
                     max: 80,
                     axisLabel: {
                         formatter: '{value} %'
-                    }
+                    },
+                    splitLine: {show: false},
+                    axisTick: {show: false},
+                    axisLine: {show: false},
+                    axisLabel: {show: false}  
                 }
             ],
             series: [
                 {
                     name: '中国游戏市场实际销售收入',
-                    type: 'bar',
+                    type: 'pictorialBar',
+                    symbol: money,
+                    symbolRepeat: true,
+                    symbolSize: [40, 30],
+                    symbolMargin: -5,
+                    z: -10,
                     data: [185.6, 262.8, 333.0, 446.1, 602.8, 831.7, 1144.8, 1407.0, 1655.7, 2036.1, 2144.4],
                     itemStyle: {
                         normal: {

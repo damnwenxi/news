@@ -71,6 +71,72 @@ router.get('/ip', async ctx => {
     }
 });
 
+router.get('/school',async ctx =>{
+    try {
+        const page = parseInt(ctx.query.page);
+
+        const getSchool = await ctx.db.query(
+            "select * from school limit ?,50",
+            [page]
+        );
+        if(getSchool.length > 0 ){
+            ctx.body = {msg:"success",school:getSchool};
+            ctx.status = 200;
+        }else{
+            ctx.body = {msg:"db err"};
+            ctx.status = 500;
+        }
+    } catch (e) {
+        console.log(e);
+        ctx.status = 500;
+        ctx.body = { msg: "崩了" };
+    }
+});
+
+router.get('/company',async ctx =>{
+    try {
+        const page = parseInt(ctx.query.page);
+
+        const getCompany = await ctx.db.query(
+            "SELECT name,short_name,english_name,LEFT(description,30) as description FROM company LIMIT ?,50;",
+            [page]
+        );
+        if(getCompany.length > 0 ){
+            ctx.body = {msg:"success",company:getCompany};
+            ctx.status = 200;
+        }else{
+            ctx.body = {msg:"db err"};
+            ctx.status = 500;
+        }
+    } catch (e) {
+        console.log(e);
+        ctx.status = 500;
+        ctx.body = { msg: "崩了" };
+    }
+});
+
+router.get('/product',async ctx =>{
+    try {
+        const page = parseInt(ctx.query.page);
+
+        const getProduct = await ctx.db.query(
+            "select * from product limit ?,50",
+            [page]
+        );
+        if(getProduct.length > 0 ){
+            ctx.body = {msg:"success",product:getProduct};
+            ctx.status = 200;
+        }else{
+            ctx.body = {msg:"db err"};
+            ctx.status = 500;
+        }
+    } catch (e) {
+        console.log(e);
+        ctx.status = 500;
+        ctx.body = { msg: "崩了" };
+    }
+});
+
 app.use(router.routes()).use(router.allowedMethods());
 app.listen(8123, () => {
     console.log('app id running on port 8123');
