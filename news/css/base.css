@@ -10,7 +10,7 @@ body{
 }
 
 .height{
-    color: #000;
+    color: rgb(237, 119, 104);
     font-weight: 600;
 }
 
@@ -62,6 +62,15 @@ body{
     background-color: rgb(255,109,112) !important;
 }
 
+.normal{
+    text-indent: 2em;
+}
+h5{
+    display: block;
+    margin: 1em auto;
+    max-width: 800px;
+    text-align: left;
+}
 /* 分割线样式 */
 article hr{
     margin: 3em auto;
@@ -145,6 +154,14 @@ article{
 section h1{
     text-align: center;
     font-size: 3em;
+}
+
+section h2{
+    display: block;
+    margin: 1em auto;
+    padding: .5em;
+    background-color: rgb(237, 119, 104);
+    color: white;
 }
 /* 每一段前面的文字部分 */
 .quto{

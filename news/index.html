@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/timeline2.css">
     <link rel="Shortcut Icon" href="./favicon.ico">
-
     <!-- <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script> -->
 </head>
 
@@ -79,10 +78,9 @@
         <!-- banner -->
         <div id="banner">
             <div id="title">
-                <h1>电竞行业的产业化进程</h1>
+                <h2>电竞行业的产业化进程</h2>
                 <h2>Industrialization process of the e-sports industry</h2>
             </div>
-
         </div>
 
         <!-- 引言部分 -->
@@ -90,18 +88,32 @@
             <!-- 引言部分 -->
             <section class="container">
                 <div id="begin"><span>“</span>随着电子竞技行业的产业化，很多职业教育院校和本科高校都纷纷开设了电竞专业和电竞课程。从2008年开始，电子竞技行业迅猛发展，电子竞技行业如今已进入黄金时代。<span>”</span></div>
+
+                
+                <h2>电子竞技产业链</h2>
+                <p class="quto">电子竞技行业如今也发展成为相对成熟的产业，该行业现已形成较为完整的产业链。
+                </p>
+                <!-- 产业链图表 -->
+                <img style="max-width: 800px;" src="./static/img/chain.png" alt="电子竞技产业链">
+                <br>
+                <br>
+                <!-- 用户规模 -->
+                <h2>2008-2018中国游戏用户规模统计</h2>
+                <div class="">
+                    <div id="users" class="echarts" style="max-width:800px;height: 30em;"></div>
+                </div>
+                <br>
+                <br>
+                <!-- 数据说明 -->
+                <p class="tips">
+                    我们整理了艾瑞咨询(iresearch)<a href="https://www.iresearch.com.cn/">https://www.iresearch.com.cn/</a>和博思数据中心<a
+                        href="http://www.bosidata.com/">http://www.bosidata.com/</a>部分研究报告，并利用象形柱状图的形式来反应2008-2018中国游戏市场规模的变化。
+                </p>
+                <!-- 2009—2019年中国电子竞技市场规模 -->
+                <h2>2009—2018年中国电子竞技市场规模</h2>
+                <div id="incomeMarket" class="echarts" style="max-width:800px;height: 30em;"></div>
+                <br>
             </section>
-
-
-            <br>
-            <!-- 数据说明 -->
-            <p class="tips">
-                我们从中国教育在线<a href="https://gkcx.eol.cn/">https://gkcx.eol.cn/</a>爬取并筛选出了所有开设了电竞相关专业的学校信息，按照地理位置分布做了地理数据可视化图表。您还可以在此<a href="./file.html">查看数据源</a>。
-            </p>
-            <hr>
-            <!-- 截止2019年开设与游戏行业强相关专业的高校 -->
-            <h2>截止2019年开设与游戏行业强相关专业的高校 </h2>
-            <div id="mapOfSchool" class="echarts" style="max-width:1200px;height: 50em;"></div>
         </article>
 
 
@@ -110,19 +122,11 @@
             <span class="section">section 1</span>
             <section class="container">
                 <img class="title" src="./static/img/政策保障.png" alt="技术研发" />
-                <hr>
-                <h2>电子竞技产业链</h2>
-                <p class="quto">电子竞技行业如今也发展成为相对成熟的产业，该行业现已形成较为完整的产业链。
-                </p>
-                <!-- 产业链图表 -->
-                <img style="max-width: 800px;" src="./static/img/chain.png" alt="电子竞技产业链">
-
-                <br><br><br>
-
+                <br>
                 <!-- 时间线 -->
                 <h3 style="text-align:center;"> 相关政策扶持 <label id="timelineControl" class="btn btn-sm btn-outline-primary">折叠/展开</label>
                 </h3>
-                <div style="display:none" id="timeline" class="row">
+                <div id="timeline" class="row">
                     <div class="col-md-12">
                         <div class="VivaTimeline">
                             <dl>
@@ -130,7 +134,7 @@
                                 <dt>2018.7</dt>
                                 <dd class="pos-left clearfix">
                                     <div class="circ"></div>
-                                    <div class="time">July 7</div>
+                                    <div class="time">7月</div>
                                     <div class="events">
                                         <div class="events-header">《关于举办2018年全国电子竞技公开赛的通知》</div>
                                         <div class="events-body">
@@ -140,7 +144,7 @@
                                                 </div>
                                                 <div class="events-desc">
                                                     <span class="height">国家体育总局</span>
-                                                    发布了《关于举办2018年全国电子竞技公开赛的通知》，拟于2018年12月在四川成都举办2018年全国<span class="height">电子竞技公开赛</span>总决赛。
+                                                    发布了<span class="height">《关于举办2018年全国电子竞技公开赛的通知》</span>，拟于2018年12月在四川成都举办2018年全国<span class="height">电子竞技公开赛</span>总决赛。
                                                 </div>
                                             </div>
                                         </div>
@@ -148,7 +152,7 @@
                                 </dd>
                                 <dd class="pos-right clearfix">
                                     <div class="circ"></div>
-                                    <div class="time">May 5</div>
+                                    <div class="time">5月</div>
                                     <div class="events">
                                         <div class="events-header">《关于加强网络表演管理工作的通知》</div>
                                         <div class="events-body">
@@ -169,7 +173,7 @@
                                 <dt>2017.4</dt>
                                 <dd class="pos-left clearfix">
                                     <div class="circ"></div>
-                                    <div class="time">April 4</div>
+                                    <div class="time">4月</div>
                                     <div class="events">
                                         <!-- <div class="events-header">Events</div> -->
                                         <div class="events-body">
@@ -178,7 +182,7 @@
                                                     <!-- <img class="events-object img-responsive img-rounded" src="img/cat02.png" /> -->
                                                 </div>
                                                 <div class="events-desc">
-                                                    腾讯召开2017年电竞战略发布会，战略的核心, 便是效仿NBA模式的电竞体育联盟化。
+                                                    腾讯召开2017年电竞战略发布会，战略的核心, 便是效仿NBA模式的<span class="height">电竞体育联盟化</span>。
                                                 </div>
                                             </div>
                                         </div>
@@ -187,7 +191,7 @@
 
                                 <dd class="pos-right clearfix">
                                     <div class="circ"></div>
-                                    <div class="time">April 4</div>
+                                    <div class="time">4月</div>
                                     <div class="events">
                                         <div class="events-header">《文化部“十三五”时期文化产业发展规划》</div>
                                         <div class="events-body">
@@ -207,7 +211,7 @@
 
                                 <dd class="pos-left clearfix">
                                     <div class="circ"></div>
-                                    <div class="time">January 1</div>
+                                    <div class="time">1月</div>
                                     <div class="events">
                                         <!-- <div class="events-header">国际奥委会认证电子竞技运动为正式体育项目</div> -->
                                         <div class="events-body">
@@ -216,7 +220,7 @@
                                                     <!-- <img class="events-object img-responsive img-rounded" src="img/cat02.png" /> -->
                                                 </div>
                                                 <div class="events-desc">
-                                                    国际奥委会正式宣布，认证电子竞技运动为正式体育项目，代表着国际奥委会将开始把电子竞技纳入奥运会比赛项目。
+                                                    国际奥委会正式宣布，认证电子竞技运动为正式体育项目，代表着国际奥委会将开始把电子竞技纳入<span class="height">奥运会比赛项目</span>。
                                                 </div>
                                             </div>
                                         </div>
@@ -228,7 +232,7 @@
                                 <dt>2016.9</dt>
                                 <dd class="pos-right clearfix">
                                     <div class="circ"></div>
-                                    <div class="time">September 9</div>
+                                    <div class="time">9月</div>
                                     <div class="events">
                                         <div class="events-header">《普通高等学校高等职业教育(专科)专业目录》</div>
                                         <div class="events-body">
@@ -237,7 +241,7 @@
                                                     <!-- <img class="events-object img-responsive img-rounded" src="img/cat02.png" /> -->
                                                 </div>
                                                 <div class="events-desc">
-                                                    教育部增补了”电子竟技运动与管理”专业。截止到2018年1月，已有13个院校发布了其电子竟技相关专业的开设及招生情况。
+                                                        <span class="height">教育部增补了”电子竟技运动与管理”专业</span>。截止到2018年1月，已有13个院校发布了其电子竟技相关专业的开设及招生情况。
                                                 </div>
                                             </div>
                                         </div>
@@ -245,7 +249,7 @@
                                 </dd>
                                 <dd class="pos-left clearfix">
                                     <div class="circ"></div>
-                                    <div class="time">July 7</div>
+                                    <div class="time">7月</div>
                                     <div class="events">
                                         <!-- <div class="events-header">Events</div> -->
                                         <div class="events-body">
@@ -262,7 +266,7 @@
                                 </dd>
                                 <dd class="pos-right clearfix">
                                     <div class="circ"></div>
-                                    <div class="time">April 4</div>
+                                    <div class="time">4月</div>
                                     <div class="events">
                                         <!-- <div class="events-header">Events</div> -->
                                         <div class="events-body">
@@ -271,7 +275,7 @@
                                                     <!-- <img class="events-object img-responsive img-rounded" src="img/cat02.png" /> -->
                                                 </div>
                                                 <div class="events-desc">
-                                                    国家发改委明确指出在做好知识产权保护和对青少年引导的前提下，以企业为主体，举办全国性或国际性电子竞技游戏游艺赛事活动。
+                                                    国家发改委明确指出在做好知识产权保护和对青少年引导的前提下，以企业为主体，举办全国性或国际性<span class="height">电子竞技游戏游艺赛事活动</span>。
                                                 </div>
                                             </div>
                                         </div>
@@ -291,7 +295,7 @@
                                                     <!-- <img class="events-object img-responsive img-rounded" src="img/cat02.png" /> -->
                                                 </div>
                                                 <div class="events-desc">
-                                                    国家体育总局决定成立电子竞技国家队，出站第四届亚洲室内和武道运动会。
+                                                    国家体育总局决定<span class="height">成立电子竞技国家队</span>，出站第四届亚洲室内和武道运动会。
                                                 </div>
                                             </div>
                                         </div>
@@ -309,7 +313,7 @@
                                                     <!-- <img class="events-object img-responsive img-rounded" src="img/cat02.png" /> -->
                                                 </div>
                                                 <div class="events-desc">
-                                                    金融危机爆发的背景下，电竞产业举步维艰。国家体育总局整合现有的运动项目，将电竞重新整合为第78号体育运动。
+                                                    金融危机爆发的背景下，电竞产业举步维艰。国家体育总局整合现有的运动项目，将电竞<span class="height">重新整合</span>为第78号体育运动。
                                                 </div>
                                             </div>
                                         </div>
@@ -328,7 +332,7 @@
                                                     <!-- <img class="events-object img-responsive img-rounded" src="img/cat02.png" /> -->
                                                 </div>
                                                 <div class="events-desc">
-                                                    广电总局发布网络游戏类节目的禁播令
+                                                    广电总局发布网络游戏类节目的<span class="height">禁播令</span>。
                                                 </div>
                                             </div>
                                         </div>
@@ -346,7 +350,7 @@
                                                     <!-- <img class="events-object img-responsive img-rounded" src="img/cat02.png" /> -->
                                                 </div>
                                                 <div class="events-desc">
-                                                    国家体育总局批准电子竞技运动项目为第99个正式体育竞赛项目。
+                                                    国家体育总局批准电子竞技运动项目为第99个<span class="height">正式体育竞赛项目</span>。
                                                 </div>
                                             </div>
                                         </div>
@@ -357,22 +361,11 @@
                     </div>
                 </div>
                 <br>
-            </section>
-            <!-- 图表一 中国游戏用户规模 -->
-            <section class="container">
-                <!-- 数据说明 -->
-                <!-- <p class="tips">
-                    我们从中国教育在线<a href="https://gkcx.eol.cn/">https://gkcx.eol.cn/</a>爬取并筛选出了所有开设了电竞相关专业的学校信息，按照地理位置分布做了地理数据可视化图表。您还可以在此<a href="#">查看数据源</a>。
-                </p> -->
-                <hr>
-                <h2>2008-2018中国游戏用户规模统计</h2>
-                <div class="">
-                    <div id="users" class="echarts" style="max-width:800px;height: 30em;"></div>
-                </div>
-
                 <p class="quto">国内在近年来对电子竞技行业出台了不少相关扶持政策，为电子竞技行业引入资本投资和社会资源奠定了基础。
                 </p>
+                <br>
             </section>
+
         </article>
 
         <!-- 商业模式部分 -->
@@ -380,37 +373,34 @@
             <span class="section">section 2</span>
             <section class="container">
                 <img class="title" src="./static/img/商业模式.png" alt="技术研发" />
-
                 <!-- 数据说明 -->
                 <p class="tips">
-                        根据中国音数协游戏工委官方网站<a href="http://www.cgigc.com.cn/">http://www.cgigc.com.cn/</a>以及伽马数据<a href="http://www.joynews.cn/">http://www.joynews.cn/</a>相关报告内容，我们统计了2008-2018年间中国游戏市场情况，并对相关资料进行了整理和内容输出。您还可以在此<a href="./file.html">查看所有源报告内容</a>。
-                    </p>
-                <hr>
+                    根据中国音数协游戏工委官方网站<a href="http://www.cgigc.com.cn/">http://www.cgigc.com.cn/</a>以及伽马数据<a href="http://www.joynews.cn/">http://www.joynews.cn/</a>相关报告内容，我们统计了2008-2018年间中国游戏市场情况，并对相关资料进行了整理和内容输出。您还可以在此<a
+                        href="./file.html">查看所有源报告内容</a>。
+                </p>
                 <!-- 2008—2018年中国游戏市场实际销售收入 -->
                 <h2>2008—2018年中国游戏市场实际销售收入</h2>
                 <div id="income" class="echarts" style="max-width:800px;height: 30em;"></div>
                 <br>
+                <!-- <h4 class="leftalign">多重因素促使移动游戏增长放缓</h4> -->
+                <p class="quto"> 2008—2018年中国移动游戏市场依然保持增长，但近年来增速出现快速下滑，销售收入增长放缓。这主要受用户需求改变、用户获取难度提升、新产品竞争力减弱等因素影响。</p>
 
-                <div>
-                    <br>
-                    <!-- <h4 class="leftalign">多重因素促使移动游戏增长放缓</h4> -->
-                    <p class="quto"> 资本投资的增长为电子竞技行业产业提供了机遇。电子竞技通过加快赛事城市化进程、产业地方化、多元化、内容与商业融合发展等方式，其赛事价值将逐渐得到更充分的展现。</p>
-
-                    <br>
-                    <br>
-                </div>
-
-                <br>
-                <br>
-                <!-- 数据说明 -->
-                <p class="tips">
-                    我们整理了艾瑞咨询(iresearch)<a href="https://www.iresearch.com.cn/">https://www.iresearch.com.cn/</a>和博思数据中心<a href="http://www.bosidata.com/">http://www.bosidata.com/</a>部分研究报告，并利用象形柱状图的形式来反应2008-2018中国游戏市场规模的变化。
+                <h5>一、用户需求发生变化。</h5>
+                <p class="normal">
+                    一方面，在移动互联网人口流量接近饱和的趋势下，移动游戏用户数量增量有限；
+                    另一方面，以短视频为主的新型娱乐内容对于用户的注意力争夺日益激烈，移动游戏用户的黏性有所松动，移动游戏用户使用时长在移动互联网总使用时长中占比不断下降。
                 </p>
-                <hr>
-                <!-- 2009—2019年中国电子竞技市场规模 -->
-                <h2>2009—2018年中国电子竞技市场规模</h2>
-                <div id="incomeMarket" class="echarts" style="max-width:800px;height: 30em;"></div>
+                <h5>二、产品获取用户难度提升。</h5>
+                <p class="normal">
+                    首先从推广角度来看，广告投放价格自上半年大幅上涨后维持在较高水平，传统品类游戏在游戏广告投放市场完成一轮洗牌后价格逐渐企稳，而二线题材品类的投放价格仍在攀升。
+                    再次，用户的游戏体验需求已经升级，主动选择产品的意愿更加明确，对游戏品质和体验的要求也更严格，反向推动产品进行定制化研发和精细化运营，所需周期和成本大幅增加。
+                </p>
+                <h5>三、新产品竞争力较弱，市场收入增长动力不足。</h5>
+                <p class="normal">
+                    少数热门游戏占据了大部分流量份额，市场格局固化加深，市场竞争推动游戏产品越来越精品化，新产品进入门槛也有所提升。
+                </p>
                 <br>
+                <br>                
             </section>
 
         </article>
@@ -422,13 +412,44 @@
             <section class="container">
                 <img class="title" src="./static/img/人才储备.png" alt="技术研发" />
                 <hr>
-                <p class="quto">2018年，中国游戏从业者约145万人，需求规模约为44.1万人。</p>
+                <!-- 数据说明 -->
+                <p class="tips">
+                        我们从中国教育在线<a href="https://gkcx.eol.cn/">https://gkcx.eol.cn/</a>爬取并筛选出了所有开设了电竞相关专业的学校信息，按照地理位置分布做了地理数据可视化图表。您还可以在此<a
+                            href="./file.html">查看数据源</a>。
+                    </p>
+                    <hr>
+                    <!-- 截止2019年开设与游戏行业强相关专业的高校 -->
+                    <h2>截止2019年开设与游戏行业强相关专业的高校 </h2>
+                    <div id="mapOfSchool" class="echarts" style="max-width:1200px;height: 50em;"></div>
+    
+                    <p class="quto">
+                        自2016年起，我国高校开始陆续开设与游戏和电竞强相关的专业。高校已成为游戏相关产业人才培养的重要方式之一，截止2019年四月，仅不到三年时间，已开设与游戏和电竞强相关的专业的高校已有89所。
+                    </p>
+                    <p class="quto">
+                        但开设此类专业的高校大多为职业技术学校，高等教育学府开设此类专业较少，双一流大学更是寥寥无几。高校开设一个新专业需要资金、师资、教学环境及多方面的支持，电竞相关专业在高校作为近年来刚开设的新专业，各大高校尤其是双一流大学更是要严格把控开设条件，为学生提供高质的教育环境。
+                    </p>
+                    <p class="quto">
+                        在地理分布上，游戏产业发展较快的地区开设相关专业的高校较多，例如四川、重庆、上海、广东、湖北等地。
+                    </p>
+                    <br>
+                <!-- 中国电竞产业从业者月薪分布  -->
+                
                 <h2>中国电竞产业从业者月薪分布 </h2>
+                <p class="quto">2018年，中国游戏从业者约145万人，需求规模约为44.1万人。</p>
                 <div class="">
                     <div id="salary" class="echarts" style="max-width:800px;height: 30em;"></div>
                     <br>
                 </div>
-
+                <p class="quto">
+                    58.9%的电竞产业从业者月薪超过8000元，超过了我国的平均工资水平。但值得注意的是，电竞产业从业者的月薪分布在4000-20000元不等，薪资待遇差别较大，与从业者的岗位以及学历有关。
+                </p>
+                <p class="quto">
+                    2018年中国不同职位的游戏产业从业者中主策划、品牌管理、服务器开发工程师平均月薪最高，在16000元以上，而新媒体运营、文案编辑、游戏客服、游戏推广人员平均月薪最低，在6500元以下。
+                </p>
+                <p class="quto">
+                    其次，即便是同一岗位，学历高低对电竞产业从业者的薪资水平也有很大影响，比如同是游戏开发岗位，本科及以上学历月薪可达15000以上，而高中学历月薪仅7000甚至更低。
+                </p>
+                <br>
                 <hr>
                 <h2>不同规模企业对最低学历要求分布情况 </h2>
                 <div id="employeeOfCompany" class="echarts" style="max-width:800px;height: 60em;"></div>
@@ -449,7 +470,7 @@
                 <p class="quto">我国信息网络基础设施建设加速，互联网与电子竞技产业的融合不断加深。
                 </p>
                 <p>*部分游戏产品如下：</p>
-                <div id="radial" class="echarts" style="max-width:800px;height: 40em;"></div>
+                <div id="radial" class="echarts" style="max-width:800px;height: 35em;"></div>
                 <hr>
                 <p class="quto">电子竞技游戏的开发与制作这一环节为整个产业的内容提供了源泉，而游戏研发商是整个电子竞技产业内容的提供者。
                 </p>
@@ -457,15 +478,19 @@
 
                 <!-- 数据来源说明 -->
                 <p class="tips">
-                    我们在<a href="http://www.cgigc.com.cn/isbn/">中国音数协游戏工委</a>根据游戏版号爬取并统计了该了网站收录的所有<span class="height">游戏产品</span>相关信息；在<a href="http://gamemap.cgigc.com.cn/list.html?type=2">中国游企版图</a>爬取并统计了该网站收录的所有<span class="height">游戏企业</span>信息；我们根据这些信息以及相关报告内容整理出了如下图表以反映近年来游戏产品以及游戏公司的数量变化规律。您可以在这里 <a href="./file.html">查看相关数据源</a>。
+                    我们在<a href="http://www.cgigc.com.cn/isbn/">中国音数协游戏工委</a>根据游戏版号爬取并统计了该了网站收录的所有<span class="height">游戏产品</span>相关信息；在<a
+                        href="http://gamemap.cgigc.com.cn/list.html?type=2">中国游企版图</a>爬取并统计了该网站收录的所有<span class="height">游戏企业</span>信息；我们根据这些信息以及相关报告内容整理出了如下图表以反映近年来游戏产品以及游戏公司的数量变化规律。您可以在这里
+                    <a href="./file.html">查看相关数据源</a>。
                 </p>
-                <hr>
                 <!-- 2008-2018年中国自主研发游戏产品数量和公司数量 -->
                 <h2>2008-2018年中国自主研发游戏产品数量和公司数量</h2>
                 <div id="company" class="echarts" style="max-width:800px;height: 30em;"></div>
                 <hr>
                 <p class="quto">
                     我国自主研发的游戏产品数量呈现逐年增长的态势，但是我国自主研发的游戏公司数量一直偏少。我国自主研发的游戏公司逐渐壮大，专业性更强，那些不知名的微小企业在竞争中没有生存下来。
+                </p>
+                <p class="quto">
+                    受到移动游戏发展带来的游戏门槛降低、普及面提升等方面的影响，我国的游戏企业抓住机会，对市场做出了迅速反映。同时，国内游戏企业的研发水准得到了国内和海外市场的肯定，游戏市场对于游戏产品的需求很旺盛，游戏企业加大了研发投入，导致2017年我国自主研发游戏产品数量显著提升。
                 </p>
                 <br>
                 <!-- 2008-2018年中国自主研发网络游戏市场实际销售收入  -->
@@ -491,7 +516,7 @@
                 <img class="title" src="./static/img/结论.png" alt="技术研发" />
                 <hr>
                 <p class="quto">
-                    在这十年间，中国电子竞技行业发展迅猛，离不开国家政策的支持、商业资本的投入、研发人才的培养和信息技术的提高，由以上数据我们可以看出，未来中国电子竞技行业蓬勃发展需要多元充分的政策来推动，形成完善的体系，加强技术研发，只有创新才能为电子竞技行业提供源源不断的动力。
+                    在这十年间，电子竞技行业发展迅猛，如今已成为集体育、游戏、娱乐相结合的成熟的产业。由以上数据可看出，国家政策的支持为其发展提供了先行基础。当然更离不开的是商业资本的投入，研发人才的培养以及信息技术的提高而孵化出的众多游戏公司的推动。如今，电子竞技行业仍存在着巨大的市场需求，未来如能出台更加充分完善的政策，加强技术研发与创新，为该行业提供源源不断发展的动力，我们相信电子竞技行业将成为新时代下的朝阳产业。
                 </p>
 
             </section>
@@ -500,50 +525,52 @@
 
         <!-- 致谢及团队介绍 -->
         <article id="thanks">
-            <h1>致谢</h1>
+            <h2>致谢</h2>
             <p class="tips">
-                在我们的研究调查过程中，引用参考并从相关网站获取了部分数据资料，除此之外，我们还利用了一些工具来构建我们的网站，在此我们团队对以下网站及相关机构表示感谢！    
+                在我们的研究调查过程中，引用参考并从相关网站获取了部分数据资料，除此之外，我们还利用了一些工具来构建我们的网站，在此我们团队对以下网站及相关机构表示感谢！
             </p>
             <!-- 鸣谢名单 -->
             <div id="logo_list" class="container">
-                    <ul>
-                        <li>
-                            <img style="background-color:rgb(27, 42, 87)" src="http://gamemap.cgigc.com.cn/images/logo.png" alt=""><br>
-                            <a class="name" href="">中国游企版图</a><br>
-                            <a href="http://gamemap.cgigc.com.cn">http://gamemap.cgigc.com.cn</a>
-                        </li>
-                        <li>
-                            <img src="http://www.cgigc.com.cn/cgigc/2018new/images/logo-2.png?1" alt=""><br>
-                            <a class="name" href="">中国音数协游戏工委</a><br>
-                            <a href="http://www.cgigc.com.cn/">http://www.cgigc.com.cn/</a>
-                        </li>  
+                <ul>
+                    <li>
+                        <img style="background-color:rgb(27, 42, 87)" src="http://gamemap.cgigc.com.cn/images/logo.png"
+                            alt=""><br>
+                        <a class="name" href="">中国游企版图</a><br>
+                        <a href="http://gamemap.cgigc.com.cn">http://gamemap.cgigc.com.cn</a>
+                    </li>
+                    <li>
+                        <img src="http://www.cgigc.com.cn/cgigc/2018new/images/logo-2.png?1" alt=""><br>
+                        <a class="name" href="">中国音数协游戏工委</a><br>
+                        <a href="http://www.cgigc.com.cn/">http://www.cgigc.com.cn/</a>
+                    </li>
 
-                        <li>
-                            <img src="https://www.iresearch.com.cn/images/base/logo.png?v1" alt=""><br>
-                            <a class="name" href="">艾瑞咨询(iResearch)</a><br>
-                            <a href="https://www.iresearch.com.cn/">https://www.iresearch.com.cn/</a>
-                        </li>
-                        <li>
-                            <img src="http://www.bosidata.com/themes/images/logo.gif" alt=""><br>
-                            <a class="name" href="">博思数据中心</a><br>
-                            <a href="http://www.bosidata.com/">http://www.bosidata.com/</a>
-                        </li>
-                        <li>
-                            <img style="background-color:rgb(44, 59, 83);padding: 2px 5px" src="https://www.echartsjs.com/images/logo.png" alt=""><br>
-                            <a class="name" href="">Echarts</a><br>
-                            <a href="https://www.echartsjs.com/">https://www.echartsjs.com/</a>
-                        </li>
+                    <li>
+                        <img src="https://www.iresearch.com.cn/images/base/logo.png?v1" alt=""><br>
+                        <a class="name" href="">艾瑞咨询(iResearch)</a><br>
+                        <a href="https://www.iresearch.com.cn/">https://www.iresearch.com.cn/</a>
+                    </li>
+                    <li>
+                        <img src="http://www.bosidata.com/themes/images/logo.gif" alt=""><br>
+                        <a class="name" href="">博思数据中心</a><br>
+                        <a href="http://www.bosidata.com/">http://www.bosidata.com/</a>
+                    </li>
+                    <li>
+                        <img style="background-color:rgb(44, 59, 83);padding: 2px 5px" src="https://www.echartsjs.com/images/logo.png"
+                            alt=""><br>
+                        <a class="name" href="">Echarts</a><br>
+                        <a href="https://www.echartsjs.com/">https://www.echartsjs.com/</a>
+                    </li>
 
-                        <li>
-                            <img src="./static/img/logo.jpg" alt=""><br>
-                            <a href="">伽马数据</a><br>
-                            <a href="http://www.joynews.cn/">http://www.joynews.cn/</a>
-                        </li>
-                    </ul>
+                    <li>
+                        <img src="./static/img/logo.jpg" alt=""><br>
+                        <a class="name" href="">伽马数据</a><br>
+                        <a href="http://www.joynews.cn/">http://www.joynews.cn/</a>
+                    </li>
+                </ul>
             </div>
             <hr>
 
-            <h1>团队介绍</h1>
+            <h2>团队介绍</h2>
             <ul>
                 <li>指导教师：</li>
                 <li>xxx</li>
@@ -565,7 +592,8 @@
                         <ul class="list-unstyled">
                             <li class="float-lg-right"><a href="#top">返回顶部</a></li>
                         </ul>
-                        <p>Made by <a class="contact" href="#">低端人口</a>.</p>
+                        <p>Made by <a class="contact" href="https://www.weibo.com/u/5785591031">
+                                低端人口</a>. </p>
                         <p>Code released under the <a href="https://github.com/Kefeng2017/news.git">MIT
                                 License</a>.</p>
                         <p>Based on <a href="https://getbootstrap.com" rel="nofollow">Bootstrap</a>. Icons from <a href="http://fontawesome.io/"
@@ -667,7 +695,7 @@
         var Income = echarts.init(document.getElementById('income'));
         var IncomeMarket = echarts.init(document.getElementById('incomeMarket'));
 
-        
+
         // 用户规模
         var option_user = {
             tooltip: {
@@ -813,17 +841,15 @@
                 textStyle: {
                     fontSize: 16
                 },
-                formatter:"{a}{c}%"
+                formatter: "{a}{c}%"
             }
         };
-
-
         var option_employeeOfCom = {
             title: {
                 text: '企业规模'
             },
             legend: {
-                data: ['本科', '大专','高中','不限']
+                data: ['本科', '大专', '高中', '不限']
             },
             tooltip: {
                 trigger: 'axis',
@@ -838,8 +864,8 @@
             yAxis: {
                 data: ['1000人以上', '500-999人', '100-499人', '20-99人', '20人以下'],
                 inverse: true,
-                axisLine: {show: false},
-                axisTick: {show: false},
+                axisLine: { show: false },
+                axisTick: { show: false },
                 axisLabel: {
                     margin: 30,
                     textStyle: {
@@ -853,10 +879,10 @@
                 }
             },
             xAxis: {
-                splitLine: {show: false},
-                axisLabel: {show: false},
-                axisTick: {show: false},
-                axisLine: {show: false}
+                splitLine: { show: false },
+                axisLabel: { show: false },
+                axisTick: { show: false },
+                axisLine: { show: false }
             },
             series: [{
                 name: '本科',
@@ -904,7 +930,7 @@
                     value: 52.3,
                     symbol: college2
                 }]
-            },{
+            }, {
                 name: '高中',
                 type: 'pictorialBar',
                 barGap: '10%',
@@ -927,7 +953,7 @@
                     value: 4.7,
                     symbol: college3
                 }]
-            },{
+            }, {
                 name: '不限',
                 type: 'pictorialBar',
                 barGap: '10%',
@@ -951,326 +977,236 @@
                     symbol: college4
                 }]
             }
-        ]
+            ]
         };
-
         // EmployeeOfCompany.setOption(option_employeeOfCom);
 
         // 放射状呈现游戏与技术之间的关系
+        var colors = ['#E5D4CE', '#E5D4CE', '#7FD1B9', '#FF6F59', '#9A2555'];
+        var bgColor = '#fff';
+
+        var itemStyle = {
+            star4: {
+                color: colors[3]
+            }
+        };
+
+        var data = [{
+            name: '信息技术发展',
+            itemStyle: {
+                normal: {
+                    color: '#FF6F59'
+                }
+            },
+            children: [
+                {
+                    name: 'VR/AR游戏',
+                    children: [
+                        {
+                            name: '4☆',
+                            children: [{
+                                name: '无处可逃'
+                            }, {
+                                name: '深海'
+                            }, {
+                                name: 'Beat Saber'
+                            }, {
+                                name: '天际VR'
+                            }, {
+                                name: 'Population：One'
+                            }, {
+                                name: '一起来抓妖'
+                            }, {
+                                name: '我的世界'
+                            }, {
+                                name: '重返恐龙岛'
+                            }]
+                        }]
+                },
+                {
+                    name: '移动游戏',
+                    children: [
+                        {
+                            name: '4☆',
+                            children: [{
+                                name: '卡车跑酷'
+                            }, {
+                                name: '旅行青蛙'
+                            }, {
+                                name: '荒野求生'
+                            }, {
+                                name: '王者荣耀'
+                            }, {
+                                name: '三国霸'
+                            }, {
+                                name: '小冰冰传奇'
+                            }, {
+                                name: '暗夜狂奔'
+                            }, {
+                                name: '迷你世界'
+                            }]
+                        }]
+                },
+                {
+                    name: '互联网普及',
+                    children: [
+                        {
+                            name: '4☆',
+                            children: [{
+                                name: '生化危机'
+                            }, {
+                                name: '极品飞车'
+                            }, {
+                                name: '龙权天下'
+                            }, {
+                                name: '愤怒的小鸟'
+                            }, {
+                                name: '最终幻想'
+                            }, {
+                                name: '植物大战僵尸'
+                            }, {
+                                name: '武林三'
+                            }, {
+                                name: '超级街霸'
+                            }]
+                        }]
+                },
+
+            ]
+        }];
+
+        for (var j = 0; j < data.length; ++j) {
+            var level1 = data[j].children;
+            for (var i = 0; i < level1.length; ++i) {
+                var block = level1[i].children;
+                var bookScore = [];
+                var bookScoreId;
+                for (var star = 0; star < block.length; ++star) {
+                    var style = (function (name) {
+                        switch (name) {
+                            case '4☆':
+                                bookScoreId = 1;
+                                return itemStyle.star4;
+                        }
+                    })(block[star].name);
+
+                    block[star].label = {
+                        color: style.color,
+                        downplay: {
+                            opacity: 0.5
+                        }
+                    };
+
+                    if (block[star].children) {
+                        style = {
+                            opacity: 1,
+                            color: style.color
+                        };
+                        block[star].children.forEach(function (book) {
+                            book.value = 1;
+                            book.itemStyle = style;
+
+                            book.label = {
+                                color: style.color
+                            };
+
+                            var value = 1;
+                            if (bookScoreId === 0 || bookScoreId === 3) {
+                                value = 5;
+                            }
+
+                            if (bookScore[bookScoreId]) {
+                                bookScore[bookScoreId].value += value;
+                            }
+                            else {
+                                bookScore[bookScoreId] = {
+                                    color: colors[bookScoreId],
+                                    value: value
+                                };
+                            }
+                        });
+                    }
+                }
+
+                level1[i].itemStyle = {
+                    color: data[j].itemStyle.color
+                };
+            }
+        }
+
         var option_radail = {
-            title: {
-                subtext: "数据来源：xxxx",
-                top: "top",
-                left: "left"
-            },
-            tooltip: {},
-            legend: [{
-                formatter: function (name) {
-                    return echarts.format.truncateText(name, 40, '14px Microsoft Yahei', '…');
-                },
-                tooltip: {
-                    show: true
-                },
-                selectedMode: 'false',
-                bottom: 20,
-                left: 'left',
-                data: ['互联网的普及', '4G（移动游戏）', 'VR/AR（VR/AR游戏）']
-            }],
-            toolbox: {
-                show: true,
-                feature: {
-                    dataView: {
-                        show: true,
-                        readOnly: true
-                    },
-                    restore: {
-                        show: true
-                    },
-                    saveAsImage: {
-                        show: true
-                    }
-                }
-            },
-            animationDuration: 3000,
-            animationEasingUpdate: 'quinticInOut',
+            backgroundColor: bgColor,
+            color: colors,
             series: [{
-                name: '游戏名称',
-                type: 'graph',
-                layout: 'force',
-
-                force: {
-                    repulsion: 300
+                type: 'sunburst',
+                center: ['50%', '48%'],
+                data: data,
+                sort: function (a, b) {
+                    if (a.depth === 1) {
+                        return b.getValue() - a.getValue();
+                    }
+                    else {
+                        return a.dataIndex - b.dataIndex;
+                    }
                 },
-                data: [
-                    {
-                        "name": "信息技术发展",
-                        "symbolSize": 120,
-                        "category": "信息技术发展",
-                        "draggable": "true"
-                    },
-                    {
-                        "name": "互联网的普及",
-                        // "x": 0,
-                        "category": "互联网的普及",
-                        // y: 0,
-                        "symbolSize": 90,
-                        "draggable": "true"
-
-                    }, {
-                        "name": "极品飞车",
-                        "symbolSize": 40,
-                        "category": "互联网的普及",
-                        "draggable": "true"
-                    }, {
-                        "name": "愤怒的小鸟",
-                        "symbolSize": 40,
-                        "category": "互联网的普及",
-                        "draggable": "true"
-                    }, {
-                        "name": "生化危机",
-                        "symbolSize": 40,
-                        "category": "互联网的普及",
-                        "draggable": "true"
-                    }, {
-                        "name": "超级街霸",
-                        "symbolSize": 40,
-                        "category": "互联网的普及",
-                        "draggable": "true"
-                    }, {
-                        "name": "植物大战僵尸",
-                        "symbolSize": 40,
-                        "category": "互联网的普及",
-                        "draggable": "true"
-                    }, {
-                        "name": "最终幻想",
-                        "symbolSize": 40,
-                        "category": "互联网的普及",
-                        "draggable": "true"
-                    }, {
-                        "name": "龙权天下",
-                        "symbolSize": 40,
-                        "category": "互联网的普及",
-                        "draggable": "true"
-                    }, {
-                        "name": "武林三",
-                        "symbolSize": 40,
-                        "category": "互联网的普及",
-                        "draggable": "true"
-                    },
-                    {
-                        "name": "4G（移动游戏）",
-                        // "x": 0,
-                        // y: 0,
-                        "category": "4G（移动游戏）",
-                        "symbolSize": 90,
-                        "draggable": "true"
-
-                    }, {
-                        "name": "旅行青蛙",
-                        "symbolSize": 40,
-                        "category": "4G（移动游戏）",
-                        "draggable": "true"
-                    }, {
-                        "name": "卡车跑酷",
-                        "symbolSize": 40,
-                        "category": "4G（移动游戏）",
-                        "draggable": "true"
-                    }, {
-                        "name": "王者荣耀",
-                        "symbolSize": 40,
-                        "category": "4G（移动游戏）",
-                        "draggable": "true"
-                    }, {
-                        "name": "荒野求生",
-                        "symbolSize": 40,
-                        "category": "4G（移动游戏）",
-                        "draggable": "true"
-                    }, {
-                        "name": "迷你世界",
-                        "symbolSize": 40,
-                        "category": "4G（移动游戏）",
-                        "draggable": "true"
-                    }, {
-                        "name": "三国霸",
-                        "symbolSize": 40,
-                        "category": "4G（移动游戏）",
-                        "draggable": "true"
-                    }, {
-                        "name": "小冰冰传奇",
-                        "symbolSize": 40,
-                        "category": "4G（移动游戏）",
-                        "draggable": "true"
-                    }, {
-                        "name": "暗夜狂奔",
-                        "symbolSize": 40,
-                        "category": "4G（移动游戏）",
-                        "draggable": "true"
-                    },
-                    {
-                        "name": "VR/AR（VR/AR游戏）",
-                        // "x": 0,
-                        // y: 0,
-                        "category": "VR/AR（VR/AR游戏）",
-                        "symbolSize": 90,
-                        "draggable": "true"
-
-                    }, {
-                        "name": "天际VR",
-                        "symbolSize": 40,
-                        "category": "VR/AR（VR/AR游戏）",
-                        "draggable": "true"
-                    }, {
-                        "name": "Beat Saber",
-                        "symbolSize": 40,
-                        "category": "VR/AR（VR/AR游戏）",
-                        "draggable": "true"
-                    }, {
-                        "name": "Population：One",
-                        "symbolSize": 40,
-                        "category": "VR/AR（VR/AR游戏）",
-                        "draggable": "true"
-                    }, {
-                        "name": "我的世界",
-                        "symbolSize": 40,
-                        "category": "VR/AR（VR/AR游戏）",
-                        "draggable": "true"
-                    }, {
-                        "name": "深海",
-                        "symbolSize": 40,
-                        "category": "VR/AR（VR/AR游戏）",
-                        "draggable": "true"
-                    }, {
-                        "name": "无处可逃",
-                        "symbolSize": 40,
-                        "category": "VR/AR（VR/AR游戏）",
-                        "draggable": "true"
-                    }, {
-                        "name": "重返恐龙岛",
-                        "symbolSize": 40,
-                        "category": "VR/AR（VR/AR游戏）",
-                        "draggable": "true"
-                    }, {
-                        "name": "一起来抓妖",
-                        "symbolSize": 40,
-                        "category": "VR/AR（VR/AR游戏）",
-                        "draggable": "true"
-                    }],
-                links: [{
-                    "source": "互联网的普及",
-                    "target": "极品飞车"
-                }, {
-                    "source": "互联网的普及",
-                    "target": "武林三"
-                }, {
-                    "source": "互联网的普及",
-                    "target": "龙权天下"
-                }, {
-                    "source": "互联网的普及",
-                    "target": "最终幻想"
-                }, {
-                    "source": "互联网的普及",
-                    "target": "植物大战僵尸"
-                }, {
-                    "source": "互联网的普及",
-                    "target": "超级街霸"
-                }, {
-                    "source": "互联网的普及",
-                    "target": "生化危机"
-                }, {
-                    "source": "互联网的普及",
-                    "target": "愤怒的小鸟"
-                },
-                {
-                    "source": "信息技术发展",
-                    "target": "互联网的普及"
-                },
-                {
-                    "source": "VR/AR（VR/AR游戏）",
-                    "target": "一起来抓妖"
-                }, {
-                    "source": "VR/AR（VR/AR游戏）",
-                    "target": "重返恐龙岛"
-                }, {
-                    "source": "VR/AR（VR/AR游戏）",
-                    "target": "无处可逃"
-                }, {
-                    "source": "VR/AR（VR/AR游戏）",
-                    "target": "深海"
-                }, {
-                    "source": "VR/AR（VR/AR游戏）",
-                    "target": "我的世界"
-                }, {
-                    "source": "VR/AR（VR/AR游戏）",
-                    "target": "Population：One"
-                }, {
-                    "source": "VR/AR（VR/AR游戏）",
-                    "target": "Beat Saber"
-                }, {
-                    "source": "VR/AR（VR/AR游戏）",
-                    "target": "天际VR"
-                },
-                {
-                    "source": "信息技术发展",
-                    "target": "VR/AR（VR/AR游戏）"
-                },
-                {
-                    "source": "4G（移动游戏）",
-                    "target": "旅行青蛙"
-                }, {
-                    "source": "4G（移动游戏）",
-                    "target": "卡车跑酷"
-                }, {
-                    "source": "4G（移动游戏）",
-                    "target": "王者荣耀"
-                }, {
-                    "source": "4G（移动游戏）",
-                    "target": "荒野求生"
-                }, {
-                    "source": "4G（移动游戏）",
-                    "target": "迷你世界"
-                }, {
-                    "source": "4G（移动游戏）",
-                    "target": "三国霸"
-                }, {
-                    "source": "4G（移动游戏）",
-                    "target": "小冰冰传奇"
-                }, {
-                    "source": "4G（移动游戏）",
-                    "target": "暗夜狂奔"
-                },
-                {
-                    "source": "信息技术发展",
-                    "target": "4G（移动游戏）"
-                }
-                ],
-                categories: [
-                    {
-                        'name': '互联网的普及'
-                    }, {
-                        'name': '4G（移动游戏）'
-                    }, {
-                        'name': 'VR/AR（VR/AR游戏）'
-                    },
-                    {
-                        'name': '信息技术发展'
-                    }],
-                focusNodeAdjacency: true,
-                roam: true,
                 label: {
-                    normal: {
-                        show: true,
-                        top: '50%'
+                    rotate: 'radial',
+                    color: bgColor
+                },
+                itemStyle: {
+                    borderColor: bgColor,
+                    borderWidth: 2
+                },
+                levels: [{}, {
+
+                    r0: 0,
+                    r: 50,
+                    label: {
+                        rotate: 'tangential'
+                    }
+                }, {
+
+                    r0: 50,
+                    r: 105,
+                    label: {
+                        rotate: 'tangential',
+                        fontSize: 12,
+                        color: '#456'
                     }
                 },
-                lineStyle: {
-                    normal: {
-                        color: 'source',
-                        curveness: 0,
-                        type: "solid"
+                {
+                    r0: 115,
+                    r: 140,
+                    itemStyle: {
+                        shadowBlur: 2,
+                        shadowColor: colors[2],
+                        color: 'transparent'
+                    },
+                    label: {
+                        rotate: 'tangential',
+                        fontSize: 10,
+                        color: colors[0]
                     }
-                }
+                }, {
+                    r0: 140,
+                    r: 145,
+                    itemStyle: {
+                        shadowBlur: 80,
+                        shadowColor: colors[0]
+                    },
+                    label: {
+                        position: 'outside',
+                        textShadowBlur: 5,
+                    },
+                    downplay: {
+                        label: {
+                            opacity: 0.5
+                        }
+                    }
+                }]
             }]
         };
+
         // Radial.setOption(option_radail);
 
         // 2008-2018年中国自主研发游戏产品数量和公司数量
@@ -1443,8 +1379,8 @@
                             color: new echarts.graphic.LinearGradient(
                                 0, 0, 0, 1,
                                 [
-                                    {offset: 0, color: '#14c8d4'},
-                                    {offset: 1, color: '#43eec6'}
+                                    { offset: 0, color: '#14c8d4' },
+                                    { offset: 1, color: '#43eec6' }
                                 ]
                             )
                         }
@@ -1511,9 +1447,9 @@
                             color: new echarts.graphic.LinearGradient(
                                 0, 0, 0, 1,
                                 [
-                                    {offset: 0, color: 'rgba(20,200,212,0.5)'},
-                                    {offset: 0.2, color: 'rgba(20,200,212,0.2)'},
-                                    {offset: 1, color: 'rgba(20,200,212,0)'}
+                                    { offset: 0, color: 'rgba(20,200,212,0.5)' },
+                                    { offset: 0.2, color: 'rgba(20,200,212,0.2)' },
+                                    { offset: 1, color: 'rgba(20,200,212,0)' }
                                 ]
                             ),
                             label: {
@@ -1605,10 +1541,10 @@
                     axisLabel: {
                         formatter: '{value} 亿元'
                     },
-                    splitLine: {show: false},
-                    axisTick: {show: false},
-                    axisLine: {show: false},
-                    axisLabel: {show: false}  
+                    splitLine: { show: false },
+                    axisTick: { show: false },
+                    axisLine: { show: false },
+                    axisLabel: { show: false }
                 },
                 {
                     type: 'value',
@@ -1618,10 +1554,10 @@
                     axisLabel: {
                         formatter: '{value} %'
                     },
-                    splitLine: {show: false},
-                    axisTick: {show: false},
-                    axisLine: {show: false},
-                    axisLabel: {show: false}  
+                    splitLine: { show: false },
+                    axisTick: { show: false },
+                    axisLine: { show: false },
+                    axisLabel: { show: false }
                 }
             ],
             series: [
@@ -1713,10 +1649,10 @@
                 }
             ],
             yAxis: {
-                splitLine: {show: false},
-                axisTick: {show: false},
-                axisLine: {show: false},
-                axisLabel: {show: false}
+                splitLine: { show: false },
+                axisTick: { show: false },
+                axisLine: { show: false },
+                axisLabel: { show: false }
             },
             series: [
                 {
