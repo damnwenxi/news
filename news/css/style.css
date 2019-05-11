@@ -1,0 +1,36 @@
+﻿@charset "utf-8";
+/*
+更多精品代码请访问 http://www.bootstrapmb.com/
+*/
+
+*{padding:0;margin:0;box-sizing:border-box;font-family:"微软雅黑";font-size:14px;font-weight:normal;font-style:normal}
+*:focus{outline:none}
+a{text-decoration:none}
+ul{list-style:none}
+.product-section{padding-bottom:50px;position:relative;
+    background-color: rgb(177, 206, 177);
+    /* background:url(../static/img/productBase-features-bag.jpg) no-repeat;background-size:cover} */
+}
+.product-title{padding:50px 10px 30px;font-weight:normal;font-size:36px;line-height:46px;color:#252b3a;text-align:center;color:#ffffff}
+.product-wrapper{max-width:1200px;padding-left:10px;padding-right:10px;margin-left:auto;margin-right:auto;position:relative}
+.swiper-container{margin-left:auto;margin-right:auto;position:relative;overflow:hidden;z-index:1}
+.product-features .product-body{margin:0px 25px}
+.product-features .product-body:after{content:"";width:100%;height:3px;background:url(../static/img/productBase-features-model.png) no-repeat;background-size:100% auto;background-position:center;position:absolute;top:50px;left:0;z-index:0}
+/*li*/
+.features-item{position:relative;float:left}
+.features-slide .features-item>*{text-align:center}
+.features-item h3{font-size:16px;line-height:28px;margin-bottom:50px;color:#ffffff;opacity:0.7;transition:all 0.1s}
+.features-item i{position:absolute;width:75%;height:33px;background:url(../static/img/productBase-features-timeline.png) no-repeat;background-size:contain;background-position:right center;left:-25%;margin-left:10px;top:35px;z-index:3}
+.features-item .features-info{display:block;margin:0 auto;padding:20px 53px;transition:all 0.3s;border-radius:2px}
+.features-item .features-info .features-info-i{font-size:14px;color:#A0A2A8;line-height:22px;margin-bottom:10px}
+.features-item .features-info .features-info-s{color:#FFFFFF;line-height:24px;overflow:hidden}
+.features-item.dark i{background:url(../static/img/productBase-features-timeline-dark.png) no-repeat;background-size:contain;background-position:right center}
+/*鼠标悬浮效果*/
+.features-item:hover h3{font-size:22px;line-height:28px;opacity:0.9}
+.features-item:hover i{width:75%;margin-left:13px;background:url(../static/img/productBase-features-timeline-hover.png) no-repeat;background-size:contain;background-position:right center}
+.features-item:hover a{background:url(../static/img/productBase-features-info.png) no-repeat;background-size:100% 100%}
+/*左右按钮*/
+.product-features .swiper-button-prev{width:30px;height:40%;left:-3em;top:60%;background:none}
+.product-features .swiper-button-prev:after{content:"";display:inline-block;position:absolute;width:15px;height:30px;background:url(../static/img/productBase-features-left.png) no-repeat;background-size:100% 100%;top:50%;margin-top:-15px;left:50%;margin-left:-7px}
+.product-features .swiper-button-next{width:30px;height:40%;right:-3em;top:60%;background:none}
+.product-features .swiper-button-next:after{content:"";display:inline-block;position:absolute;width:15px;height:30px;background:url(../static/img/productBase-features-right.png) no-repeat;background-size:100% 100%;top:50%;margin-top:-15px;left:50%;margin-left:-7px}

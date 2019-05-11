@@ -1,0 +1,95 @@
+.button{
+	width: 150px;
+	height: 50px;
+	opacity: 0.5;
+	color: black;
+	font-size: 20px;
+	border-radius: 50%;
+}
+
+#title{
+	font-size: 4em;
+	color: #fff;
+	line-height: 2em;
+}
+
+.item h2{
+	font-size: 2em;
+	line-height: 2em;
+}
+
+.item p{
+	line-height: 1.4em;
+	margin-top: 5px;
+}
+
+#result h2{
+	font-size: 3em;
+	line-height: 2em;
+}
+
+#result{
+	padding: 3em;
+	margin: 0 auto;
+	width: 90%;
+}
+
+#result p{
+	line-height: 1.5em;
+	padding: 1em;
+}
+
+#tip h3{
+	font-size: 1.6em;
+	line-height: 2em;
+	list-style: none;
+}
+
+#tip ul{
+	justify-content: space-around;
+	list-style: none;
+	width: 100%;
+	display: flex;
+}
+
+#tip ul li{
+	display: block;
+	float: left;
+	align-items: center;
+	padding: 2em 5em;
+}
+
+#tip ul li a{
+	text-decoration: none;
+	color: #ddd;
+}
+
+.tab ul{
+	position: absolute;
+	bottom: -100px;
+	display: flex;
+	margin: 0 auto;
+	width: 80%;
+	left: 10%;
+	justify-content: center;
+}
+
+.tab ul li{
+	border-radius: 20px;
+	margin: 0 20px;
+	padding: 1em 2em;
+	display: block;
+	background-color: rgba(212,213,234,.7);
+}
+
+#tables div{
+	height: 400px !important;
+	transform: translate(22%);
+}
+.item a,.item h2, .item h3{
+	color:forestgreen;
+}
+h4{
+	color: #ddd;
+	font-weight: 400;
+}
