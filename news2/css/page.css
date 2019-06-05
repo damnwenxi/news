@@ -13,14 +13,22 @@
 	line-height: 2em;
 }
 
-.item h2{
+section h2{
+	position: absolute;
+	bottom: 1em;
 	font-size: 2em;
 	line-height: 2em;
+	left: 0;
+	right: 0;
+	color:green;
 }
 
 .item p{
-	line-height: 1.4em;
-	margin-top: 5px;
+	color: #666;
+	line-height: 1.6em;
+	margin: 1em auto;
+	border-left: 5px solid green;
+	padding-left: 1em;
 }
 
 #result h2{
@@ -92,4 +100,13 @@
 h4{
 	color: #ddd;
 	font-weight: 400;
+}
+
+.summary{
+	padding: 5%;
+	color: #555;
+}
+.summary p{
+	line-height: 1.8em;
+	font-size: 1.1em;
 }

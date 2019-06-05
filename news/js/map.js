@@ -10,7 +10,7 @@
 
 var MapOfSchool = echarts.init(document.getElementById('mapOfSchool'));
 
-var subname = '数据爬取自中国教育网'
+var subname = ''
 var nameColor = " rgb(55, 75, 113)"
 var name_fontFamily = '等线'
 var subname_fontSize = 15

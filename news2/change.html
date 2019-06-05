@@ -10,7 +10,7 @@
     <script type="text/javascript" src="js/echarts-en.min.js"></script>
     <script src="./js/jquery-3.3.1.min.js"></script>
     <style>
-        *{
+        * {
             padding: 0;
             margin: 0;
             vertical-align: top;
@@ -18,22 +18,24 @@
             z-index: 2;
             box-sizing: border-box;
         }
-        .clear{
+
+        .clear {
             clear: both;
         }
-        section{
+
+        section {
             position: relative;
         }
 
-        section .item{
+        section .item {
             position: absolute;
             top: 1em;
             width: 90%;
             left: 5%;
-            padding-top: 2em;           
+            padding-top: 2em;
         }
 
-        p{
+        p {
             text-align: left;
             text-indent: 2em;
         }
@@ -49,7 +51,9 @@
                 </source>
             </video>
             <div class="item">
-                <h1 id="title">大数据看中国环境十年</h1>
+                <h1 id="title"> <img width="76px;" src="./img/icon.png" alt="icon"
+                        style="margin-top: -5px;vertical-align: middle ;display:inline-block;line-height: 76px;">
+                    大数据看中国环境十年</h1>
                 <p>
                     2019年4月5日，netfix上线了一部名为《我们的星球》（Our
                     Planet）的自然纪录片。其制作人与《地球脉动》为同一人，但所展现内容却截然相反。干旱的河流，污染的海洋，因全球变暖失去栖息地的海象被迫上岸，在寻找新居所途中坠落悬崖……一幕幕尽显环境破坏给动物带来的迫害。让人触目惊心，也让人不禁设想万一有一天这一切发生在人类身上该如何？
@@ -60,20 +64,27 @@
                 <div class="tab" style="height: 400px;">
 
                     <div style="position:relative" id="tables">
-                        <div id="alltable" style="transform: translate(-25%);position: absolute; top: 2em; width: 100%;height: 480px;color: wheat;z-index: 1000;">
+                        <div id="alltable"
+                            style="transform: translate(-25%);position: absolute; top: 2em; width: 100%;height: 480px;color: wheat;z-index: 1000;">
                         </div>
 
-                        <div id="alltable1" style="position: absolute; top: 2em;width: 700px;height: 480px;color: wheat;z-index: 100;">
+                        <div id="alltable1"
+                            style="position: absolute; top: 2em;width: 700px;height: 480px;color: wheat;z-index: 100;">
                         </div>
-                        <div id="alltable2" style="position: absolute; top: 2em;width: 700px;height: 480px;color: wheat;z-index: 100;">
+                        <div id="alltable2"
+                            style="position: absolute; top: 2em;width: 700px;height: 480px;color: wheat;z-index: 100;">
                         </div>
-                        <div id="alltable3" style="position: absolute; top: 2em;width: 700px;height: 480px;color: wheat;z-index: 100;">
+                        <div id="alltable3"
+                            style="position: absolute; top: 2em;width: 700px;height: 480px;color: wheat;z-index: 100;">
                         </div>
-                        <div id="alltable4" style="transform: translate(17%);position: absolute; top: 2em;width: 700px;height: 480px;color: wheat;z-index: 100;">
+                        <div id="alltable4"
+                            style="transform: translate(17%);position: absolute; top: 2em;width: 700px;height: 480px;color: wheat;z-index: 100;">
                         </div>
-                        <div id="alltable5" style="position: absolute; top: 2em;width: 700px;height: 480px;color: wheat;z-index: 100;">
+                        <div id="alltable5"
+                            style="position: absolute; top: 2em;width: 700px;height: 480px;color: wheat;z-index: 100;">
                         </div>
-                        <div id="alltable6" style="position: absolute; top: 2em;width: 700px;height: 480px;color: wheat;z-index: 100;">
+                        <div id="alltable6"
+                            style="position: absolute; top: 2em;width: 700px;height: 480px;color: wheat;z-index: 100;">
                         </div>
                         <div id="alltable7" style="width: 700px;height: 480px;color: wheat;z-index: 10;">
                         </div>
@@ -93,206 +104,241 @@
 
                 </div>
             </div>
-    </div>
 
-    </section>
+        </section>
 
-    <!-- 2 -->
-    <section onMouseOver="mainpagecontrols()">
-        <video width="100%" height="100%" autoplay="autoplay" loop="loop" muted="muted" style="">
-            <source src="img/main.mp4" type="audio/mp4">
-            </source>
-        </video>
+        <!-- 2 -->
+        <section onMouseOver="mainpagecontrols()">
+            <video width="100%" height="100%" autoplay="autoplay" loop="loop" muted="muted" style="">
+                <source src="img/main.mp4" type="audio/mp4">
+                </source>
+            </video>
 
-        <div class="item">
-            <div id="maintable" style="max-width: 1440px; width: 100%;height: 480px; z-index: 11;">
-            </div>
-            <br class="clear">
-            <h2>四大维度看中国环境十年变化</h2>
-            <p>
-                2006-2015年间，在空气污染治理方面，我国工业废气的排放总量整体上升，2011年开始增速放缓，但空气污染问题依然严峻。
-                我国工业废气治理费用在此期间总体呈稳步增加的态势，空气污染有望获得进一步改善。水污染治理方面，截止至2017年底，全
-                国废污水排放总量已从最高点2011年的807亿吨，降至2017年的756亿吨，污水排放量减少51亿吨。在国土绿化方面，我国的森
-                林资源存量与造林面积均呈现出稳步上升趋势，国土绿化整体发展前景向好。能源生产与消费方面，能源生产与消费的总趋势上升
-                ，但在能源消耗结构上，清洁能源在能源消费中的比重增加，能源消费结构不断优化。
-            </p>
-        </div>
-
-        <div style="position: absolute;top: 0; width: 100%;height: 100%;background-color: white;opacity: 0.7;z-index: 1;"></div>
-
-    </section>
-
-    <!-- 3 -->
-    <section onMouseOver="airpagecontrols()">
-        <video width="100%" height="100%" autoplay="autoplay" loop="loop" muted="muted" style="">
-            <source src="img/cloud.mp4" type="audio/mp4">
-            </source>
-        </video>
-
-        <div class="item">
-            <div id="airtable1" style="width: 45%;height: 407px;color: wheat;float: left;z-index: 100;">
-            </div>
-
-            <div id="airtable2" style="width: 45%;height: 407px;color: wheat;float: right;z-index: 100;">
-            </div>
-            <br class="clear">
-            <br><br>
-            <h2>问题之下治理并行，严峻形势下空气质量有望提高</h2>
-            <p>
-                2006年到2015年，我国工业废气的排放总量不断上升，在2010-2011年间达到小峰值，而后继续缓慢上升。备受关注的PM2.5所导致的单位范围内的死亡人数呈现出缓慢上升的趋势，
-                以PM2.5为主要成分的颗粒物导致的过早死亡率在2006-2011年间出现快速上升现象，2011-2017年，这一指标又波动下降。空气污染对人们的健康产生了很大威胁。但与此同时，工
-                业废气排放总量上升幅度已经明显减小，速度明显减慢，二氧化硫、氮氧化物的排放量自2011年后也开始减少，而烟粉尘排放量自2014年上升到五年间的峰值后 开始下降。
-            </p>
-            <p>
-                在治理方面，我国工业废气治理费用除在2010-2012年间有一定波动外，总体呈现上升趋势，2015年的治理费用约是2006年的4倍。治理费用增加与工业废气排放总量的减
-                少有着密切的关联性，并对此起着积极作用，可见我国在工业废气治理上的投入卓有成效，空气质量有望进一步改善。<br>
-                <a style="color: forestgreen;left: 0px;">（数据来源：中国环境保护数据库 OCED Statistics）</a>
-            </p>
-
-
-        </div>
-
-        <div style="position: absolute;top: 0; width: 100%;height: 100%;background-color: white;opacity: 0.7;z-index: 1;"></div>
-
-    </section>
-
-    <!-- 4 -->
-    <section onMouseOver="waterpagecontrols()">
-        <video width="100%" height="100%" autoplay="autoplay" loop="loop" muted="muted" style="">
-            <source src="img/water.mp4" type="audio/mp4">
-            </source>
-        </video>
-
-        <div class="item">
-            <div id="watertable" style="width: 900px;height: 500px;color: wheat;margin:0 auto;z-index: 100;">
-            </div>
-            <br class="clear">
-            <br><br>
-            <h2>污水排放得到控制，水环境日益转好</h2>
-            <p>
-                2011年我国污水排放总量为807万亿吨，达到历史峰值。此后，污水排放总量逐年下降。截止2017年，我国污水排放总量较2011年锐减51亿吨。水质上，中国I-III类优水质河长在全河长中的占比随着年际变化不断上升，反观劣V类水质河长占比不断下降。2007年，劣V类水质河长占比21.7%，水质污染严重。到2017年，劣V类水质河长占比已降至8.3%，下降了13.4%。同时，I-III类较优河长占比上升了19%。从整体趋势上看，国家对污水排放投资增大，水污染工作在稳中有进地推进，水质在不断上升，水环境也在日益好转。<br>
-                <a style="color: forestgreen;left: 0px;">（数据来源：《水资源公报》 中国环境保护数据库）</a>
-            </p>
-
-
-
-        </div>
-
-        <div style="position: absolute;top: 0; width: 100%;height: 100%;background-color: white;opacity: 0.7;z-index: 1;"></div>
-    </section>
-
-    <!-- 5 -->
-    <section onMouseOver="soilpagecontrols()">
-        <video width="100%" height="100%" autoplay="autoplay" loop="loop" muted="muted" style="">
-            <source src="img/forest.mp4" type="audio/mp4">
-            </source>
-        </video>
-
-        <div class="item">
-            <div id="soiltable1" style="width: 50%;height: 500px;color: wheat;float: left;z-index: 100;">
-            </div>
-
-            <div class="description" style="position: relative; top: 100px; width: 50%;height: 500px;color: #000;float: right;z-index: 100;">
-                <h3>大规模国土绿化行动取得显著成果</h3>
-                <p>2009年到2017年间，我国的年造林总面积呈波动上涨趋势，城市绿地面积逐年稳步上升，每年水土流失防治面积均在530万公顷以上。经过多年努力，我国森林面积逐年上涨，中国森林覆盖率由新中国成立初期的8.6%提高到21.66%，森林面积达到2.08亿公顷，平均每年造林660万公顷，国土绿化效果显著。<br>
-                    <a style="color: forestgreen;left: 0px;">（数据来源：国家统计局）</a>
-                </p>
-
-            </div>
-
-            <div id="soiltable2" style="position: relative;top: -120px; width: 50%;height: 350px;color: wheat;float: right;z-index: 100;">
-            </div>
-
-            <div class="description" style="width: 50%;height: 500px;color: #000;float: right;z-index: 100;">
-                <h3>森林资源增长居全球首位</h3>
-                <p>我国最新森林覆盖率为21.66%，仍低于世界平均森林覆盖率30.8%。究其原因，我国西部地区因气候、土壤环境等因素，降水较少，森林覆盖低于20%，但据最新数据统计我国其他省份森林覆盖率大都高于30%，东南沿海多省更是高达60%以上。在全球森林资源持续减少的背景下，我国在过去25年里成为森林资源增长最多的国家。<br><a
-                        style="color: forestgreen;left: 0px;">（数据来源：中国林业局 国家生态网 《中国国土缘化状况公报》）</a></p>
-
-            </div>
-
-            <br class="clear">
-            <br><br>
-
-        </div>
-
-        <div style="position: absolute;top: 0; width: 100%;height: 100%;background-color: white;opacity: 0.7;z-index: 1;"></div>
-    </section>
-
-
-    <!-- 6 -->
-    <section onMouseOver="powerpagecontrols()">
-        <video width="100%" height="100%" autoplay="autoplay" loop="loop" muted="muted" style="">
-            <source src="img/windmills.mp4" type="audio/mp4">
-            </source>
-        </video>
-
-        <div class="item">
-            <div id="powertable" style="width: 100%;height: 760px;color: wheat;margin:0 auto;z-index: 100;" class="layui-anim"
-                data-anim="layui-anim-up">
-            </div>
-            <div style="width: 40%;position: relative;
-                right: -58%;top: -730px">
-                <h2>能源消费结构不断优化</h2>
+            <div class="item">
                 <p>
-                    2006年-2016年，我国能源的生产与消费总量总体都呈现出上升趋势，但在2011年之后增速放缓，
-                    生产总量在2015年出现下降现象。能源消费中占比最大的煤炭，其生产和消费总量虽然总体增长，
-                    但已于2013年开始出现生产量和消费量下降现象。而石油、天然气、水电等其他能源的生产和消费
-                    总量都呈缓慢上升趋势。从能源消费结构来看，天然气，水电等清洁能源消费占比在过去十年中有
-                    所提升，占比从2006年的10.2%提升到了2016年的19.7%，提升了9.5个百分点。我国正在不断优
-                    化能源消费结构，减少对高污染能源的依赖。相信在未来，
-                    随着对新能源的开发和应用，我国的能源消费结构会进一步改善，能源消费带来的污染会进一步减少。<br>
-                    <a style="color: forestgreen;left: 0px;">（数据来源：国家统计局）</a>
+                    通过搜集和整理国家统计局2006-2015年的五组数据（工业废气排放总量，污水排放总量，造林总面积，能源消费总量以及污染治理总投资，其中工业废气排放总量中我们提取了二氧化硫，氮氧化物以及烟粉尘排放量）我们对选取的五个维度做了整体的宏观趋势分析。图中的五个柱形及雷达图的五角分别代表上述的5个指标。
                 </p>
-
+                <br class="clear">
+                <div id="maintable" style="max-width: 1440px; width: 100%;height: 480px; z-index: 11;">
+                </div>
             </div>
-        </div>
+            <h2>四大维度看中国环境十年变化</h2>
 
-        <div style="position: absolute;top: 0; width: 100%;height: 100%;background-color: white;opacity: 0.7;z-index: 1;"></div>
-    </section>
+            <div
+                style="position: absolute;top: 0; width: 100%;height: 100%;background-color: white;opacity: 0.7;z-index: 1;">
+            </div>
 
-
-    <!-- 7 -->
-    <section>
-        <div id="result" style="z-index:100">
-            <h2 style="color:forestgreen">美丽中国建设任重道远</h2>
+        </section>
+        <div class="summary" style="">
             <p>
-                从我国近十年来对环境保护做出的努力来看，中国正积极履行发展中大国的国际责任,保持对创新、协调、绿色、开放、共享发展理念的孜孜追求，不过，环境的污染并
-                非一朝一夕形成，环境污染的治理乃至于美丽中国的建设也不可能一蹴而就，而需
-                要一个长期的过程。中国的环境保护与治理还远没有结束，甚至可以说是刚刚开始，
-                生态文明建设、美丽中国的建设任重道远。
+                数据显示，2006-2015年间，在空气污染治理方面，我国工业废气的排放总量整体上升，2011年开始增速放缓，但空气污染问题依然严峻。我国工业废气治理费用在此期间总体呈稳步增加的态势，空气污染有望获得进一步改善。水污染治理方面，截止至2017年底，全国废污水排放总量已从最高点2011年的807亿吨，降至2017年的756亿吨，污水排放量减少51亿吨。在国土绿化方面，我国的森林资源存量与造林面积均呈现出稳步上升趋势，国土绿化整体发展前景向好。能源生产与消费方面，能源生产与消费的总趋势上升，但在能源消耗结构上，清洁能源在能源消费中的比重增加，能源消费结构不断优化。
             </p>
         </div>
 
-        <div id="tip" style="padding:3em; color: #fff;background-color:rgb(122, 136, 151);">
-            <h3>数据来源</h3>
-            <ul>
-                <li>
-                    <a href="">中华人民共和国国家统计局</a><br>
-                    <a href="">中国环境保护数据库</a><br>
-                    <a href="">国家水利部 </a>
-                </li>
-                <li>
-                    <a href="">中华人民共和国生态环境局 </a><br>
-                    <a href="">中国气候变化信息网 </a><br>
-                    <a href="">《中国国土缘化状况公报》 </a>
-                </li>
-                <li>
-                    <a href="">中华人民共和国自然资源局</a><br>
-                    <a href="">OCED STATISTICS</a><br>
-                    <a href="">《水资源公报》</a>
-                </li>
-            </ul>
+        <!-- 3 -->
+        <section onMouseOver="airpagecontrols()">
+            <video width="100%" height="100%" autoplay="autoplay" loop="loop" muted="muted" style="">
+                <source src="img/cloud.mp4" type="audio/mp4">
+                </source>
+            </video>
 
-            <h3>队伍信息</h3>
-            <h4>队伍成员：李圆圆 杨舒颖 於紫薇 毛泳 陶锦丞</h4>
-            <h4>所属院校：湖北大学新闻传播学院 湖北大学计算机与信息工程学院</h4>
+            <div class="item">
+                <p>
+                    在空气污染方面，我们提取了十年间工业废气中各成分的排放量以及工业废气治理投资的相关数据作为图表参数。并采用堆积直方图+折线的形式来直观、简洁地进行多维参数的对比。 <br> <a
+                        style="color: forestgreen;left: 0px;">（数据来源：中国环境保护数据库 OCED Statistics）</a>
+                </p>
+                <br class="clear">
+                <div id="airtable1" style="width: 45%;height: 407px;color: wheat;float: left;z-index: 100;">
+                </div>
+
+                <div id="airtable2" style="width: 45%;height: 407px;color: wheat;float: right;z-index: 100;">
+                </div>
+            </div>
+            <h2>问题之下治理并行，严峻形势下空气质量有望提高</h2>
+            <div
+                style="position: absolute;top: 0; width: 100%;height: 100%;background-color: white;opacity: 0.7;z-index: 1;">
+            </div>
+
+        </section>
+        <div class="summary" style="">
+            <p>
+                2006年到2015年，我国工业废气的排放总量不断上升，在2010-2011年间达到小峰值，而后继续缓慢上升。
+            </p>
+            <p>
+                而上方右图表示的是备受关注的PM2.5所导致的单位范围内的死亡人数，以及以PM2.5为主要成分的颗粒物所导致的过早死亡率。其中，PM2.5所导致的单位范围内的死亡人数呈现出缓慢上升的趋势，颗粒物过早死亡率在2006-2011年间出现快速上升现象，2011-2017年，这一指标又波动下降。空气污染对人们的健康产生了很大威胁。但与此同时，工业废气排放总量上升幅度已经明显减小，速度明显减慢，二氧化硫、氮氧化物的排放量自2011年后也开始减少，而烟粉尘排放量自2014年上升到五年间的峰值后开始下降。
+            </p>
+            <p>
+                在治理方面，我国工业废气治理费用除在2010-2012年间有一定波动外，总体呈现上升趋势，2015年的治理费用约是2006年的4倍。治理费用增加与工业废气排放总量的减少有着密切的关联性，并对此起着积极作用，可见我国在工业废气治理上的投入卓有成效，空气质量有望进一步改善。
+            </p>
         </div>
-    </section>
+
+        <!-- 4 -->
+        <section onMouseOver="waterpagecontrols()">
+            <video width="100%" height="100%" autoplay="autoplay" loop="loop" muted="muted" style="">
+                <source src="img/water.mp4" type="audio/mp4">
+                </source>
+            </video>
+
+            <div class="item">
+                <p>
+                    下方堆积柱形图直观展示的是2007-2017年十年间我国各水质的河长占比变化，折线为优水质河长占比的年际变化，通过滑动滑块可以对分析范围进行限定。 <br><a
+                        style="color: forestgreen;left: 0px;">（数据来源：《水资源公报》 中国环境保护数据库）</a>
+                </p>
+                <br class="clear">
+                <div id="watertable" style="width: 900px;height: 500px;color: wheat;margin:0 auto;z-index: 100;">
+                </div>
+            </div>
+            <h2>污水排放得到控制，水环境日益转好</h2>
+            <div
+                style="position: absolute;top: 0; width: 100%;height: 100%;background-color: white;opacity: 0.7;z-index: 1;">
+            </div>
+        </section>
+        <div class="summary" style="">
+            <p>
+                2011年中国污水排放总量达到历史峰值，为807万亿吨。此后，污水排放总量逐年下降。截止2017年，中国污水排放总量较2011年锐减51亿吨，水质不断得到优化，具体体现为，中国I-III类优水质河长在全河长中的占比随着年际变化不断上升，劣V类水质河长占比不断下降。2007年，劣V类水质河长占比21.7%，水质污染严重。到了2017年，劣V类水质河长占比已降至8.3%，下降了13.4%。同时，I-III类较优河长占比上升了19%。从水环境整体发展态势来看，国家对污水排放投资增大，水污染工作在稳中有进地推进，水质在不断上升，水环境也在日益好转。
+            </p>
+        </div>
+
+        <!-- 5 -->
+        <section onMouseOver="soilpagecontrols()">
+            <video width="100%" height="100%" autoplay="autoplay" loop="loop" muted="muted" style="">
+                <source src="img/forest.mp4" type="audio/mp4">
+                </source>
+            </video>
+
+            <div class="item">
+                <div id="soiltable1" style="width:45%;height: 500px;color: wheat;float: left;z-index: 100;">
+                </div>
+                <div id="soiltable2" style="width:50%;height: 500px;color: wheat;float: right;z-index: 100;">
+                </div>
+
+                <div class="description" style="width: 48%;height: 500px;color: #000;float: right;z-index: 100;">
+                    <p>
+                        下图为我国的国土绿化情况，采用面积+折线的方式来展现我国每年造林总面积，水土流失防治总面积以及城市绿地面积随时间在“量”和“势”上的变化。
+                        <br><a style="color: forestgreen;left: 0px;">（数据来源：国家统计局）</a>
+                    </p>
+
+                    <h2 style="position: relative;top: 30px">大规模国土绿化行动取得显著成果</h2>
+
+                </div>
+
+                <div class="description" style="width: 48%;height: 500px;color: #000;float: left;z-index: 100;">
+                    <p>
+                        上图展现的是我国最新的各省森林覆盖率情况，通过将各省市按照地理位置划分成7个区域并对其森林覆盖率进行排名来展现由省到区域再到全国的森林覆盖率情况。<br>
+                        <a
+                        style="color: forestgreen;left: 0px;">（数据来源：中国林业局 国家生态网 《中国国土缘化状况公报》）</a>
+                    </p>
+
+                    <h2 style="position: relative;top: 30px">森林资源增长居全球首位</h2>
+                </div>
+            </div>
+
+            <div
+                style="position: absolute;top: 0; width: 100%;height: 100%;background-color: white;opacity: 0.7;z-index: 1;">
+            </div>
+        </section>
+        <div class="summary" style="">
+            <div style="float:left; width: 48%" >
+                    <p>
+                            我国最新森林覆盖率为21.66%，仍低于世界平均森林覆盖率30.8%。究其原因，我国西部地区因气候、土壤环境等因素，降水较少，森林覆盖低于20%，但据最新数据统计我国其他省份森林覆盖率大都高于30%，东南沿海多省更是高达60%以上。在全球森林资源持续减少的背景下，我国在过去25年里成为森林资源增长最多的国家。
+                        </p>
+            </div>
+
+            <div style="width:48%; float: right">
+                    <p>2009年到2017年间，我国的年造林总面积呈波动上涨趋势，城市绿地面积逐年稳步上升，每年水土流失防治面积均在530万公顷以上。经过多年努力，我国森林面积逐年上涨，中国森林覆盖率由新中国成立初期的8.6%提高到21.66%，森林面积达到2.08亿公顷，平均每年造林660万公顷，国土绿化效果显著。</p>
+            </div>
+            <br class="clear">
+            
+        </div>
+
+        <!-- 6 -->
+        <section onMouseOver="powerpagecontrols()">
+            <video width="100%" height="100%" autoplay="autoplay" loop="loop" muted="muted" style="">
+                <source src="img/windmills.mp4" type="audio/mp4">
+                </source>
+            </video>
+
+            <div class="item">
+                <div id="powertable" style="width: 100%;height: 760px;color: wheat;margin:0 auto;z-index: 100;"
+                    class="layui-anim" data-anim="layui-anim-up">
+                </div>
+                <div style="width: 40%;position: relative;
+                right: -58%;top: -730px">
+                    <h2 style="position: relative ;margin-bottom:3em;">能源消费结构不断优化</h2>
+                    <p>饼图展现的是2006-2016年我国能源消费中各类能源的占比，下方折线图直接展现了它们各自的发展趋势。
+                        （鼠标滑至折线图不同年份时，饼图数据随之变换）
+                        <br>
+                        <a style="color: forestgreen;left: 0px;">（数据来源：国家统计局）</a>
+                    </p>
+                </div>
+            </div>
+
+            <div
+                style="position: absolute;top: 0; width: 100%;height: 100%;background-color: white;opacity: 0.7;z-index: 1;">
+            </div>
+        </section>
+        <div class="summary" style="">
+            <p>
+                2006年-2016年，我国能源的生产与消费总量总体都呈现出上升趋势，但在2011年之后增速放缓，
+                生产总量在2015年出现下降现象。能源消费中占比最大的煤炭，其生产和消费总量虽然总体增长，
+                但已于2013年开始出现生产量和消费量下降现象。而石油、天然气、水电等其他能源的生产和消费
+                总量都呈缓慢上升趋势。从能源消费结构来看，天然气，水电等清洁能源消费占比在过去十年中有
+                所提升，占比从2006年的10.2%提升到了2016年的19.7%，提升了9.5个百分点。我国正在不断优
+                化能源消费结构，减少对高污染能源的依赖。相信在未来，
+                随着对新能源的开发和应用，我国的能源消费结构会进一步改善，能源消费带来的污染会进一步减少。
+            </p>
+        </div>
+
+        <!-- 7 -->
+        <section>
+            <div id="result"
+                style="z-index:100; background-image: url('./img/greatwall.jpg');background-size: cover;width: 100%;padding: 5em 5%;">
+                <h2 style="margin-top: 2em;position: relative; ;color:forestgreen">美丽中国建设任重道远</h2>
+                <p style="font-size:1.4em; background-color: rgba(255,255,255,.2)">
+                    从我国近十年来对环境保护做出的努力来看，中国正积极履行发展中大国的国际责任,保持对创新、协调、绿色、开放、共享发展理念的孜孜追求，不过，环境的污染并
+                    非一朝一夕形成，环境污染的治理乃至于美丽中国的建设也不可能一蹴而就，而需
+                    要一个长期的过程。中国的环境保护与治理还远没有结束，甚至可以说是刚刚开始，
+                    生态文明建设、美丽中国的建设任重道远。
+                </p>
+            </div>
+
+            <div class="summary" style="">
+                <p>
+                    在此次作品中，为了阐明中国环境十年间的变化，我们在大量爬取相关数据的基础上，选取了具有典型性的四个维度，五个指标对中国环境的十年变化进行说明。在数据筛选过程中，我们首先尽可能广泛地搜集数据，以时间为标准进行初次筛选；再结合其完整性和典型性选出最终呈现的数据，确定了上述空气、水、国土绿化以及能源方面的四个维度，五个指标，再辅之以一些具体的数据进行论证和说明。在数据分析上，我们主要采取趋势分析，对比分析以及交叉分析等方法进行了从宏观到微观较为全面的分析，并最终得出结论。我们的创新点在于综合数据的宏观趋势以及微观的构成变化，从问题与治理两大角度探讨并说明中国环境十年的既有状况以及未来可能的发展趋势。对于中国环境变化的研究，我们还将在今后获取更多有效数据的基础上进行更加精确细致的分析，并通过出色的可视化以生动直观的形式为大家呈现！
+                </p>
+            </div>
+
+            <div id="tip" style="padding:3em; color: #fff;background-color:rgb(122, 136, 151);">
+                <h3>数据来源</h3>
+                <ul>
+                    <li>
+                        <a href="">中华人民共和国国家统计局</a><br>
+                        <a href="">中国环境保护数据库</a><br>
+                        <a href="">国家水利部 </a>
+                    </li>
+                    <li>
+                        <a href="">中华人民共和国生态环境局 </a><br>
+                        <a href="">中国气候变化信息网 </a><br>
+                        <a href="">《中国国土缘化状况公报》 </a>
+                    </li>
+                    <li>
+                        <a href="">中华人民共和国自然资源局</a><br>
+                        <a href="">OCED STATISTICS</a><br>
+                        <a href="">《水资源公报》</a>
+                    </li>
+                </ul>
+
+                <h3>队伍信息</h3>
+                <h4>队伍成员：李圆圆 杨舒颖 於紫薇 毛泳 陶锦丞</h4>
+                <h4>所属院校：湖北大学新闻传播学院 湖北大学计算机与信息工程学院</h4>
+            </div>
+        </section>
+
 
 
     </div>
 
-
+    <!-- script -->
     <script>
         function allpagecontrols() {
             $("#alltable").siblings().hide(100);
@@ -494,11 +540,12 @@
                 backgroundColor: "",
                 "title": {
                     "text": "2007-2017年各水质河长占比变化",
-                    x: "4%",
+                    x: "center",
+                    top: '20',
 
                     textStyle: {
                         color: '#000',
-                        fontSize: '22'
+                        fontSize: '16'
                     },
                     subtextStyle: {
                         color: '#90979c',
@@ -2758,6 +2805,15 @@
             setTimeout(function () {
 
                 option = {
+                    title:{
+                        text:"2006-2016年我国各能源消费占比及变化趋势",
+                        textStyle:{
+                            fontSize:'16',
+                            color:'#777'
+                        },
+                        left:'center',
+                        top:'45%'
+                    },
                     legend: {
                         left: 0
                     },
@@ -2839,6 +2895,7 @@
         }
 
     </script>
+
 </body>
 
 </html>

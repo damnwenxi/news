@@ -1,8 +1,13 @@
-
+/* 
+@font-face{
+    font-family: 'Font';
+    src: url("font_1.ttf");
+} */
 *{
     padding: 0;
     margin: 0;
 }
+
 body{
     background-color: #EAE8E6;
     color: #777;
@@ -11,7 +16,8 @@ body{
 
 .height{
     color: rgb(237, 119, 104);
-    font-weight: 600;
+    /* font-weight: 600; */
+    font-size: 1em;
 }
 
 .section{
@@ -43,7 +49,13 @@ body{
     margin: 0 auto;
     text-align: center;
 }
-
+section h1{
+    background-color: rgb(237, 119, 104);
+    color: #fff;
+    padding: 1em;
+    font-weight: 900;
+    font-family: 'Noto Serif SC', serif;
+}
 .loader{
     z-index: 999;
     width: 100px;
@@ -62,7 +74,32 @@ body{
     background-color: rgb(255,109,112) !important;
 }
 
+#result_img{
+    padding: 200px 0;
+    min-height: 600px;
+    width: 100%;
+    background-image: url('../static/img/result.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#result_img p{
+    text-indent: 2em;
+    max-width: 100%;
+    font-weight: 900;
+    font-size: 1.6em;
+    color: #000;
+    font-family: 'Noto Serif SC', serif;
+    padding: 2em 3em;
+    height: 40%;
+    width: 80% !important;
+    display: block;
+    line-height: 1.6em;
+    background-color: rgba(255, 255, 255, .7);
+}
+
 .normal{
+    margin-top: 1em;
     text-indent: 2em;
 }
 h5{
@@ -70,6 +107,8 @@ h5{
     margin: 1em auto;
     max-width: 800px;
     text-align: left;
+    font-weight: 600;
+    color: rgb(177, 206, 177);
 }
 /* 分割线样式 */
 article hr{
@@ -172,23 +211,32 @@ section h2{
     font-size: 1.2em;
 }
 #title{
+    margin: 0 auto;
+    width:60%;
     position: relative;
     z-index: 10;
 }
 #title h1{
-    padding: .5em 1em;
-    display: inline-block;
-    border: 1px solid #fff;
-    border-radius: 5px;
     font-size: 3em;
     margin: 1em;
     color: #fff;
+    text-align: left;
 }
 #title h2{
+    font-size: 2.5em;
+    padding: 1em 0;
+    text-align: right;
     color: white;
 }
 
+#title h3{
+    text-align: center;
+    color: #fff;
+}
+
 #begin{
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
     line-height: 1.5em;
     display: block;
     color: #fff;
