@@ -42,6 +42,9 @@ body{
     .section{
         display: none;
     }
+    #employeeOfCompany{
+        height: 60em !important;
+    }
 }
 
 .leftalign{
@@ -76,7 +79,7 @@ section h1{
 
 #result_img{
     padding: 200px 0;
-    min-height: 600px;
+    height: 600px;
     width: 100%;
     background-image: url('../static/img/result.jpg');
     background-size: cover;
@@ -91,8 +94,7 @@ section h1{
     color: #000;
     font-family: 'Noto Serif SC', serif;
     padding: 2em 3em;
-    height: 40%;
-    width: 80% !important;
+    width: 80%;
     display: block;
     line-height: 1.6em;
     background-color: rgba(255, 255, 255, .7);
@@ -177,7 +179,7 @@ section p{
 article{
     position: relative;
     background-color: #fff;
-    padding: 3em 5px;
+    padding: 3em 0;
     margin-bottom: .5em;
     text-align: center;
 }
@@ -207,12 +209,11 @@ section h2{
     display: block;
     max-width: 800px;
     margin: 1em auto;
-    text-indent: 2.5em;
     font-size: 1.2em;
 }
 #title{
     margin: 0 auto;
-    width:60%;
+    width:100%;
     position: relative;
     z-index: 10;
 }
@@ -235,22 +236,27 @@ section h2{
 }
 
 #begin{
-    font-family: 'Noto Serif SC', serif;
-    font-weight: 700;
-    line-height: 1.5em;
+    padding: 4em 0;
     display: block;
-    color: #fff;
-    font-size: 1.5em;
-    padding: 2em;
-    border-radius: 10px;
-    margin-bottom: 2em;
-    background-image: url("../static/img/begin.png");
+    color: #000;
+    margin-bottom: 2em; 
+    background-image: url("../static/img/quto.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 #begin span{
-    font-size: 2em;
+    font-size: 4em;
+}
+
+#begin p{
+    padding: 0 6em;
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 900;
+    line-height: 1.5em;
+    text-align: left;
+    text-indent: 2em;
+    font-size: 1.5em;
 }
 
 
@@ -323,7 +329,116 @@ section h2{
 }
 
 
-/* 用户数量统计表 */
-.echarts{
-    margin: 0 auto;
+
+@media (max-width: 540px){
+    /* 用户数量统计表 */
+    .echarts{
+        width: 100%;
+        margin: 0 auto;
+        height: 300px !important;
+    }
+    #result_img p{
+        width: 100%;
+        font-size: 1.2em;
+        margin: 0;
+        padding: 1em;    
+    }
+    #result_img{
+        padding: 0;
+        height: auto;
+    }
+    #title h3{
+        font-size: 1.2em;
+        text-align: left;
+    }
+
+    #begin p{
+        color: #fff;
+        padding: 0 1em;
+        font-family: 'Noto Serif SC', serif;
+        font-weight: 900;
+        line-height: 1.5em;
+        text-align: left;
+        text-indent: 2em;
+        font-size: 1em;
+    }
+    #timeline{
+        display: none;
+    }
+    #timeline-tip{
+        display: none;
+    }
+    #timeline-mobile li{
+        padding: 1em;
+    }
+    #timeline-mobile li h3{
+        color: #fff;
+    }
+    #timeline-mobile li p{
+        color: #fff;
+    }
+    #timeline-mobile{
+        display: block !important;
+    }
 }
+
+/* 开关样式 */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: rgb(237, 119, 104);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px rgb(237, 119, 104);
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }

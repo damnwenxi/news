@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no,minimum-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>news</title>
     <!-- <link rel="stylesheet" href="./css/bootstrap.min.css"> -->
@@ -15,10 +15,30 @@
     <link rel="Shortcut Icon" href="./favicon.ico">
     <!-- <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script> -->
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,600" rel="stylesheet">
+    <style>
+        *{
+            overflow-x:hidden; 
+        }
     </style>
 </head>
 
 <body>
+
+    <!-- 背景音乐控制 -->
+
+    <div style="position:fixed;right:2em;bottom:2em;z-index: 100;">
+        <p id="musicstate" style="margin-bottom:0;text-align: center">音乐:关</p>
+        <label class="switch">
+            <input id="musiccontrol" type="checkbox">
+            <span class="slider round"></span>
+        </label>
+    </div>
+    <!-- 背景音乐 -->
+    <div style="margin:0 auto">
+        <audio id="audio" src="./static/bgm/bgm.mp3" style="opacity:0" preload="auto" controls loop
+            hidden="true"></audio>
+    </div>
+
     <!-- loader -->
 
     <div id="load" class="loader">
@@ -87,26 +107,38 @@
         </div>
 
         <!-- 引言部分 -->
-        <article>
+        <article style="padding-top:0">
             <!-- 引言部分 -->
-            <section class="container">
-                <div id="begin"><span>“</span>随着电子竞技行业的产业化，很多职业教育院校和本科高校都纷纷开设了电竞专业和电竞课程。从2008年开始，电子竞技行业迅猛发展，电子竞技行业如今已进入黄金时代。<span>”</span></div>
+            <div id="begin">
+                <!-- <span>"</span> -->
+                <p>
+                    “冠军属于iG，属于LPL。但我认为，他不仅仅属于英雄联盟的LPL，他属于中国每一个有电竞梦想的我们，哪怕我们可能早已不在那片热血的战场。”2018年11月3日iG夺冠，一位英雄联盟的“老粉”热血道，这也是很多热爱这款游戏及热爱这项比赛的玩家心声。
+                </p>
+                <p>
+                    对他们来说，圆梦似乎意味着青春时代的结束。但对于中国电竞而言，刚好是一个时代的开始。
+                </p>
+                <p>
+                    电竞的出圈伴随着的不仅是目光与欢呼，一条趋于完备的产业链在背后默默支持。早在2016年我国高校已开设电竞专业，培养出更多的游戏数据分析师、专业的电竞赛事解说、赛事运营策划等电竞从业者。除此之外，电竞产业链已经从最早的“游戏开发商——用户”的简单链条，逐渐发展为从“源头的游戏开发商、运营商，到内容输出的赛事策划、直播，再到末端消费用户的”完整生态体系。
+                </p>
+                <!-- <span>"</span> -->
+            </div>
 
+            <section class="container">
 
                 <h2>各方蓄力：形成完整产业链</h2>
                 <p class="quto">以前我们一谈到电子竞技，就联想到沉迷网络电子游戏的青少年们。经过多年的发展，电子竞技行业如今又以什么样的面貌展现在大众视野里呢？
                 </p>
                 <!-- 产业链图表 -->
-                <img style="max-width: 800px;" src="./static/img/chain.png" alt="电子竞技产业链">
+                <img style="width: 100%;" src="./static/img/chain2.jpeg" alt="电子竞技产业链">
                 <p class="quto">如今的电子竞技产业链集娱乐、体育和传媒等为一体，被越来越多的人所接受。</p>
                 <br>
                 <br>
-                
+
                 <h2>十年电竞：用户、市场不断壮大</h2>
                 <!-- 用户规模 -->
                 <div class="">
                     <p class="quto" style="color:#000;text-align: center;">2008−2018年中国电子竞技市场规模</p>
-                    <div id="users" class="echarts" style="max-width:800px;height: 30em;"></div>
+                    <div id="users" class="echarts" style="width:100%;height: 30em;"></div>
                 </div>
                 <!-- 数据说明 -->
                 <p class="tips">
@@ -114,11 +146,13 @@
                 </p>
                 <br>
                 <!-- 2009—2019年中国电子竞技市场规模 -->
-                <div id="incomeMarket" class="echarts" style="max-width:800px;height: 30em;"></div>
+                <div id="incomeMarket" class="echarts" style="width:100%;height: 30em;"></div>
                 <!-- 数据说明 -->
-                <p class="quto">如今的电子竞技行业拥有近<span class="height">6亿</span>的用户，用户规模庞大，为电子竞技市场做出了<span class="height">940.5亿</span>人民币的贡献。</p>
+                <p class="quto">如今的电子竞技行业拥有近<span class="height">6亿</span>的用户，用户规模庞大，为电子竞技市场做出了<span
+                        class="height">940.5亿</span>人民币的贡献。</p>
                 <p class="tips">
-                    数据来源：<a href="https://www.iresearch.com.cn/">艾瑞咨询(iresearch)</a>、<a href="http://www.bosidata.com/">博思数据中心</a>
+                    数据来源：<a href="https://www.iresearch.com.cn/">艾瑞咨询(iresearch)</a>、<a
+                        href="http://www.bosidata.com/">博思数据中心</a>
                 </p>
                 <br>
             </section>
@@ -137,7 +171,7 @@
                 <!-- 时间线 -->
                 <div class="product-section product-features">
                     <div class="product-title"> 相关政策扶持</div>
-                    <div class="product-wrapper">
+                    <div id="timeline" class="product-wrapper">
                         <div class="product-body swiper-container">
                             <ul class="features-slide swiper-wrapper">
                                 <li class="features-item swiper-slide">
@@ -145,7 +179,8 @@
                                     <i></i>
                                     <a class="features-info">
                                         <p class="features-info-i"></p>
-                                        <p class="features-info-s"> 国家体育总局批准电子竞技运动项目为第99个<span class="height">正式体育竞赛项目</span>。
+                                        <p class="features-info-s"> 国家体育总局批准电子竞技运动项目为第99个<span
+                                                class="height">正式体育竞赛项目</span>。
                                         </p>
 
                                     </a>
@@ -166,7 +201,8 @@
                                     <i></i>
                                     <a class="features-info">
                                         <p class="features-info-i"></p>
-                                        <p class="features-info-s"> 金融危机爆发的背景下，电竞产业举步维艰。国家体育总局整合现有的运动项目，将电竞<span class="height">重新整合</span>为第78号体育运动。
+                                        <p class="features-info-s"> 金融危机爆发的背景下，电竞产业举步维艰。国家体育总局整合现有的运动项目，将电竞<span
+                                                class="height">重新整合</span>为第78号体育运动。
                                         </p>
 
                                     </a>
@@ -177,7 +213,8 @@
                                     <i></i>
                                     <a class="features-info">
                                         <p class="features-info-i"></p>
-                                        <p class="features-info-s"> 国家体育总局决定<span class="height">成立电子竞技国家队</span>，出站第四届亚洲室内和武道运动会。
+                                        <p class="features-info-s"> 国家体育总局决定<span
+                                                class="height">成立电子竞技国家队</span>，出站第四届亚洲室内和武道运动会。
                                         </p>
 
                                     </a>
@@ -199,7 +236,8 @@
                                     <i></i>
                                     <a class="features-info">
                                         <p class="features-info-i"></p>
-                                        <p class="features-info-s">国家体育总局指出“以冰雹、山地户外、水上、汽摩、航空、电竞等运动项目为重点，引导具有消费引领性的健身休闲项目发展。”</p>
+                                        <p class="features-info-s">
+                                            国家体育总局指出“以冰雹、山地户外、水上、汽摩、航空、电竞等运动项目为重点，引导具有消费引领性的健身休闲项目发展。”</p>
 
                                     </a>
                                 </li>
@@ -209,7 +247,9 @@
                                     <i></i>
                                     <a class="features-info">
                                         <p class="features-info-i"></p>
-                                        <p class="features-info-s"><span class="height">教育部增补了”电子竟技运动与管理”专业</span>。截止到2018年1月，已有13个院校发布了其电子竟技相关专业的开设及招生情况。</p>
+                                        <p class="features-info-s"><span
+                                                class="height">教育部增补了”电子竟技运动与管理”专业</span>。截止到2018年1月，已有13个院校发布了其电子竟技相关专业的开设及招生情况。
+                                        </p>
 
                                     </a>
                                 </li>
@@ -242,7 +282,8 @@
                                     <i></i>
                                     <a class="features-info">
                                         <p class="features-info-i"></p>
-                                        <p class="features-info-s">腾讯召开2017年电竞战略发布会，战略的核心, 便是效仿NBA模式的<span class="height">电竞体育联盟化</span>。</p>
+                                        <p class="features-info-s">腾讯召开2017年电竞战略发布会，战略的核心, 便是效仿NBA模式的<span
+                                                class="height">电竞体育联盟化</span>。</p>
 
                                     </a>
                                 </li>
@@ -264,7 +305,8 @@
                                     <a class="features-info">
                                         <p class="features-info-i"></p>
                                         <p class="features-info-s"><span class="height">国家体育总局</span>
-                                            发布了<span class="height">《关于举办2018年全国电子竞技公开赛的通知》</span>，拟于2018年12月在四川成都举办2018年全国<span
+                                            发布了<span
+                                                class="height">《关于举办2018年全国电子竞技公开赛的通知》</span>，拟于2018年12月在四川成都举办2018年全国<span
                                                 class="height">电子竞技公开赛</span>总决赛。</p>
 
                                     </a>
@@ -284,10 +326,166 @@
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next swiper-button-disabled"></div>
                     </div>
+
+                    <!-- 移动端 -->
+                    <div style="display:none" id="timeline-mobile">
+                        <ul class="">
+                            <li>
+                                <h3>2003-11</h3>
+                                <i></i>
+                                <a class="">
+                                    <p class=""></p>
+                                    <p class=""> 国家体育总局批准电子竞技运动项目为第99个<span class="height">正式体育竞赛项目</span>。
+                                    </p>
+
+                                </a>
+                            </li>
+
+                            <li>
+                                <h3>2004</h3>
+                                <i></i>
+                                <a class="">
+                                    <p class=""></p>
+                                    <p class=""> 广电总局发布网络游戏类节目的<span class="height">禁播令</span>。 </p>
+
+                                </a>
+                            </li>
+
+                            <li>
+                                <h3>2008</h3>
+                                <i></i>
+                                <a class="">
+                                    <p class=""></p>
+                                    <p class=""> 金融危机爆发的背景下，电竞产业举步维艰。国家体育总局整合现有的运动项目，将电竞<span
+                                            class="height">重新整合</span>为第78号体育运动。
+                                    </p>
+
+                                </a>
+                            </li>
+
+                            <li>
+                                <h3>2013</h3>
+                                <i></i>
+                                <a class="">
+                                    <p class=""></p>
+                                    <p class=""> 国家体育总局决定<span class="height">成立电子竞技国家队</span>，出站第四届亚洲室内和武道运动会。
+                                    </p>
+
+                                </a>
+                            </li>
+
+                            <li class="">
+                                <h3>2016-04</h3>
+                                <i></i>
+                                <a class="">
+                                    <p class=""></p>
+                                    <p class="">国家发改委明确指出在做好知识产权保护和对青少年引导的前提下，以企业为主体，举办全国性或国际性<span
+                                            class="height">电子竞技游戏游艺赛事活动</span>。</p>
+
+                                </a>
+                            </li>
+
+                            <li class="">
+                                <h3>2016-07</h3>
+                                <i></i>
+                                <a class="">
+                                    <p class=""></p>
+                                    <p class="">
+                                        国家体育总局指出“以冰雹、山地户外、水上、汽摩、航空、电竞等运动项目为重点，引导具有消费引领性的健身休闲项目发展。”</p>
+
+                                </a>
+                            </li>
+
+                            <li class="">
+                                <h3>2016-09</h3>
+                                <i></i>
+                                <a class="">
+                                    <p class=""></p>
+                                    <p class=""><span
+                                            class="height">教育部增补了”电子竟技运动与管理”专业</span>。截止到2018年1月，已有13个院校发布了其电子竟技相关专业的开设及招生情况。
+                                    </p>
+
+                                </a>
+                            </li>
+
+                            <li class="">
+                                <h3>2017-01</h3>
+                                <i></i>
+                                <a class="">
+                                    <p class=""></p>
+                                    <p class="">国际奥委会正式宣布，认证电子竞技运动为正式体育项目，代表着国际奥委会将开始把电子竞技纳入<span
+                                            class="height">奥运会比赛项目</span>。</p>
+
+                                </a>
+                            </li>
+
+                            <li class="">
+                                <h3>2017-04</h3>
+                                <i></i>
+                                <a class="">
+                                    <p class=""></p>
+                                    <p class="">文化部提出推进游戏 <span class="height">产业结构升级</span>
+                                        ，推动网络游戏、电子游戏等游戏 <span class="height">门类协调发展</span>
+                                        ，促进移动游戏、电子竞技、游戏直播、虚拟现实游戏等 <span class="height"> 新业态发展</span> 。</p>
+
+                                </a>
+                            </li>
+
+                            <li class="">
+                                <h3>2017-04</h3>
+                                <i></i>
+                                <a class="">
+                                    <p class=""></p>
+                                    <p class="">腾讯召开2017年电竞战略发布会，战略的核心, 便是效仿NBA模式的<span class="height">电竞体育联盟化</span>。
+                                    </p>
+
+                                </a>
+                            </li>
+
+                            <li class="">
+                                <h3>2018-05</h3>
+                                <i></i>
+                                <a class="">
+                                    <p class=""></p>
+                                    <p class="">亚洲奥林匹克理事会宣布6款游戏入围 <span class="height">亚运会比赛项目</span>
+                                        ，电竞作为表演赛第一次进入亚运会。</p>
+
+                                </a>
+                            </li>
+
+                            <li class="">
+                                <h3>2018-07</h3>
+                                <i></i>
+                                <a class="">
+                                    <p class=""></p>
+                                    <p class=""><span class="height">国家体育总局</span>
+                                        发布了<span
+                                            class="height">《关于举办2018年全国电子竞技公开赛的通知》</span>，拟于2018年12月在四川成都举办2018年全国<span
+                                            class="height">电子竞技公开赛</span>总决赛。</p>
+
+                                </a>
+                            </li>
+
+                            <li class="">
+                                <h3>至今</h3>
+                                <i></i>
+                                <a class="">
+                                    <p class=""></p>
+                                    <p class=""> ... </p>
+
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <p id="timeline-tip" style="text-align:center;color: #fff;margin: 1em auto;font-size: 1.2em">
+                        *点击两侧按钮滑动查看</p>
                 </div>
 
+
+
                 <br>
-                <p class="quto">国内在近年来对电子竞技行业出台了不少相关扶持政策，为电子竞技行业引入资本投资和社会资源奠定了基础。
+                <p style="padding:0 1em" class="quto">国内在近年来对电子竞技行业出台了不少相关扶持政策，为电子竞技行业引入资本投资和社会资源奠定了基础。
                 </p>
                 <br>
             </section>
@@ -302,7 +500,7 @@
                 <!-- 2008—2018年中国游戏市场实际销售收入 -->
                 <h2>销售收入稳增，市场格局占主力</h2>
                 <p class="quto" style="color:#000;text-align: center;">2008—2018年中国游戏市场实际销售收入</p>
-                <div id="income" class="echarts" style="max-width:800px;height: 30em;"></div>
+                <div id="income" class="echarts" style="width:100%;height: 30em;"></div>
                 <!-- 数据说明 -->
                 <p class="tips">
                     数据来源：<a href="http://www.cgigc.com.cn/">中国音数协游戏工委</a>、<a href="http://www.joynews.cn/">伽马数据</a>
@@ -310,13 +508,17 @@
                 <!-- <h4 class="leftalign">多重因素促使移动游戏增长放缓</h4> -->
                 <p class="quto"> 2008—2018年中国移动游戏市场依然保持增长，但近年来增速出现快速下滑，销售收入增长放缓。这主要受到三个方面的影响。</p>
                 <p class="normal">
-                        <span class="height">一是用户需求发生变化</span>。一方面，在移动互联网人口流量接近饱和的趋势下，移动游戏用户数量增量有限； 另一方面，以短视频为主的新型娱乐内容对于用户的注意力争夺日益激烈，移动游戏用户的黏性有所松动，移动游戏用户使用时长在移动互联网总使用时长中占比不断下降。
+                    <span
+                        class="height">一是用户需求发生变化</span>。自2014年直播平台概念热起来之后，众多电竞选手转向游戏直播，但大众认选手，不认俱乐部，所以直接导致用户注意力转移至以直播为主的新型娱乐内容。
+
                 </p>
                 <p class="normal">
-                    <span class="height"> 二是产品获取用户难度提升</span>。首先从推广角度来看，广告投放价格自上半年大幅上涨后维持在较高水平，传统品类游戏在游戏广告投放市场完成一轮洗牌后价格逐渐企稳，而二线题材品类的投放价格仍在攀升。 再次，用户的游戏体验需求已经升级，主动选择产品的意愿更加明确，对游戏品质和体验的要求也更严格，反向推动产品进行定制化研发和精细化运营，所需周期和成本大幅增加。
+                    <span class="height">
+                        二是产品获取用户难度提升</span>。篮球有NBA，足球有英超、中超，还有影响力最大的奥运会和世界杯这些都是巨型关注点。dota和lol的官方赛事目前从收视人数来说是不容小觑的，但观众属性较为单一，多为电竞爱好者，其他用户的注意力获取有限。
                 </p>
                 <p class="normal">
-                    <span class="height">三是新产品竞争力较弱，市场收入增长动力不足</span>。少数热门游戏占据了大部分流量份额，市场格局固化加深，市场竞争推动游戏产品越来越精品化，新产品进入门槛也有所提升。
+                    <span
+                        class="height">三是新产品竞争力较弱，市场收入增长动力不足</span>。少数热门游戏比如dota、lol，之所以占据了大部分流量份额，都是很多年情怀积累起来的。而类似于自由之战、全民枪战那样利润低的才是市场常态。
                 </p>
                 <br>
                 <br>
@@ -333,22 +535,27 @@
                 <!-- 截止2019年开设与游戏行业强相关专业的高校 -->
                 <h2>89所高校开设电竞专业 储备人才提供持续发展</h2>
                 <p style="color:#000;text-align: center;" class="quto">截止2019年开设与游戏行业强相关专业的高校</p>
-                <div id="mapOfSchool" class="echarts" style="max-width:1200px;height: 45em;"></div>
+                <div id="mapOfSchool" class="echarts" style="width:100%;height: 45em;"></div>
                 <!-- 数据说明 -->
                 <p class="tips">
                     数据来源：<a href="https://gkcx.eol.cn/">中国教育在线</a>
                 </p>
                 <p class="quto">
-                    自2016年起，我国高校开始陆续开设与游戏和电竞强相关的专业。高校已成为游戏相关产业人才培养的重要方式之一，截止2019年四月，仅不到三年时间，<span class="height">已开设与游戏和电竞强相关的专业的高校已有89所</span>。
+                    区别于传统运动员的培养，高校电竞专业更多的目的不是培养职业电竞运动员，而是培养出更多的游戏数据分析师、专业的电竞赛事解说、赛事运营策划等电竞从业者。随着电竞热度的逐渐升温，专业度、系统性要求的不断提升，对于从业人员的要求也会相应增加，这也给高校的电竞人才培养提出了更高的要求。
                 </p>
                 <p class="quto">
-                    但开设此类专业的高校<span class="height">大多为职业技术学校</span>，高等教育学府开设此类专业较少，双一流大学更是寥寥无几。高校开设一个新专业需要资金、师资、教学环境及多方面的支持，电竞相关专业在高校作为近年来刚开设的新专业，各大高校尤其是双一流大学更是要严格把控开设条件，为学生提供高质的教育环境。
+                    自2016年起，我国高校开始陆续开设与游戏和电竞强相关的专业。高校已成为游戏相关产业人才培养的重要方式之一，截止2019年四月，仅不到三年时间，<span
+                        class="height">已开设与游戏和电竞强相关的专业的高校已有89所</span>。
+                </p>
+                <p class="quto">
+                    但开设此类专业的高校<span
+                        class="height">大多为职业技术学校</span>，高等教育学府开设此类专业较少，双一流大学更是寥寥无几。高校开设一个新专业需要资金、师资、教学环境及多方面的支持，电竞相关专业在高校作为近年来刚开设的新专业，各大高校尤其是双一流大学更是要严格把控开设条件，为学生提供高质的教育环境。
                 </p>
                 <p class="quto">
                     在地理分布上，游戏产业发展较快的地区开设相关专业的高校较多，例如四川、重庆、上海、广东、湖北等地。
                 </p>
                 <br>
-               
+
             </section>
 
         </article>
@@ -361,18 +568,19 @@
                 <h2>自主研发实力不断提升</h2>
                 <p class="quto">我国信息网络基础设施建设加速，互联网与电子竞技产业的融合不断加深。
                 </p>
-                <p style="color:#000;text-align: center;" >*部分游戏产品如下：</p>
-                <div id="radial" class="echarts" style="max-width:800px;height: 35em;"></div>
+                <p style="color:#000;text-align: center;">*部分游戏产品如下：</p>
+                <div id="radial" class="echarts" style="width:100%;height: 35em;"></div>
                 <p class="quto">电子竞技游戏的开发与制作这一环节为整个产业的内容提供了源泉，而游戏研发商是整个电子竞技产业内容的提供者。
                 </p>
                 <br>
                 <!-- 2008-2018年中国自主研发游戏产品数量和公司数量 -->
                 <!-- <h2>自主研发实力不断提升</h2> -->
                 <p style="color:#000;text-align: center;" class="quto">2008-2018年中国自主研发游戏产品数量和公司数量</p>
-                <div id="company" class="echarts" style="max-width:800px;height: 30em;"></div>
+                <div id="company" class="echarts" style="width:100%;height: 30em;"></div>
                 <!-- 数据来源说明 -->
                 <p class="tips">
-                    数据来源：<a href="http://www.cgigc.com.cn/isbn/">中国音数协游戏工委</a>、<a href="http://gamemap.cgigc.com.cn/list.html?type=2">中国游企版图</a>
+                    数据来源：<a href="http://www.cgigc.com.cn/isbn/">中国音数协游戏工委</a>、<a
+                        href="http://gamemap.cgigc.com.cn/list.html?type=2">中国游企版图</a>
                 </p>
                 <p class="quto">
                     我国自主研发的游戏产品数量呈现逐年增长的态势，但是我国自主研发的游戏公司数量一直偏少。我国自主研发的游戏公司逐渐壮大，专业性更强，那些不知名的微小企业在竞争中没有生存下来。
@@ -383,47 +591,50 @@
                 <br>
                 <!-- 2008-2018年中国自主研发网络游戏市场实际销售收入  -->
                 <p style="color:#000;text-align: center;" class="quto">2008-2018年中国自主研发网络游戏市场实际销售收入 </p>
-                <div id="market" class="echarts" style="max-width:800px;height: 35em;"></div>
+                <div id="market" class="echarts" style="width:100%;height: 35em;"></div>
                 <!-- 数据说明 -->
                 <p class="tips">
                     数据来源：<a href="http://www.cgigc.com.cn/">中国音数协游戏工委</a>、<a href="http://www.joynews.cn/">伽马数据</a>
                 </p>
                 <p class="quto">
-                    2008年以后，我国互联网的普及率越来越高，中国网民的特征朝着年轻化方向发展，我国自主研发的网络游戏市场销售收入呈现逐年增长的状态。
+                    2008年以后，我国互联网的普及率越来越高，中国网民的特征朝着年轻化的方向发展，我国自主研发的网络游戏越来越受到年轻人的欢迎，网络游戏市场销售收入呈现逐年增长的态势。像搜狐畅游出品的“天龙八部”，是国内最烧钱的网络游戏之一，金庸大神正式授权的游戏，虽然是2.5D，但丝毫不夸张的说，在现存的众多网络角色扮演游戏中，天龙八部经久不衰是有它独特的魅力的。
                 </p>
                 <p class="quto">
-                    可以看到，2013年中国自主网络游戏海外市场销售收入<span class="height">增长率高达219.3%</span>。这一年的增长率如此之高的主要原因是，网页游戏和移动游戏成为海外出口的新锐力量，全球平台化趋势使得移动游戏和网页游戏获得更多助力。并且，中国更多的游戏企业在海外出口中选择建立海外子公司直接经营，拥有更大的自主权和灵活性，可以真正了解当地的用户行为和习惯，与当地合作伙伴建立长期稳定关系，获得更大的收益。
+                    可以看到，2013年中国自主研发网络游戏海外市场销售收入<span
+                        class="height">增长率高达219.3%</span>。这样的好成绩很大程度上是因为中国有更多的游戏企业选择开拓海外市场，甚至有的企业直接在海外出口中选择建立海外子公司直接经营。弹弹堂这款游戏相信许多人都玩过，但你们知道吗？不仅我们中国在玩，许多外国人也在玩。这都要归功于智明星通这家国内知名社交游戏公司，智明星通代理了多款国内知名游戏，在国外游戏市场取得巨大成功，“弹弹堂”就是其中之一。
                 </p>
                 <br>
 
-                 <!-- 中国电竞产业从业者月薪分布  -->
+                <!-- 中国电竞产业从业者月薪分布  -->
 
-                 <h2>从事电竞行业赚钱吗？ </h2>
-                 <p class="quto">2018年，中国游戏从业者约145万人，需求规模约为44.1万人。</p>
-                 <p style="color:#000;text-align: center;" class="quto">中国电竞产业从业者月薪分布</p>
-                 <div class="">
-                     <div id="salary" class="echarts" style="max-width:800px;height: 30em;"></div>
-                     <p class="tips">
-                         数据来源：<a href="http://www.joynews.cn/">伽马数据</a>
-                     </p>
-                 </div>
-                 <p class="quto">
-                     58.9%的电竞产业从业者月薪超过8000元，<span class="height">超过了我国的平均工资水平</span>。但值得注意的是，电竞产业从业者的月薪分布在4000-20000元不等，<span class="height">薪资待遇差别较大，与从业者的岗位以及学历有关</span>。
-                 </p>
-                 <p class="quto">
-                     2018年中国不同职位的游戏产业从业者中主策划、品牌管理、服务器开发工程师平均月薪最高，在16000元以上，而新媒体运营、文案编辑、游戏客服、游戏推广人员平均月薪最低，在6500元以下。
-                 </p>
-                 <p class="quto">
-                     其次，即便是同一岗位，学历高低对电竞产业从业者的薪资水平也有很大影响，比如同是游戏开发岗位，本科及以上学历月薪可达15000以上，而高中学历月薪仅7000甚至更低。
-                 </p>
-                 <br>
-                 <hr>
-                 <h2>从事电竞行业 你的学历够吗？ </h2>
-                 <p style="color:#000;text-align: center;" class="quto">不同规模企业对最低学历要求分布情况</p>
-                 <div id="employeeOfCompany" class="echarts" style="max-width:800px;height: 60em;"></div>
-                 <p class="quto">
-                     游戏企业对人才的学历要求较高，超过80%的企业要求本科及以上学历，尤其是大公司更青睐高学历人才。学历差异对游戏企业提供的薪资水平差异明显。
-                 </p>
+                <h2>从事电竞行业赚钱吗？ </h2>
+                <p class="quto">2018年，中国游戏从业者约145万人，需求规模约为44.1万人。</p>
+                <p style="color:#000;text-align: center;" class="quto">中国电竞产业从业者月薪分布</p>
+                <div class="">
+                    <div id="salary" class="echarts" style="width:100%;height: 30em;"></div>
+                    <p class="tips">
+                        数据来源：<a href="http://www.joynews.cn/">伽马数据</a>
+                    </p>
+                </div>
+                <p class="quto">
+                    58.9%的电竞产业从业者月薪超过8000元，<span
+                        class="height">超过了我国的平均工资水平</span>。但值得注意的是，电竞产业从业者的月薪分布在4000-20000元不等，<span
+                        class="height">薪资待遇差别较大，与从业者的岗位以及学历有关</span>。
+                </p>
+                <p class="quto">
+                    2018年中国不同职位的游戏产业从业者中主策划、品牌管理、服务器开发工程师平均月薪最高，在16000元以上，而新媒体运营、文案编辑、游戏客服、游戏推广人员平均月薪最低，在6500元以下。
+                </p>
+                <p class="quto">
+                    其次，即便是同一岗位，学历高低对电竞产业从业者的薪资水平也有很大影响，比如同是游戏开发岗位，本科及以上学历月薪可达15000以上，而高中学历月薪仅7000甚至更低。
+                </p>
+                <br>
+                <hr>
+                <h2>从事电竞行业 你的学历够吗？ </h2>
+                <p style="color:#000;text-align: center;" class="quto">不同规模企业对最低学历要求分布情况</p>
+                <div id="employeeOfCompany" class="echarts" style="width:100%;height: 60em;"></div>
+                <p class="quto">
+                    游戏企业对人才的学历要求较高，超过80%的企业要求本科及以上学历，尤其是大公司更青睐高学历人才。学历差异对游戏企业提供的薪资水平差异明显。
+                </p>
 
             </section>
 
@@ -477,8 +688,8 @@
                         <a href="http://www.bosidata.com/">http://www.bosidata.com/</a>
                     </li>
                     <li>
-                        <img style="background-color:rgb(44, 59, 83);padding: 2px 5px" src="https://www.echartsjs.com/images/logo.png"
-                            alt=""><br>
+                        <img style="background-color:rgb(44, 59, 83);padding: 2px 5px"
+                            src="https://www.echartsjs.com/images/logo.png" alt=""><br>
                         <a class="name" href="">Echarts</a><br>
                         <a href="https://www.echartsjs.com/">https://www.echartsjs.com/</a>
                     </li>
@@ -499,7 +710,7 @@
                 <li>[2].高源.我国电子竞技产业发展研究[J].哈尔滨体育学院报.2015，33（6）：56</li>
                 <li>[3].游继之布特.我国电子竞技产业链发展现状及前景研究[J].吉林体育学院学报,2018,34(03):56-62</li>
                 <li>[4].蔡易彤. 我国电子竞技产业的投资趋势与前景研究[D].对外经济贸易大学,2016</li>
-                <li>[5].方润.电子竞技产业发展探讨[J].当代体育科技,2019,9(04):230-231+235</li>
+                <li>[5].方润.电子竞技产业发展探讨[J].当代体育科技,2019,9(04):230-231、235</li>
                 <li>[6].金轲,王昕.大力发展文化产业的产业政策研究——以电竞产业为例[J].经济研究参考,2017(56):58-64</li>
             </ul>
 
@@ -507,7 +718,7 @@
 
             <h2>团队介绍</h2>
             <ul>
-		<li>指导教师：湖北大学 张帆</li>
+                <li>指导教师：湖北大学 张帆</li>
                 <li>团队成员：步美娟，童蓥，熊嘉宝，魏沛玲，柯锋</li>
             </ul>
 
@@ -527,9 +738,11 @@
                                 低端人口</a>. </p>
                         <p>Code released under the <a href="https://github.com/Kefeng2017/news.git">MIT
                                 License</a>.</p>
-                        <p>Based on <a href="https://getbootstrap.com" rel="nofollow">Bootstrap</a>. Icons from <a href="http://fontawesome.io/"
-                                rel="nofollow">Font Awesome</a>. Web fonts from <a href="https://fonts.google.com/" rel="nofollow">Google</a>.</p>
-                        <p>© 2019 | author: <a class="contact" href="#">1396956549@qq.com</a> | <a href="http://www.miitbeian.gov.cn/">鄂ICP备19008087号</a></p>
+                        <p>Based on <a href="https://getbootstrap.com" rel="nofollow">Bootstrap</a>. Icons from <a
+                                href="http://fontawesome.io/" rel="nofollow">Font Awesome</a>. Web fonts from <a
+                                href="https://fonts.google.com/" rel="nofollow">Google</a>.</p>
+                        <p>© 2019 | author: <a class="contact" href="#">1396956549@qq.com</a> | <a
+                                href="http://www.miitbeian.gov.cn/">鄂ICP备19008087号</a></p>
 
                     </div>
                 </div>
@@ -542,7 +755,28 @@
     <script src="https://cdn.bootcss.com/jquery/3.4.0/jquery.min.js"></script>
     <script src="./js/swiper-3.4.2.jquery.min.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript">
-        window.onload = function () {
+        $(window).ready(function () {
+            // 音乐自动播放
+            var music = document.getElementById('audio');
+            music.oncanplaythrough = function(){
+                music.volume = .5;
+                music.play();
+                if(!music.paused){
+                    $('#musicstate').text('音乐:开').css('color', 'rgb(237, 119, 104)').attr('checked','checked');
+                }
+            }
+
+            $('#musiccontrol').change(function () {
+                if (music.paused) {
+                    music.volume = .5;
+                    music.play();
+                    $('#musicstate').text('音乐:开').css('color', 'rgb(237, 119, 104)');
+                } else {
+                    music.pause();
+                    $('#musicstate').text('音乐:关').css('color', '#777');
+                }
+            });
+
             $(function () {
                 var mySwiper = new Swiper(".swiper-container", {
                     slidesPerView: 4, /*默认是显示4个*/
@@ -606,13 +840,13 @@
                     chains.eq(i).css('color', rgb).css('border', '1px solid ' + rgb);
                 }(i))
             }
+        })
 
             //   ip统计 
             // $.get("http://www.kkboom.cn:8123/ip", { ip: returnCitySN["cip"], addr: returnCitySN["cname"] }, function (res) {
             //     // console.log(res);
             //     $("#visitor").html("访问量：" + res.count[0]['count(*)']);
-            // });
-        };
+            // });;
     </script>
 
     <!-- <script type="text/javascript" src="./js/echarts.min.js"></script> -->
